@@ -159,3 +159,182 @@ a{color:inherit;text-decoration:none}
 .rivalry-icon-logo{border-radius:18px!important;background:#081426!important;border:2px solid #d7a842!important}.rivalry-icon-logo img{width:100%;height:100%;object-fit:cover;border-radius:15px}
 .rivalry-emblem{display:flex;justify-content:center;align-items:center;margin:10px 0 14px}.rivalry-emblem img{width:118px;height:118px;object-fit:cover;border-radius:24px;border:2px solid rgba(240,203,112,.85);box-shadow:0 12px 30px rgba(0,0,0,.26)}
 .claim-icon{width:80px;height:80px;border-radius:18px;overflow:hidden;border:2px solid #d7a842;background:#081426;margin-bottom:14px}.claim-icon img{width:100%;height:100%;object-fit:cover}.rivalry-claim{font-size:28px!important;line-height:1.08!important;margin:6px 0 8px!important}.rivalry-icon-card em{line-height:1.25;min-height:30px;display:flex;align-items:center;justify-content:center}
+
+/* v2.1 — mobile fit pass: no horizontal scrolling / compact responsive UI */
+.matrix-short{display:none}
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+#app,.page,.wrap,.section,.site-header,.site-footer{max-width:100%}
+img,svg,video,canvas{max-width:100%}
+.wrap>*{min-width:0}
+
+@media(max-width:700px){
+  *{min-width:0}
+  .wrap{width:100%;padding-left:14px;padding-right:14px}
+  .section{padding:34px 0}
+  .page-hero{padding:36px 0 24px}
+  .page-hero h1{font-size:clamp(34px,10vw,42px);line-height:.95}
+  .page-hero p{font-size:13px;line-height:1.55}
+  .eyebrow,.kicker{letter-spacing:.14em}
+  .section-heading{margin-bottom:18px;gap:5px}
+  .section-heading h2{font-size:clamp(25px,7.5vw,31px);line-height:1.02}
+  .section-heading p{font-size:12px;line-height:1.5}
+
+  .site-header{padding:9px 14px;gap:10px}
+  .brand{gap:9px;min-width:0;max-width:calc(100% - 48px)}
+  .brand-mark{width:38px;height:38px;flex:0 0 38px}
+  .brand-copy strong{font-size:13px;white-space:nowrap}
+  .brand-copy small{font-size:7px;letter-spacing:.18em;white-space:nowrap}
+  .mobile-menu{flex:0 0 40px}
+  .main-nav.open{max-width:100%;overflow:hidden}
+  .nav-link{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+  .hero{padding:42px 0 34px}
+  .hero-grid{gap:24px}
+  .hero h1{font-size:clamp(43px,15vw,58px);line-height:.86}
+  .hero-deck{font-size:14px;line-height:1.55}
+  .hero-side{padding-top:18px}
+  .hero-logo-lockup img{width:58px;height:58px}
+  .hero-side-value{font-size:clamp(27px,8vw,34px);overflow-wrap:normal;word-break:normal}
+  .hero-side-sub{font-size:11px}
+  .stat-grid,.pulse-grid,.record-grid,.story-grid,.leaderboard-grid,.ready-grid,.season-kpis,.season-timeline,.playoff-grid,.injury-grid,.season-grid,.season-team-grid,.news-grid,.owner-dna-grid,.history-grid,.adp-context-grid,.adp-position-grid{grid-template-columns:1fr!important}
+  .stat{padding:15px 4px;border-right:0!important;border-bottom:1px solid var(--line)}
+  .stat:last-child{border-bottom:0}
+  .stat-value{font-size:24px}
+  .stat-label{font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .pulse-card,.record-card,.story-card{min-width:0}
+  .banners{grid-template-columns:1fr 1fr;gap:8px}
+  .banner{min-width:0;min-height:160px;padding-left:9px;padding-right:9px}
+  .banner-team{font-size:12px;overflow-wrap:normal;word-break:normal}
+
+  .team-grid{grid-template-columns:1fr!important;justify-items:center}
+  .team-card{width:min(100%,330px);min-height:0}
+  .team-body{grid-template-rows:auto 34px 44px 42px}
+  .team-name{font-size:19px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .team-franchise{display:block;min-height:34px;line-height:34px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .team-trophy-case{flex-wrap:nowrap;overflow:hidden}
+  .team-trophy-case .trophy-unit{white-space:nowrap}
+  .directory-controls{grid-template-columns:1fr!important}
+  .directory-controls .search-input{grid-column:auto}
+  .filter-select,.search-input{width:100%;max-width:100%}
+  .player-results{grid-template-columns:1fr!important}
+  .player-result{min-width:0;gap:7px;padding:12px}
+  .player-result>div:first-child{min-width:0;overflow:hidden}
+  .player-result strong{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .player-result small,.player-result .draft-meta,.player-result .player-team{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .player-result-right{flex:0 0 auto}
+
+  .season-hero{padding:40px 0 32px}
+  .season-hero-grid{grid-template-columns:1fr;gap:22px}
+  .season-hero h1{font-size:clamp(39px,12vw,52px)}
+  .season-hero p{font-size:13px;line-height:1.55}
+  .champion-lockup{padding-top:17px}
+  .champion-lockup strong{font-size:clamp(24px,7vw,30px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .season-team-card{padding:16px}
+  .season-team-head{grid-template-columns:44px minmax(0,1fr);gap:10px}
+  .finish-badge{width:44px;height:44px;font-size:15px}
+  .season-team-head h3{font-size:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .season-team-head small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .season-record{grid-column:2;text-align:left;font-size:15px}
+  .season-team-stats{grid-template-columns:1fr 1fr;gap:6px}
+  .season-team-stat{min-width:0}
+  .season-team-stat span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .season-team-story{font-size:11px!important;line-height:1.62!important}
+
+  .matrix-shell,.draft-table-shell,.season-table-shell,.leaderboard-card{width:100%;max-width:100%;overflow:hidden}
+  table{max-width:100%}
+  .matrix,.draft-table,.season-table,.career-table,.podium-table{width:100%;table-layout:fixed}
+  .matrix th,.matrix td,.draft-table th,.draft-table td,.season-table th,.season-table td,.career-table th,.career-table td,.podium-table th,.podium-table td{white-space:nowrap!important;word-break:normal!important;overflow-wrap:normal!important;overflow:hidden;text-overflow:ellipsis}
+  .matrix th,.matrix td{font-size:6.5px;padding:6px 1px;line-height:1;font-variant-numeric:tabular-nums}
+  .matrix th{position:static}
+  .matrix td:first-child,.matrix th:first-child{position:static;width:61px;text-align:left;padding-left:5px;font-size:7px}
+  .matrix th:not(:first-child),.matrix td:not(:first-child){width:auto}
+  .matrix-full{display:none}
+  .matrix-short{display:inline;text-transform:uppercase;letter-spacing:0}
+  .matrix tbody td:first-child{font-size:7.5px;font-weight:900;white-space:nowrap!important;text-overflow:ellipsis}
+
+  .season-table th,.season-table td{font-size:8px;padding:8px 3px}
+  .season-table th:nth-child(5),.season-table td:nth-child(5),.season-table th:nth-child(6),.season-table td:nth-child(6),.season-table th:nth-child(7),.season-table td:nth-child(7){display:none}
+  .rank-badge{width:25px;height:25px;font-size:9px}
+
+  .career-table th,.career-table td{font-size:8px;padding:8px 4px}
+  .career-table th:nth-child(4),.career-table td:nth-child(4),.career-table th:nth-child(5),.career-table td:nth-child(5),.career-table th:nth-child(6),.career-table td:nth-child(6),.career-table th:nth-child(7),.career-table td:nth-child(7){display:none}
+  .career-table td:first-child small{display:none!important}
+
+  .podium-table th,.podium-table td{font-size:8px;padding:9px 4px}
+  .podium-table td{line-height:1.25}
+
+  .draft-table th,.draft-table td{font-size:7.5px;padding:8px 3px}
+  .draft-table th:nth-child(n+7),.draft-table td:nth-child(n+7){display:none}
+  .draft-table td strong{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+  .draft-rank{font-size:12px}
+  .round-pill,.pos-badge,.nfl-team-pill{padding:3px 4px;font-size:7px;min-width:0}
+  .adp-overall{font-size:11px}
+  .draft-source-note{font-size:8px;line-height:1.45}
+
+  .rivalry-library{grid-template-columns:1fr!important;gap:9px}
+  .rivalry-icon-card{display:grid;grid-template-columns:58px minmax(0,1fr);grid-template-rows:auto auto auto;column-gap:12px;row-gap:2px;min-height:0;padding:10px 12px;text-align:left;justify-items:start}
+  .rivalry-icon-logo{grid-column:1;grid-row:1/4;width:58px;height:58px}
+  .rivalry-icon-card strong,.rivalry-icon-card small,.rivalry-icon-card em{grid-column:2;width:100%;justify-content:flex-start;text-align:left;min-height:0}
+  .rivalry-icon-card strong{font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .rivalry-icon-card small{font-size:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .rivalry-icon-card em{font-size:7.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .rivalry-grid{grid-template-columns:1fr!important}
+  .rivalry-poster{min-height:0;padding:20px}
+  .rivalry-poster-title h2{font-size:clamp(24px,8vw,31px)}
+  .rivalry-emblem img{width:88px;height:88px}
+  .rivalry-faces{grid-template-columns:1fr auto 1fr;gap:8px}
+  .rivalry-avatar{width:64px;height:64px;font-size:22px}
+  .rivalry-face strong{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .belt-card{padding:18px}
+  .claim-icon{width:62px;height:62px}
+  .rivalry-claim{font-size:clamp(19px,6vw,24px)!important}
+  .series-stats{grid-template-columns:1fr 1fr 1fr;gap:5px}
+  .series-stat{padding:8px 5px;min-width:0}
+  .series-stat strong{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .series-stat span{font-size:6.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+  .rivalry-game{grid-template-columns:1fr!important;padding:11px;gap:6px}
+  .rivalry-game .rg-date{padding-bottom:6px;border-bottom:1px solid #edf0f2}
+  .rivalry-score{font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .rivalry-game .rg-belt{display:none}
+
+  .championship-bracket{grid-template-columns:1fr!important;gap:10px}
+  .championship-bracket .qf-one,.championship-bracket .qf-two,.championship-bracket .sf-one,.championship-bracket .sf-two,.championship-bracket .final,.championship-bracket .bracket-champ{grid-column:auto;grid-row:auto}
+  .placement-bracket{grid-template-columns:1fr!important}
+  .scope-toggle,.award-scope,.draft-year-toggle,.draft-toolbar{width:100%;max-width:100%;gap:5px}
+  .scope-btn,.award-scope button,.draft-year-toggle button,.draft-pos-btn{padding:6px 9px;font-size:9px;white-space:nowrap}
+  .metric-row,.dna-stats{grid-template-columns:1fr 1fr!important}
+  .metric-chip,.dna-stats div{min-width:0}
+  .metric-chip span,.dna-stats span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+
+  .modal-backdrop{padding:7px}
+  .modal{width:100%;max-width:100%;max-height:94vh;border-radius:15px}
+  .modal-hero,.modal-body{padding-left:17px;padding-right:17px}
+  .modal-hero-grid{gap:12px}
+  .modal-avatar{width:58px;height:58px;flex-basis:58px}
+  .modal-hero h2{font-size:24px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .modal-hero p{font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .modal-stat-grid{grid-template-columns:1fr 1fr;gap:6px}
+  .detail-grid{grid-template-columns:1fr!important;gap:10px}
+  .detail-card{padding:14px;min-width:0}
+  .timeline-item{grid-template-columns:58px minmax(0,1fr);gap:8px}
+  .timeline-item b,.timeline-item small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .timeline-item strong{grid-column:2;text-align:left;white-space:nowrap}
+  .tag-list{max-width:100%}
+  .tag{max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+  .gallery-grid{columns:1!important;column-gap:0}
+  .gallery-card{max-width:100%;margin-bottom:12px}
+  .gallery-caption{font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+  .site-footer{padding:18px 14px;gap:7px;font-size:9px}
+  .site-footer>*{max-width:100%}
+}
+
+@media(max-width:380px){
+  .wrap{padding-left:10px;padding-right:10px}
+  .matrix td:first-child,.matrix th:first-child{width:54px;font-size:6.7px;padding-left:3px}
+  .matrix th,.matrix td{font-size:5.8px;padding-left:0;padding-right:0}
+  .banners{grid-template-columns:1fr}
+  .series-stat span{font-size:6px}
+  .scope-btn,.award-scope button,.draft-year-toggle button,.draft-pos-btn{font-size:8px;padding:5px 7px}
+}
