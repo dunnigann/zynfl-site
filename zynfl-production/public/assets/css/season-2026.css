@@ -17,3 +17,25 @@
 
 /* Frame the supplied manager portrait consistently in archive cards too. */
 .team-photo img[src*="mitchell.jpg"]{object-position:50% 30%}
+
+/* Compact field: backs and quarterback share a row; specialists occupy the corners. */
+.z-field{padding:10px 18px;min-width:690px}
+.z-team-header{min-height:60px;padding:4px 8px;gap:10px}
+.z-team-header h2{font-size:17px}.z-team-header .z-photo{width:42px;height:42px}
+.z-team-score strong{font-size:25px}.z-header-bottom{margin-top:0}
+.z-formation{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:114px 112px 28px;padding:8px 0 0}
+.z-backs{grid-column:1/-1;grid-row:1;justify-content:space-evenly;gap:145px;min-height:0;align-items:start;pointer-events:none}
+.z-backs .z-player{pointer-events:auto}
+.z-qb{grid-column:2;grid-row:1;min-height:0;align-items:start}
+.z-receivers{grid-column:1/-1;grid-row:2;min-height:0;padding:0}
+.z-line{grid-column:1/-1;grid-row:3;padding:4px 0!important;align-items:center}
+.z-bottom{padding:0 0 8px;grid-template-rows:28px 112px 114px}
+.z-bottom .z-line{grid-row:1}.z-bottom .z-receivers{grid-row:2}.z-bottom .z-backs,.z-bottom .z-qb{grid-row:3}
+.z-midfield{min-height:26px;font-size:15px}
+.z-player{gap:2px;width:135px}.z-player strong{font-size:11px}.z-player-photo{width:calc(var(--bubble)*.78);height:calc(var(--bubble)*.78);background:transparent}
+.z-field-specialists{position:absolute;inset:8px 0 auto;display:flex;justify-content:space-between;pointer-events:none}
+.z-bottom .z-field-specialists{inset:auto 0 8px}
+.z-field-specialists .z-player{width:84px;color:white;pointer-events:auto}
+.z-field-specialists strong{font-size:10px}.z-field-specialists small{color:#b8cabb}
+.z-nfl-logo{background:#fff}.z-nfl-logo img{object-fit:contain;padding:5px;box-sizing:border-box}
+.rivalry-inactive{filter:grayscale(1);opacity:.55}.rivalry-inactive:hover,.rivalry-inactive:focus-visible{opacity:.8}

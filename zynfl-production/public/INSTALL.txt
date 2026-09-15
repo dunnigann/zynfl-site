@@ -1,0 +1,5 @@
+Upload the assets folder from this ZIP inside the EXISTING zynfl-production/public folder in GitHub. Replace the five matching files. Do not upload the ZIP itself or create another zynfl-production folder.
+
+Changes: Week 1 career records, points totals, head-to-head results and rivalry histories; inactive rivalry section; exact Jack rankings and comments; transparent player portraits without initials; compact field with kickers and defenses; integer NFL scores; white circular NFL logo backgrounds.
+
+Validation: all 12 supplied final scores reconciled; JavaScript syntax and page-render/data checks passed. Browser screenshot verification unavailable. This package has not been deployed.

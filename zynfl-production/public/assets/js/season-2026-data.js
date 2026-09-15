@@ -1,4 +1,3 @@
-/* Week 1 snapshot. Edit jackRankings["1"] to publish Jack's order. */
 window.ZYNFL_2026={
   "year": 2026,
   "updated": "2026-09-15",
@@ -355,7 +354,7 @@ window.ZYNFL_2026={
       "owner": "Jack",
       "slot": "FLEX",
       "projection": 10.58,
-      "points": 6.0,
+      "points": 6,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/12512.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -368,7 +367,7 @@ window.ZYNFL_2026={
       "owner": "Jack",
       "slot": "K",
       "projection": 7.26,
-      "points": 7.0,
+      "points": 7,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/12185.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -381,7 +380,7 @@ window.ZYNFL_2026={
       "owner": "Jack",
       "slot": "DEF",
       "projection": 7.7,
-      "points": 1.0,
+      "points": 1,
       "status": "final",
       "headshot": "https://a.espncdn.com/i/teamlogos/nfl/500/lac.png",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -420,7 +419,7 @@ window.ZYNFL_2026={
       "owner": "Jack",
       "slot": "BN",
       "projection": 9.3,
-      "points": 0.0,
+      "points": 0,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/9756.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -550,7 +549,7 @@ window.ZYNFL_2026={
       "owner": "Santi",
       "slot": "K",
       "projection": 7.48,
-      "points": 7.0,
+      "points": 7,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/2747.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -563,7 +562,7 @@ window.ZYNFL_2026={
       "owner": "Santi",
       "slot": "DEF",
       "projection": 7.33,
-      "points": 3.0,
+      "points": 3,
       "status": "final",
       "headshot": "https://a.espncdn.com/i/teamlogos/nfl/500/phi.png",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -575,8 +574,8 @@ window.ZYNFL_2026={
       "nfl": "NE",
       "owner": "Santi",
       "slot": "BN",
-      "projection": 0.0,
-      "points": 0.0,
+      "projection": 0,
+      "points": 0,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/12529.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -641,7 +640,7 @@ window.ZYNFL_2026={
       "owner": "Santi",
       "slot": "BN",
       "projection": 4.34,
-      "points": 4.0,
+      "points": 4,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/11576.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -745,7 +744,7 @@ window.ZYNFL_2026={
       "owner": "Quinn",
       "slot": "K",
       "projection": 7.63,
-      "points": 1.0,
+      "points": 1,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/12015.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -758,7 +757,7 @@ window.ZYNFL_2026={
       "owner": "Quinn",
       "slot": "DEF",
       "projection": 7.35,
-      "points": 18.0,
+      "points": 18,
       "status": "final",
       "headshot": "https://a.espncdn.com/i/teamlogos/nfl/500/pit.png",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -797,7 +796,7 @@ window.ZYNFL_2026={
       "owner": "Quinn",
       "slot": "BN",
       "projection": 6.01,
-      "points": 1.0,
+      "points": 1,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/13294.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -848,7 +847,7 @@ window.ZYNFL_2026={
       "nfl": "WAS",
       "owner": "Nick",
       "slot": "QB",
-      "projection": 18.0,
+      "projection": 18,
       "points": 17.66,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/11566.jpg",
@@ -914,7 +913,7 @@ window.ZYNFL_2026={
       "owner": "Nick",
       "slot": "TE",
       "projection": 10.53,
-      "points": 0.0,
+      "points": 0,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/12517.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -940,7 +939,7 @@ window.ZYNFL_2026={
       "owner": "Nick",
       "slot": "K",
       "projection": 7.46,
-      "points": 12.0,
+      "points": 12,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/11786.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -953,7 +952,7 @@ window.ZYNFL_2026={
       "owner": "Nick",
       "slot": "DEF",
       "projection": 7.74,
-      "points": 13.0,
+      "points": 13,
       "status": "final",
       "headshot": "https://a.espncdn.com/i/teamlogos/nfl/500/jax.png",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -1018,7 +1017,7 @@ window.ZYNFL_2026={
       "owner": "Nick",
       "slot": "BN",
       "projection": 3.55,
-      "points": 0.0,
+      "points": 0,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/13345.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -1057,7 +1056,7 @@ window.ZYNFL_2026={
       "owner": "Tina",
       "slot": "RB",
       "projection": 11.03,
-      "points": 12.0,
+      "points": 12,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/13287.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -1135,7 +1134,7 @@ window.ZYNFL_2026={
       "owner": "Tina",
       "slot": "K",
       "projection": 7.61,
-      "points": 14.0,
+      "points": 14,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/12711.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -1148,7 +1147,7 @@ window.ZYNFL_2026={
       "owner": "Tina",
       "slot": "DEF",
       "projection": 6.05,
-      "points": 2.0,
+      "points": 2,
       "status": "final",
       "headshot": "https://a.espncdn.com/i/teamlogos/nfl/500/lar.png",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -1173,8 +1172,8 @@ window.ZYNFL_2026={
       "nfl": "LV",
       "owner": "Tina",
       "slot": "BN",
-      "projection": 0.0,
-      "points": 0.0,
+      "projection": 0,
+      "points": 0,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/11604.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -1330,7 +1329,7 @@ window.ZYNFL_2026={
       "owner": "Brock",
       "slot": "K",
       "projection": 7.95,
-      "points": 7.0,
+      "points": 7,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/11539.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -1343,7 +1342,7 @@ window.ZYNFL_2026={
       "owner": "Brock",
       "slot": "DEF",
       "projection": 6.96,
-      "points": 13.0,
+      "points": 13,
       "status": "final",
       "headshot": "https://a.espncdn.com/i/teamlogos/nfl/500/sea.png",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -1356,7 +1355,7 @@ window.ZYNFL_2026={
       "owner": "Brock",
       "slot": "BN",
       "projection": 6.01,
-      "points": 0.0,
+      "points": 0,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/13417.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -1395,7 +1394,7 @@ window.ZYNFL_2026={
       "owner": "Brock",
       "slot": "BN",
       "projection": 6.96,
-      "points": 8.0,
+      "points": 8,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/8132.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -1460,7 +1459,7 @@ window.ZYNFL_2026={
       "owner": "Chuck",
       "slot": "RB",
       "projection": 12.97,
-      "points": 14.0,
+      "points": 14,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/8150.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -1499,7 +1498,7 @@ window.ZYNFL_2026={
       "owner": "Chuck",
       "slot": "TE",
       "projection": 8.05,
-      "points": 0.0,
+      "points": 0,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/7553.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -1511,7 +1510,7 @@ window.ZYNFL_2026={
       "nfl": "TEN",
       "owner": "Chuck",
       "slot": "FLEX",
-      "projection": 10.0,
+      "projection": 10,
       "points": 3.9,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/5967.jpg",
@@ -1524,8 +1523,8 @@ window.ZYNFL_2026={
       "nfl": "LAC",
       "owner": "Chuck",
       "slot": "K",
-      "projection": 8.0,
-      "points": 2.0,
+      "projection": 8,
+      "points": 2,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/8259.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -1538,7 +1537,7 @@ window.ZYNFL_2026={
       "owner": "Chuck",
       "slot": "DEF",
       "projection": 5.72,
-      "points": 6.0,
+      "points": 6,
       "status": "final",
       "headshot": "https://a.espncdn.com/i/teamlogos/nfl/500/bal.png",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -1590,7 +1589,7 @@ window.ZYNFL_2026={
       "owner": "Chuck",
       "slot": "BN",
       "projection": 7.64,
-      "points": 7.0,
+      "points": 7,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/8134.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -1720,7 +1719,7 @@ window.ZYNFL_2026={
       "owner": "Mitchell",
       "slot": "K",
       "projection": 7.48,
-      "points": 2.0,
+      "points": 2,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/11533.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -1733,7 +1732,7 @@ window.ZYNFL_2026={
       "owner": "Mitchell",
       "slot": "DEF",
       "projection": 7.1,
-      "points": 10.0,
+      "points": 10,
       "status": "final",
       "headshot": "https://a.espncdn.com/i/teamlogos/nfl/500/det.png",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -1772,7 +1771,7 @@ window.ZYNFL_2026={
       "owner": "Mitchell",
       "slot": "BN",
       "projection": 7.78,
-      "points": 10.0,
+      "points": 10,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/4199.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -1798,7 +1797,7 @@ window.ZYNFL_2026={
       "owner": "Mitchell",
       "slot": "BN",
       "projection": 5.05,
-      "points": 0.0,
+      "points": 0,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/12487.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -1811,7 +1810,7 @@ window.ZYNFL_2026={
       "owner": "Mitchell",
       "slot": "BN",
       "projection": 4.6,
-      "points": 3.0,
+      "points": 3,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/13311.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -1876,7 +1875,7 @@ window.ZYNFL_2026={
       "owner": "Leo",
       "slot": "WR",
       "projection": 12.46,
-      "points": 8.0,
+      "points": 8,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/12526.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -1915,7 +1914,7 @@ window.ZYNFL_2026={
       "owner": "Leo",
       "slot": "K",
       "projection": 6.86,
-      "points": 11.0,
+      "points": 11,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/5189.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -1928,7 +1927,7 @@ window.ZYNFL_2026={
       "owner": "Leo",
       "slot": "DEF",
       "projection": 6.14,
-      "points": -2.0,
+      "points": -2,
       "status": "final",
       "headshot": "https://a.espncdn.com/i/teamlogos/nfl/500/hou.png",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -1941,7 +1940,7 @@ window.ZYNFL_2026={
       "owner": "Leo",
       "slot": "BN",
       "projection": 13.68,
-      "points": 12.0,
+      "points": 12,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/7611.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -1980,7 +1979,7 @@ window.ZYNFL_2026={
       "owner": "Leo",
       "slot": "BN",
       "projection": 8.14,
-      "points": 0.0,
+      "points": 0,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/8121.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -2084,7 +2083,7 @@ window.ZYNFL_2026={
       "owner": "Liam",
       "slot": "TE",
       "projection": 9.28,
-      "points": 8.0,
+      "points": 8,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/9484.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -2110,7 +2109,7 @@ window.ZYNFL_2026={
       "owner": "Liam",
       "slot": "K",
       "projection": 7.08,
-      "points": 9.0,
+      "points": 9,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/3451.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -2123,7 +2122,7 @@ window.ZYNFL_2026={
       "owner": "Liam",
       "slot": "DEF",
       "projection": 6.69,
-      "points": 3.0,
+      "points": 3,
       "status": "final",
       "headshot": "https://a.espncdn.com/i/teamlogos/nfl/500/den.png",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -2188,7 +2187,7 @@ window.ZYNFL_2026={
       "owner": "Liam",
       "slot": "BN",
       "projection": 2.66,
-      "points": 0.0,
+      "points": 0,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/12504.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -2200,8 +2199,8 @@ window.ZYNFL_2026={
       "nfl": "CLE",
       "owner": "Liam",
       "slot": "BN",
-      "projection": 0.0,
-      "points": 0.0,
+      "projection": 0,
+      "points": 0,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/12469.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -2252,7 +2251,7 @@ window.ZYNFL_2026={
       "nfl": "NE",
       "owner": "Akhil",
       "slot": "WR",
-      "projection": 0.0,
+      "projection": 0,
       "points": 4.1,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/5859.jpg",
@@ -2292,7 +2291,7 @@ window.ZYNFL_2026={
       "owner": "Akhil",
       "slot": "FLEX",
       "projection": 10.72,
-      "points": 7.0,
+      "points": 7,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/12519.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -2305,7 +2304,7 @@ window.ZYNFL_2026={
       "owner": "Akhil",
       "slot": "K",
       "projection": 7.24,
-      "points": 7.0,
+      "points": 7,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/11792.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -2318,7 +2317,7 @@ window.ZYNFL_2026={
       "owner": "Akhil",
       "slot": "DEF",
       "projection": 6.22,
-      "points": 8.0,
+      "points": 8,
       "status": "final",
       "headshot": "https://a.espncdn.com/i/teamlogos/nfl/500/min.png",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -2396,7 +2395,7 @@ window.ZYNFL_2026={
       "owner": "Akhil",
       "slot": "BN",
       "projection": 7.39,
-      "points": 15.0,
+      "points": 15,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/5872.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -2461,7 +2460,7 @@ window.ZYNFL_2026={
       "owner": "Isaac",
       "slot": "WR",
       "projection": 9.91,
-      "points": 6.0,
+      "points": 6,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/5846.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -2474,7 +2473,7 @@ window.ZYNFL_2026={
       "owner": "Isaac",
       "slot": "TE",
       "projection": 10.96,
-      "points": 20.0,
+      "points": 20,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/8130.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -2500,7 +2499,7 @@ window.ZYNFL_2026={
       "owner": "Isaac",
       "slot": "K",
       "projection": 7.59,
-      "points": 19.0,
+      "points": 19,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/7839.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -2513,7 +2512,7 @@ window.ZYNFL_2026={
       "owner": "Isaac",
       "slot": "DEF",
       "projection": 7.72,
-      "points": 0.0,
+      "points": 0,
       "status": "final",
       "headshot": "https://a.espncdn.com/i/teamlogos/nfl/500/ten.png",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -2591,7 +2590,7 @@ window.ZYNFL_2026={
       "owner": "Isaac",
       "slot": "BN",
       "projection": 0.01,
-      "points": 0.0,
+      "points": 0,
       "status": "final",
       "headshot": "https://sleepercdn.com/content/nfl/players/4035.jpg",
       "source": "Yahoo screenshot · Week 1 · supplied September 15, 2026"
@@ -3736,7 +3735,22 @@ window.ZYNFL_2026={
     ]
   ],
   "futureSchedule": [],
-  "jackRankings": {},
+  "jackRankings": {
+    "1": [
+      "Brock",
+      "Mitchell",
+      "Jack",
+      "Quinn",
+      "Liam",
+      "Nick",
+      "Isaac",
+      "Leo",
+      "Chuck",
+      "Santi",
+      "Tina",
+      "Akhil"
+    ]
+  },
   "analystRankings": [
     "Mitchell",
     "Nick",
@@ -4952,5 +4966,19 @@ window.ZYNFL_2026={
     "De'Zhaun Stribling": "Reported ankle absence of at least a month; depth-chart placement is a snapshot, not active status.",
     "Brock Bowers": "Screenshot projection and score are both zero; availability is not established by this snapshot.",
     "TreVeyon Henderson": "Screenshot projection and score are both zero; verify availability before the next lineup."
+  },
+  "jackRankReasons": {
+    "Brock": "picked up a massive W despite record low from Chase",
+    "Mitchell": "very well balanced team, plenty of depth and stars",
+    "Jack": "stars showed out but injuries could become a problem",
+    "Quinn": "Big win over rival, even with subpar performances",
+    "Liam": "Is Derrick Henry immortal?",
+    "Nick": "Bijan will continue to be a terror, this team is nasty if Loveland comes alive",
+    "Isaac": "Hurts scored all that? With no tush pushes?",
+    "Leo": "came up just short but has amazing depth",
+    "Chuck": "Can K9 drag a weaker bottom half roster?",
+    "Santi": "Disappointing RBs and a lack of depth could be dangerous",
+    "Tina": "Many low-lights but a Puka return to form and Bowers recovery could change everything",
+    "Akhil": "That's rough buddy"
   }
 };
