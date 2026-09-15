@@ -4968,17 +4968,17 @@ window.ZYNFL_2026={
     "TreVeyon Henderson": "Screenshot projection and score are both zero; verify availability before the next lineup."
   },
   "jackRankReasons": {
-    "Brock": "picked up a massive W despite record low from Chase",
-    "Mitchell": "very well balanced team, plenty of depth and stars",
-    "Jack": "stars showed out but injuries could become a problem",
-    "Quinn": "Big win over rival, even with subpar performances",
+    "Brock": "Picked up a massive W despite a record low from Chase.",
+    "Mitchell": "Very well-balanced team, with plenty of depth and stars.",
+    "Jack": "Stars showed out, but injuries could become a problem.",
+    "Quinn": "Big win over a rival, even with subpar performances.",
     "Liam": "Is Derrick Henry immortal?",
-    "Nick": "Bijan will continue to be a terror, this team is nasty if Loveland comes alive",
+    "Nick": "Bijan will continue to be a terror. This team is nasty if Loveland comes alive.",
     "Isaac": "Hurts scored all that? With no tush pushes?",
-    "Leo": "came up just short but has amazing depth",
-    "Chuck": "Can K9 drag a weaker bottom half roster?",
-    "Santi": "Disappointing RBs and a lack of depth could be dangerous",
-    "Tina": "Many low-lights but a Puka return to form and Bowers recovery could change everything",
-    "Akhil": "That's rough buddy"
+    "Leo": "Came up just short, but has amazing depth.",
+    "Chuck": "Can K9 drag a weaker bottom-half roster?",
+    "Santi": "Disappointing RBs and a lack of depth could be dangerous.",
+    "Tina": "Many lowlights, but a Puka return to form and Bowers’ recovery could change everything.",
+    "Akhil": "That’s rough, buddy."
   }
 };

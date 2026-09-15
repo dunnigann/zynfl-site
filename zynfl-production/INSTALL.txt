@@ -1,0 +1,14 @@
+ZYNFL MOBILE POLISH
+
+1. Extract this ZIP.
+2. In GitHub, open the EXISTING zynfl-production folder.
+3. Upload the extracted public folder and wrangler.jsonc there, replacing matching files.
+4. Commit the changes and let Cloudflare deploy. Refresh after deployment.
+
+Do not upload this ZIP itself. Do not create another zynfl-production folder. The public folder belongs immediately inside the existing zynfl-production folder; wrangler.jsonc sits beside it.
+
+Includes: fixed left/right RB slots, polished Jack rankings, removed prototype and development copy, responsive field and matchup dropdowns, readable mobile table cards and manager comparisons, round tin logo styling, and a custom 404 page. Existing scores, records, rivalries, and images are preserved.
+
+Validation: all 11 pages checked in Chromium at 320, 390, 768, 1024, and 1440 pixels without horizontal overflow. Every NFL backfield checked for RB/QB overlap. All fantasy/NFL player hit targets checked at mobile/tablet sizes. Navigation and owner/player/ranking dialogs checked. Missing URL and hash routes recover to Home. Existing Week 1 score validation passed. External headshot downloads were blocked during layout testing; their existing image URLs are unchanged.
+
+This package has not been pushed to GitHub or deployed.
