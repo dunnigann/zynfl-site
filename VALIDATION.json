@@ -1,0 +1,23 @@
+{
+  "as_of": "2026-09-24",
+  "scoring": "Yahoo-default half-PPR",
+  "through_week": 2,
+  "leader_counts": {
+    "QB": 10,
+    "RB": 10,
+    "WR": 10,
+    "TE": 10,
+    "FLEX": 10,
+    "K": 10,
+    "DEF": 10
+  },
+  "all_lists_descending": true,
+  "isaac_current_team": "Chiang Kai-Shough",
+  "active_2026_olave_garden_remaining": false,
+  "historical_2025_olave_garden_preserved": true,
+  "click_behavior": "Every top-player card uses the same showPlayer() Player File modal as Player Index rows",
+  "ownership_source": "Latest available ZYNFL Week 2 roster snapshot; no current roster match = Free Agent",
+  "archive_player_resolution": "All 70 leaderboard entries resolve to a Player File",
+  "headshots": "Reuses the same ZYNFL_2026 headshot pool used by Matchups; DEF uses the current NFL logo where available",
+  "cache_busting": true
+}

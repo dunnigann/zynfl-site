@@ -1,0 +1,20 @@
+ZYNFL Players Tab Update v2 — September 24, 2026
+
+Upload/replace these four files in the GitHub repository using the same paths:
+
+1. zynfl-production/public/index.html
+2. zynfl-production/public/assets/js/app.js
+3. zynfl-production/public/assets/css/season-2026.css
+4. zynfl-production/public/assets/js/zynfl-data.js
+
+Do not create another nested zynfl-production folder.
+
+Changes in this version:
+- Top Players rankings now use CURRENT 2026 season Yahoo half-PPR points through Week 2 (as of 9/24/26), not career starter points.
+- QB/RB/WR/TE/FLEX/K/DEF each show the current top 10 on the season.
+- FLEX is the top 10 among RB/WR/TE combined.
+- Current fantasy team is shown under each player; unowned players say “Free Agent.”
+- Top-player cards/heads are clickable and open the same Player File modal as the Players list.
+- Shared Matchups-tab portraits/logos are reused where available.
+- Isaac’s 2026 team name is corrected from “Olave Garden” to “Chiang Kai-Shough” in current 2026 player/draft data, while historical 2025 “Olave Garden” records are preserved.
+- Cache-busting versions were updated.
