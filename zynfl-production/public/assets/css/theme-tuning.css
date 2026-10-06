@@ -1,0 +1,88 @@
+/* ZYNFL's archive surfaces share the same dark palette as the season pages. */
+:root{color-scheme:dark;--ink:#f5f7fb;--ink-2:#e3ebf3;--navy:#10151f;--navy-2:#192431;--navy-3:#26384b;--cream:#192431;--paper:#10151f;--white:#1b2633;--line:#405367;--muted:#b8c8d7;--red:#ed6476;--gold:#f5cc66}
+body{background:#10151f;color:#f5f7fb}
+button,input,select,textarea{font:inherit}
+button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #8bd3ff;outline-offset:3px}
+.nav-dropdown{position:relative;display:flex;align-items:center}
+.nav-submenu{display:none;position:absolute;left:0;top:100%;min-width:208px;padding:8px;background:#1d2b39;border:1px solid #53687a;border-radius:12px;box-shadow:0 18px 42px #0009;z-index:80}
+.nav-dropdown:hover .nav-submenu,.nav-dropdown:focus-within .nav-submenu{display:grid;gap:3px}
+.nav-submenu .nav-link{width:100%;padding:11px 12px;border-radius:7px;text-align:left}
+.nav-submenu .nav-link:hover,.nav-submenu .nav-link.active{background:#314558;color:#fff}
+.nav-submenu .nav-link:after{display:none}
+.hero,.season-hero,.z-season-hero,.page-hero{background:radial-gradient(circle at 90% 5%,#db536833,transparent 35%),linear-gradient(135deg,#14202d,#202d3d 70%,#30283a);color:#f8fafc}
+.hero-side,.champion-lockup{border-color:#52657a;color:#f6f8fb}
+.stats-strip,.section,.section.alt,.section.dark,.player-top-section{background:#10151f;color:#f5f7fb;border-color:#34485a}
+.section.alt,.player-top-section{background:#151e2a}.section.dark{background:#18212e}
+.page-hero h1,.section-heading h2,.z-section-head h2,.record-card .record-value{color:#fff}
+.page-hero p,.section-heading p,.hero-deck,.record-card .record-detail,.record-subdetail{color:#b8c8d7}
+.eyebrow,.kicker,.award-group-title{color:#f5cc66}
+.record-card,.season-card,.story-card,.pulse-card,.leaderboard-card,.shame-card,.belt-card,.series-stat,.rivalry-game,.rivalry-icon-card,.team-card,.player-result,.owner-dna-card,.draft-table-shell,.search-panel,.season-team-card,.timeline-item,.detail-card,.modal,.modal-stat,.z-recap,.z-ranking-list,.z-week-highlights,.z-reserves,.z-sidebar,.z-coming-soon{background:#1b2633;color:#f5f7fb;border-color:#405367;box-shadow:0 10px 28px #0004}
+.record-card .record-title,.team-franchise,.rivalry-icon-card small,.belt-card p,.series-stat span,.timeline-item small,.search-meta,.draft-meta,.season-card p,.story-card p,.player-result small,.player-result .draft-value small,.season-team-card small{color:#b8c8d7}
+.team-name,.team-record strong,.belt-card h2,.series-stat strong,.rivalry-icon-card strong,.player-result strong,.story-card h3,.record-card .record-value{color:#fff}
+.rivalry-icon-card em{color:#f5cc66}.rivalry-icon-card:hover,.rivalry-icon-card.active{border-color:#f5cc66}
+.rivalry-game .winner{color:#8fe4bb}.rivalry-game .loser{color:#c7d2dc}
+.shame-card,.rivalry-game,.timeline-item{border:1px solid #405367}
+.matrix-shell{background:#1b2633;border-color:#405367}
+.matrix th,.matrix td{border-color:#405367}.matrix tbody td{background:#1b2633;color:#e3edf7}
+.matrix tbody td:first-child{background:#263648;color:#fff}.matrix tbody td.positive{background:#193f3d;color:#a5f0d0}.matrix tbody td.negative{background:#492e3b;color:#ffd1d6}.matrix tbody td.even{background:#304052;color:#fff}.matrix tbody td.diagonal{background:#293543;color:#aebeca}
+.podium-table,.career-table,.season-table,.draft-table{background:#1b2633;color:#f5f7fb}
+.podium-table th,.career-table th,.season-table th,.draft-table th{background:#29394a;color:#f5cc66;border-color:#405367}
+.podium-table td,.career-table td,.season-table td,.draft-table td{border-color:#405367;color:#f5f7fb}
+.podium-table tr:nth-child(even),.career-table tr:nth-child(even),.season-table tr:nth-child(even),.draft-table tr:nth-child(even){background:#223143}
+.award-scope button,.scope-btn,.draft-year-toggle button,.draft-pos-btn,.filter-select,.search-input,.player-top-select{background:#263648;color:#f5f7fb;border-color:#53697d}
+.award-scope button.active,.scope-btn.active,.draft-year-toggle button.active,.draft-pos-btn.active{background:#bc364b;border-color:#f27687;color:#fff}
+.player-top-select.pos-QB,.player-top-select.pos-RB,.player-top-select.pos-WR,.player-top-select.pos-TE,.player-top-select.pos-FLEX,.player-top-select.pos-K,.player-top-select.pos-DEF{color:#10151f}
+.pos-badge{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;min-width:31px;padding:3px 7px;border-radius:7px;background:#8bd3d7;color:#10151f;font-size:10px;font-weight:900;line-height:1.2;letter-spacing:.02em;white-space:nowrap}
+.pos-QB{background:#ff6f91}.pos-RB{background:#3ee0b0}.pos-WR{background:#5cb8ff}.pos-TE{background:#ffb347}.pos-FLEX{background:#baa6ff}.pos-K{background:#ffdc75}.pos-DEF{background:#8bd3d7}
+.z-player small .pos-badge,.z-dialog .pos-badge{color:#10151f}
+.z-page .z-player{color:#fff}
+.z-page-heading h1{color:#fff}
+.z-weekbar button,.z-sidebar select,.z-toggle,.z-toggle button{background:#263648;color:#f5f7fb;border-color:#53697d}
+.z-weekbar button.active,.z-toggle button.active,.z-match-choice.selected{background:#bc364b;color:#fff;border-color:#f27687}
+.z-match-choice{background:#263648;color:#f5f7fb;border-color:#405367}
+.z-match-choice>small,.z-field-note,.z-depth-note{color:#b8c8d7}
+.z-news,.z-empty,.z-specialists{background:#1b2633;color:#f5f7fb;border-color:#405367}
+.z-news h3,.z-news>span{color:#f5f7fb}.z-news p,.z-news>small,.z-empty p{color:#b8c8d7}
+.z-news:hover{border-color:#f5cc66}
+.z-outline,.z-primary{background:#30465a;color:#fff;border-color:#688097}
+.z-primary{background:#bc364b;border-color:#f27687}
+.z-method,.z-method summary,.z-recap details,.z-recap details p{color:#c8d5e0}
+.z-recap details{border-color:#405367}
+.z-rank-editor select{background:#263648;color:#fff;border-color:#53697d}
+.z-dialog{background:#1b2633;color:#f5f7fb;border:1px solid #53697d}
+.z-dialog-close{background:#30465a;color:#fff}
+.z-dialog .z-eyebrow,.z-dialog-heading p,.z-detail-stats small{color:#bdcdd9}
+.z-log th{background:#29394a;color:#f5cc66}
+.z-log td,.z-log th{border-color:#405367}
+.z-injury{background:#42382c;color:#ffe6ae;border-left-color:#f5cc66}
+#zRankError{color:#ff9da8}
+.z-section-head h2,.z-ranking-list h3,.z-rank,.z-recap h3,.z-recap-heading strong{color:#fff}
+.z-ranking-list p,.z-ranking-list small,.z-recap p,.z-week-highlights span,.z-muted{color:#b8c8d7}
+.z-ranking-list>li,.z-week-highlights>div{border-color:#405367}
+.z-result,.z-detail-stats>div{background:#263648;color:#f5f7fb}
+.z-coming-soon{text-align:center;padding:clamp(50px,10vw,110px) 20px;border:1px solid #405367;border-radius:18px}
+.z-coming-soon span{font-size:11px;font-weight:900;letter-spacing:.18em;color:#f5cc66}
+.z-coming-soon h2{font-size:clamp(32px,5vw,56px);margin:12px 0;color:#fff}
+.z-coming-soon p{color:#b8c8d7}
+.site-footer{background:#090c12;color:#bdcbd8;border-top:1px solid #405367}
+.site-footer strong{color:#fff}
+.modal-body{background:#172330;color:#f5f7fb}
+.modal-hero{background:linear-gradient(130deg,#812a40,#26394a)}
+.h2h-light-section{background:#151e2a;color:#f5f7fb}
+.shame-card-wrap,.ready-card,.notice,.season-phase,.injury-card,.predraft-card,.gallery-card,.gallery-empty,.adp-context-card,.season-table-shell,.bracket-match,.bracket-team,.points-row,.season-team-stat,.metric-chip{background:#1b2633;color:#f5f7fb;border-color:#405367}
+.predraft-player,.team-card .trophy-unit,.rivalry-icon-card.placeholder{background:#263648;color:#e3edf7;border-color:#53697d}
+.gallery-caption-input,.gallery input{background:#263648;color:#fff;border-color:#53697d}
+.gallery-empty p,.adp-context-card p,.injury-card p,.season-phase p,.notice p{color:#bdcdd9}
+.bracket-team.advances{background:#30465a;color:#fff}
+.season-table-shell th,.season-table-shell td{border-color:#405367}
+.season-team-stat strong,.bracket-team strong,.gallery-card strong{color:#fff}
+.belt-tag{background:#554523;color:#ffe49d}
+@media(max-width:1180px){
+ .nav-dropdown{display:block}
+ .main-nav.open .nav-submenu{display:grid;position:static;min-width:0;margin:0 0 8px 16px;padding:3px 0 3px 10px;border:0;border-left:2px solid #53697d;border-radius:0;box-shadow:none;background:transparent}
+ .main-nav.open .nav-submenu .nav-link{padding:9px 12px}
+}
+@media(max-width:520px){
+ .record-grid{grid-template-columns:1fr}
+ .z-coming-soon{padding:60px 16px}
+}
