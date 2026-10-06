@@ -59,13 +59,13 @@ window.ZYNFL_DATA={
   "wallOfShame": [
     {
       "year": 2024,
-      "owner": "Calvin",
-      "team": "ChatGPT"
+      "owner": "Isaac",
+      "team": "Olave Garden"
     },
     {
       "year": 2025,
-      "owner": "Isaac",
-      "team": "Olave Garden"
+      "owner": "Tina",
+      "team": "Big Nix Energy"
     }
   ],
   "owners": {
@@ -132,7 +132,7 @@ window.ZYNFL_DATA={
       "titles": 0,
       "silver": 0,
       "bronze": 0,
-      "brown": 0,
+      "brown": 1,
       "avgLineupEff": 0.8955364798320712,
       "missed": 383.26,
       "transactions": 44,
@@ -1952,7 +1952,7 @@ window.ZYNFL_DATA={
       "titles": 0,
       "silver": 0,
       "bronze": 0,
-      "brown": 1,
+      "brown": 0,
       "avgLineupEff": 0.8918891660560011,
       "missed": 173.6,
       "transactions": 27,
