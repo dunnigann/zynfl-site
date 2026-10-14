@@ -1,0 +1,17 @@
+ZYNFL WEEK 5 UPDATE
+
+1. Extract this ZIP.
+2. Open https://github.com/dunnigann/zynfl-site on the main branch.
+3. Choose Add file > Upload files.
+4. Drag the extracted zynfl-production folder, WEEK5_UPDATE.md, and this text file into the upload area.
+5. Commit all files together to main. This replaces the changed files and adds the new weekly snapshot, sync script, historical ledger, and validator.
+
+Do not upload the ZIP itself or put the files inside an extra enclosing folder.
+The index must land at zynfl-production/public/index.html.
+
+After the hosting deployment completes, refresh zynfl.com with Ctrl+Shift+R.
+Week 5 should be selected. Jack is 5-0, Liam is 4-1, and Tina beat Quinn 108.50-105.26.
+
+Includes only changed/new files. Existing photos, styling, 2024-25 data, and Weeks 1-4 are already in the repository and remain available.
+
+GitHub publication was blocked by the connection's 403 permissions error. This package contains the finished, validated changes; the live website has not yet been updated.
