@@ -44,7 +44,7 @@
   }
   // Player histories include actual weekly starts, bench and IR; draft day is a separate fact.
   const byIdentity=new Map();
-  for(const p of d.players){p.history=p.history.filter(h=>h.year<2026);const nfl=p.position==='DEF'?Object.entries(z.nflTeams).find(([,t])=>norm(t.name).endsWith(norm(p.name)))?.[0]:null;byIdentity.set(p.position==='DEF'?'def:'+team(nfl||p.name):nameKey(p.name),p);}
+  for(const p of d.players){if(!['QB','RB','WR','TE','K','DEF'].includes(p.position)){const ref=z.players.find(x=>nameKey(x.name)===nameKey(p.name));if(ref)p.position=ref.position;}p.history=p.history.filter(h=>h.year<2026);const nfl=p.position==='DEF'?Object.entries(z.nflTeams).find(([,t])=>norm(t.name).endsWith(norm(p.name)))?.[0]:null;byIdentity.set(p.position==='DEF'?'def:'+team(nfl||p.name):nameKey(p.name),p);}
   for(const [w,week] of Object.entries(z.weeks))for(const p of rows(w)){
     if(!p.owner)continue;const key=identity(p);let archive=byIdentity.get(key);
     if(!archive){archive={key:'2026:'+key,name:p.name,position:p.position,playerId:null,history:[],drafts:[],avgDraft:null};d.players.push(archive);byIdentity.set(key,archive);}

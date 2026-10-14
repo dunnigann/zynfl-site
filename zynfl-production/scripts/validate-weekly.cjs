@@ -1,6 +1,6 @@
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'../public'),ctx=vm.createContext({window:{},console});
-const files=['zynfl-data','season-2026-data','week-5-2026','season-sync','season-2026-leaders'];
+const files=['zynfl-data','season-2026-data','week-5-2026','snapshot-corrections','season-sync','archive-audit','season-2026-leaders','transactions-2026-data','transaction-sync'];
 for(const file of files)vm.runInContext(fs.readFileSync(path.join(root,'assets/js',file+'.js'),'utf8'),ctx);
 const z=ctx.window.ZYNFL_2026,d=ctx.window.ZYNFL_DATA,owners=Object.keys(z.teams),round=n=>Math.round(n*100)/100;
 const expected={Jack:[147.78,114.64,5,0],Nick:[125.96,107.05,0,5],Chuck:[102.14,100.46,3,2],Leo:[128.24,106.41,2,3],Akhil:[107.12,98.96,3,2],Liam:[149.84,107.71,4,1],Mitchell:[119.88,117.9,3,2],Brock:[85.5,101.16,1,4],Isaac:[129.92,114.08,2,3],Santi:[139.44,118.66,3,2],Tina:[108.5,106.39,3,2],Quinn:[105.26,109.45,1,4]};
@@ -15,7 +15,14 @@ for(const [o,[score,projection,w,l]] of Object.entries(expected)){const roster=z
 assert.equal(d.matchups.filter(g=>g.year===2026).length,30);assert.equal(new Set(d.matchups.map(g=>[g.year,g.week,...[g.aOwner,g.bOwner].sort()].join('|'))).size,d.matchups.length);assert.equal(d.meta.games,226);assert.equal(d.meta.regularGames,198);
 assert.equal(d.rivalries.find(r=>r.id==='durby').beltHolder,'Tina');assert.equal(d.rivalries.find(r=>r.id==='lion-raven').beltHolder,'Leo');
 const gibbs=d.players.find(p=>p.name==='Jahmyr Gibbs');assert.equal(gibbs.starts,35);assert.equal(gibbs.history.find(h=>h.year===2026).starts,5);assert.equal(gibbs.starterPoints,709.5);
-const before=JSON.stringify({owners:d.owners,players:d.players,matchups:d.matchups,awards:d.awards});vm.runInContext(fs.readFileSync(path.join(root,'assets/js/season-sync.js'),'utf8'),ctx);assert.equal(JSON.stringify({owners:d.owners,players:d.players,matchups:d.matchups,awards:d.awards}),before,'sync must not double count on rerun');
+const before=JSON.stringify({owners:d.owners,players:d.players,matchups:d.matchups,awards:d.awards});for(const file of ['season-sync','archive-audit','season-2026-leaders','transaction-sync'])vm.runInContext(fs.readFileSync(path.join(root,'assets/js',file+'.js'),'utf8'),ctx);assert.equal(JSON.stringify({owners:d.owners,players:d.players,matchups:d.matchups,awards:d.awards}),before,'sync must not double count on rerun');
 for(const pos of ['QB','RB','WR','TE','FLEX','K','DEF']){const leaders=ctx.window.ZYNFL_2026_LEADERS[pos];assert.equal(leaders.length,10);assert(leaders.every((p,i)=>!i||p.points<=leaders[i-1].points));}
 const ledger=JSON.parse(fs.readFileSync(path.join(root,'data/season-2026-history.json')));assert.equal(ledger.games.length,30);assert(ledger.complete);
+const expectedFinishes={2024:['Chuck','Daniel','Quinn','Rick','Jack','Tina','Nick','Brock','Santi','Liam','Isaac','Calvin'],2025:['Leo','Quinn','Liam','Rick','Jack','Brock','Chuck','Nick','Santi','Daniel','Tina','Isaac']};
+for(const [year,order] of Object.entries(expectedFinishes))for(let i=0;i<order.length;i++)assert.equal(d.finalPlacements[year][order[i]],i+1,year+' '+order[i]);
+assert.equal(ctx.window.ZYNFL_ARCHIVE_AUDIT.gamesChecked,226);assert.equal(d.owners.Tina.brown,0);assert.equal(d.owners.Isaac.brown,1);assert.equal(d.owners.Calvin.brown,1);
+assert.equal(d.meta.transactions,719);assert.equal(d.meta.fabAwards,99);assert.equal(d.owners.Jack.seasons.at(-1).faabSpent,55);assert.equal(ctx.window.ZYNFL_TRANSACTIONS_2026.transactions.length,112);assert.equal(ctx.window.ZYNFL_TRANSACTIONS_2026.contestedAwards.length,22);
+assert.equal(JSON.stringify(z.weeks[5].jackRankings),JSON.stringify(['Jack','Liam','Chuck','Mitchell','Santi','Akhil','Isaac','Quinn','Tina','Leo','Nick','Brock']));
+assert.equal(ctx.window.ZYNFL_LATEST_ROSTER.find(p=>p.name==='Matt Gay').owner,'Quinn');assert(!ctx.window.ZYNFL_LATEST_ROSTER.some(p=>p.name==='Jacoby Brissett'));
+assert(!d.players.find(p=>p.name==='Bijan Robinson').history.some(h=>h.year===2026&&h.owner==='Quinn'));
 console.log('PASS: all 60 team scores; Week 5 projections, records and legal best lineups; career starts/points; 30 archived games; rivalry belts; scoring leaders; repeat-safe aggregation.');

@@ -1,0 +1,2817 @@
+{
+  "year": 2026,
+  "asOf": "2026-10-14",
+  "throughSourceTime": "Oct 14, 9:38 am",
+  "source": "User-supplied Yahoo transaction and contested waiver reports",
+  "countingRule": "Each Yahoo add/drop transaction row counts once; contested offer reports do not add transactions or spending.",
+  "transactions": [
+    {
+      "id": "2026-tx-108",
+      "owner": "Leo",
+      "team": "Garrett’s Mix",
+      "date": "2026-09-05T02:16",
+      "sourceTime": "Sep 5, 2:16 am",
+      "added": {
+        "name": "Patrick Mahomes",
+        "nfl": "KC",
+        "position": "QB",
+        "designation": ""
+      },
+      "dropped": null,
+      "method": "waiver",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-109",
+      "owner": "Isaac",
+      "team": "Chiang Kai-Shough",
+      "date": "2026-09-05T02:16",
+      "sourceTime": "Sep 5, 2:16 am",
+      "added": {
+        "name": "James Conner",
+        "nfl": "ARI",
+        "position": "RB",
+        "designation": "IR-R"
+      },
+      "dropped": null,
+      "method": "waiver",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-110",
+      "owner": "Liam",
+      "team": "That's What Cheesehead",
+      "date": "2026-09-05T02:16",
+      "sourceTime": "Sep 5, 2:16 am",
+      "added": {
+        "name": "Kaleb Johnson",
+        "nfl": "GB",
+        "position": "RB",
+        "designation": ""
+      },
+      "dropped": null,
+      "method": "waiver",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-111",
+      "owner": "Mitchell",
+      "team": "Brownian Motion",
+      "date": "2026-09-05T02:16",
+      "sourceTime": "Sep 5, 2:16 am",
+      "added": {
+        "name": "Chris Bell",
+        "nfl": "MIA",
+        "position": "WR",
+        "designation": ""
+      },
+      "dropped": null,
+      "method": "waiver",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-112",
+      "owner": "Quinn",
+      "team": "Pax Amon-Ra",
+      "date": "2026-09-05T02:16",
+      "sourceTime": "Sep 5, 2:16 am",
+      "added": {
+        "name": "Tank Dell",
+        "nfl": "HOU",
+        "position": "WR",
+        "designation": "IR-R"
+      },
+      "dropped": null,
+      "method": "waiver",
+      "faab": 2,
+      "losingBids": [
+        {
+          "owner": "Isaac",
+          "amount": 0,
+          "reason": "Lower Offer"
+        },
+        {
+          "owner": "Tina",
+          "amount": 0,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "id": "2026-tx-107",
+      "owner": "Isaac",
+      "team": "Chiang Kai-Shough",
+      "date": "2026-09-06T21:29",
+      "sourceTime": "Sep 6, 9:29 pm",
+      "added": {
+        "name": "Titans",
+        "nfl": "TEN",
+        "position": "DEF",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Patriots",
+        "nfl": "NE",
+        "position": "DEF",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-106",
+      "owner": "Tina",
+      "team": "Big Nix Energy",
+      "date": "2026-09-08T00:49",
+      "sourceTime": "Sep 8, 12:49 am",
+      "added": {
+        "name": "Samaje Perine",
+        "nfl": "CIN",
+        "position": "RB",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Eli Heidenreich",
+        "nfl": "PIT",
+        "position": "RB",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-105",
+      "owner": "Tina",
+      "team": "Big Nix Energy",
+      "date": "2026-09-08T01:09",
+      "sourceTime": "Sep 8, 1:09 am",
+      "added": {
+        "name": "Cyrus Allen",
+        "nfl": "KC",
+        "position": "WR",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Cooper Kupp",
+        "nfl": "SEA",
+        "position": "WR",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-104",
+      "owner": "Tina",
+      "team": "Big Nix Energy",
+      "date": "2026-09-08T01:24",
+      "sourceTime": "Sep 8, 1:24 am",
+      "added": {
+        "name": "Devaughn Vele",
+        "nfl": "NO",
+        "position": "WR",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Cyrus Allen",
+        "nfl": "KC",
+        "position": "WR",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-103",
+      "owner": "Tina",
+      "team": "Big Nix Energy",
+      "date": "2026-09-09T15:14",
+      "sourceTime": "Sep 9, 3:14 pm",
+      "added": {
+        "name": "Hunter Henry",
+        "nfl": "NE",
+        "position": "TE",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Devaughn Vele",
+        "nfl": "NO",
+        "position": "WR",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-102",
+      "owner": "Liam",
+      "team": "That's What Cheesehead",
+      "date": "2026-09-10T12:24",
+      "sourceTime": "Sep 10, 12:24 pm",
+      "added": {
+        "name": "Dylan Sampson",
+        "nfl": "CLE",
+        "position": "RB",
+        "designation": "IR-R"
+      },
+      "dropped": null,
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-101",
+      "owner": "Nick",
+      "team": "Longhorny",
+      "date": "2026-09-13T10:02",
+      "sourceTime": "Sep 13, 10:02 am",
+      "added": {
+        "name": "Jalen Nailor",
+        "nfl": "LV",
+        "position": "WR",
+        "designation": "Q"
+      },
+      "dropped": {
+        "name": "Ray Davis",
+        "nfl": "BUF",
+        "position": "RB",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-100",
+      "owner": "Jack",
+      "team": "The Shibuya Gibbsident",
+      "date": "2026-09-15T10:07",
+      "sourceTime": "Sep 15, 10:07 am",
+      "added": null,
+      "dropped": {
+        "name": "Malik Davis",
+        "nfl": "DAL",
+        "position": "RB",
+        "designation": "IR"
+      },
+      "method": "drop",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-094",
+      "owner": "Brock",
+      "team": "Seahawks Super Bowl LX Champs",
+      "date": "2026-09-16T03:31",
+      "sourceTime": "Sep 16, 3:31 am",
+      "added": {
+        "name": "Cairo Santos",
+        "nfl": "CHI",
+        "position": "K",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Jake Bates",
+        "nfl": "DET",
+        "position": "K",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-095",
+      "owner": "Quinn",
+      "team": "Pax Amon-Ra",
+      "date": "2026-09-16T03:31",
+      "sourceTime": "Sep 16, 3:31 am",
+      "added": {
+        "name": "Chad Ryland",
+        "nfl": "ARI",
+        "position": "K",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Harrison Mevis",
+        "nfl": "LAR",
+        "position": "K",
+        "designation": "NA"
+      },
+      "method": "waiver",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-096",
+      "owner": "Mitchell",
+      "team": "Brownian Motion",
+      "date": "2026-09-16T03:31",
+      "sourceTime": "Sep 16, 3:31 am",
+      "added": {
+        "name": "Antonio Williams",
+        "nfl": "WAS",
+        "position": "WR",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Terrance Ferguson",
+        "nfl": "LAR",
+        "position": "TE",
+        "designation": "IR"
+      },
+      "method": "waiver",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-097",
+      "owner": "Jack",
+      "team": "The Shibuya Gibbsident",
+      "date": "2026-09-16T03:31",
+      "sourceTime": "Sep 16, 3:31 am",
+      "added": {
+        "name": "Tampa Bay",
+        "nfl": "TB",
+        "position": "DEF",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Los Angeles",
+        "nfl": "LAC",
+        "position": "DEF",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 3,
+      "losingBids": [
+        {
+          "owner": "Isaac",
+          "amount": 0,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "id": "2026-tx-098",
+      "owner": "Jack",
+      "team": "The Shibuya Gibbsident",
+      "date": "2026-09-16T03:31",
+      "sourceTime": "Sep 16, 3:31 am",
+      "added": {
+        "name": "Emmett Johnson",
+        "nfl": "KC",
+        "position": "RB",
+        "designation": ""
+      },
+      "dropped": null,
+      "method": "waiver",
+      "faab": 8,
+      "losingBids": [
+        {
+          "owner": "Liam",
+          "amount": 0,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "id": "2026-tx-099",
+      "owner": "Santi",
+      "team": "Bench Warmers United",
+      "date": "2026-09-16T03:31",
+      "sourceTime": "Sep 16, 3:31 am",
+      "added": {
+        "name": "Devaughn Vele",
+        "nfl": "NO",
+        "position": "WR",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Chris Rodriguez Jr.",
+        "nfl": "JAX",
+        "position": "RB",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 17,
+      "losingBids": [
+        {
+          "owner": "Jack",
+          "amount": 3,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "id": "2026-tx-093",
+      "owner": "Isaac",
+      "team": "Chiang Kai-Shough",
+      "date": "2026-09-16T03:45",
+      "sourceTime": "Sep 16, 3:45 am",
+      "added": {
+        "name": "San Francisco",
+        "nfl": "SF",
+        "position": "DEF",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Tennessee",
+        "nfl": "TEN",
+        "position": "DEF",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-092",
+      "owner": "Quinn",
+      "team": "Pax Amon-Ra",
+      "date": "2026-09-16T08:26",
+      "sourceTime": "Sep 16, 8:26 am",
+      "added": {
+        "name": "Andy Borregales",
+        "nfl": "NE",
+        "position": "K",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Chad Ryland",
+        "nfl": "ARI",
+        "position": "K",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-091",
+      "owner": "Akhil",
+      "team": "Akhil's Avengers",
+      "date": "2026-09-16T12:45",
+      "sourceTime": "Sep 16, 12:45 pm",
+      "added": {
+        "name": "New England",
+        "nfl": "NE",
+        "position": "DEF",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Minnesota",
+        "nfl": "MIN",
+        "position": "DEF",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-090",
+      "owner": "Brock",
+      "team": "Seahawks Super Bowl LX Champs",
+      "date": "2026-09-16T15:12",
+      "sourceTime": "Sep 16, 3:12 pm",
+      "added": {
+        "name": "Adonai Mitchell",
+        "nfl": "NYJ",
+        "position": "WR",
+        "designation": "D"
+      },
+      "dropped": null,
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-089",
+      "owner": "Tina",
+      "team": "Big Nix Energy",
+      "date": "2026-09-16T18:56",
+      "sourceTime": "Sep 16, 6:56 pm",
+      "added": {
+        "name": "Kalif Raymond",
+        "nfl": "CHI",
+        "position": "WR",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Samaje Perine",
+        "nfl": "CIN",
+        "position": "RB",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-088",
+      "owner": "Quinn",
+      "team": "Pax Amon-Ra",
+      "date": "2026-09-17T09:05",
+      "sourceTime": "Sep 17, 9:05 am",
+      "added": {
+        "name": "Green Bay",
+        "nfl": "GB",
+        "position": "DEF",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Pittsburgh",
+        "nfl": "PIT",
+        "position": "DEF",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-087",
+      "owner": "Jack",
+      "team": "The Shibuya Gibbsident",
+      "date": "2026-09-17T17:58",
+      "sourceTime": "Sep 17, 5:58 pm",
+      "added": {
+        "name": "Xavier Hutchinson",
+        "nfl": "HOU",
+        "position": "WR",
+        "designation": ""
+      },
+      "dropped": null,
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-086",
+      "owner": "Quinn",
+      "team": "Pax Amon-Ra",
+      "date": "2026-09-18T20:54",
+      "sourceTime": "Sep 18, 8:54 pm",
+      "added": {
+        "name": "Chase McLaughlin",
+        "nfl": "TB",
+        "position": "K",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Andy Borregales",
+        "nfl": "NE",
+        "position": "K",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-084",
+      "owner": "Nick",
+      "team": "Longhorny",
+      "date": "2026-09-19T02:47",
+      "sourceTime": "Sep 19, 2:47 am",
+      "added": {
+        "name": "Los Angeles",
+        "nfl": "LAC",
+        "position": "DEF",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Jacksonville",
+        "nfl": "JAX",
+        "position": "DEF",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-085",
+      "owner": "Liam",
+      "team": "That's What Cheesehead",
+      "date": "2026-09-19T02:47",
+      "sourceTime": "Sep 19, 2:47 am",
+      "added": {
+        "name": "Chris Rodriguez Jr.",
+        "nfl": "JAX",
+        "position": "RB",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Kaleb Johnson",
+        "nfl": "GB",
+        "position": "RB",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-083",
+      "owner": "Nick",
+      "team": "Longhorny",
+      "date": "2026-09-20T02:25",
+      "sourceTime": "Sep 20, 2:25 am",
+      "added": {
+        "name": "Rashod Bateman",
+        "nfl": "BAL",
+        "position": "WR",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Jonah Coleman",
+        "nfl": "DEN",
+        "position": "RB",
+        "designation": "IR"
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-082",
+      "owner": "Brock",
+      "team": "Seahawks Super Bowl LX Champs",
+      "date": "2026-09-20T07:41",
+      "sourceTime": "Sep 20, 7:41 am",
+      "added": {
+        "name": "Dalton Schultz",
+        "nfl": "HOU",
+        "position": "TE",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Adonai Mitchell",
+        "nfl": "NYJ",
+        "position": "WR",
+        "designation": "D"
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-081",
+      "owner": "Tina",
+      "team": "Big Nix Energy",
+      "date": "2026-09-21T16:35",
+      "sourceTime": "Sep 21, 4:35 pm",
+      "added": {
+        "name": "Malachi Fields",
+        "nfl": "NYG",
+        "position": "WR",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Kalif Raymond",
+        "nfl": "CHI",
+        "position": "WR",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-080",
+      "owner": "Brock",
+      "team": "Seahawks Super Bowl LX Champs",
+      "date": "2026-09-22T22:48",
+      "sourceTime": "Sep 22, 10:48 pm",
+      "added": null,
+      "dropped": {
+        "name": "De'Zhaun Stribling",
+        "nfl": "SF",
+        "position": "WR",
+        "designation": "IR"
+      },
+      "method": "drop",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-079",
+      "owner": "Nick",
+      "team": "Longhorny",
+      "date": "2026-09-22T23:00",
+      "sourceTime": "Sep 22, 11:00 pm",
+      "added": null,
+      "dropped": {
+        "name": "Los Angeles",
+        "nfl": "LAC",
+        "position": "DEF",
+        "designation": ""
+      },
+      "method": "drop",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-069",
+      "owner": "Brock",
+      "team": "Seahawks Super Bowl LX Champs",
+      "date": "2026-09-23T03:38",
+      "sourceTime": "Sep 23, 3:38 am",
+      "added": {
+        "name": "Harrison Butker",
+        "nfl": "KC",
+        "position": "K",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Cairo Santos",
+        "nfl": "CHI",
+        "position": "K",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-070",
+      "owner": "Akhil",
+      "team": "Akhil's Avengers",
+      "date": "2026-09-23T03:38",
+      "sourceTime": "Sep 23, 3:38 am",
+      "added": {
+        "name": "Pat Freiermuth",
+        "nfl": "PIT",
+        "position": "TE",
+        "designation": ""
+      },
+      "dropped": null,
+      "method": "waiver",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-071",
+      "owner": "Jack",
+      "team": "The Shibuya Gibbsident",
+      "date": "2026-09-23T03:38",
+      "sourceTime": "Sep 23, 3:38 am",
+      "added": {
+        "name": "Emanuel Wilson",
+        "nfl": "SEA",
+        "position": "RB",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Jordan Addison",
+        "nfl": "MIN",
+        "position": "WR",
+        "designation": "Q"
+      },
+      "method": "waiver",
+      "faab": 2
+    },
+    {
+      "id": "2026-tx-072",
+      "owner": "Nick",
+      "team": "Longhorny",
+      "date": "2026-09-23T03:38",
+      "sourceTime": "Sep 23, 3:38 am",
+      "added": {
+        "name": "Bryce Young",
+        "nfl": "CAR",
+        "position": "QB",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Jalen Nailor",
+        "nfl": "LV",
+        "position": "WR",
+        "designation": "Q"
+      },
+      "method": "waiver",
+      "faab": 2
+    },
+    {
+      "id": "2026-tx-073",
+      "owner": "Nick",
+      "team": "Longhorny",
+      "date": "2026-09-23T03:38",
+      "sourceTime": "Sep 23, 3:38 am",
+      "added": {
+        "name": "Kansas City",
+        "nfl": "KC",
+        "position": "DEF",
+        "designation": ""
+      },
+      "dropped": null,
+      "method": "waiver",
+      "faab": 3,
+      "losingBids": [
+        {
+          "owner": "Isaac",
+          "amount": 2,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "id": "2026-tx-074",
+      "owner": "Tina",
+      "team": "Big Nix Energy",
+      "date": "2026-09-23T03:38",
+      "sourceTime": "Sep 23, 3:38 am",
+      "added": {
+        "name": "Tyler Shough",
+        "nfl": "NO",
+        "position": "QB",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Hunter Henry",
+        "nfl": "NE",
+        "position": "TE",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 4,
+      "losingBids": [
+        {
+          "owner": "Nick",
+          "amount": 0,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "id": "2026-tx-075",
+      "owner": "Jack",
+      "team": "The Shibuya Gibbsident",
+      "date": "2026-09-23T03:38",
+      "sourceTime": "Sep 23, 3:38 am",
+      "added": {
+        "name": "Minnesota",
+        "nfl": "MIN",
+        "position": "DEF",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Tampa Bay",
+        "nfl": "TB",
+        "position": "DEF",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 5
+    },
+    {
+      "id": "2026-tx-076",
+      "owner": "Leo",
+      "team": "Garrett’s Mix",
+      "date": "2026-09-23T03:38",
+      "sourceTime": "Sep 23, 3:38 am",
+      "added": {
+        "name": "Jared Goff",
+        "nfl": "DET",
+        "position": "QB",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Justin Herbert",
+        "nfl": "LAC",
+        "position": "QB",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 8,
+      "losingBids": [
+        {
+          "owner": "Nick",
+          "amount": 7,
+          "reason": "Lower Offer"
+        },
+        {
+          "owner": "Brock",
+          "amount": 0,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "id": "2026-tx-077",
+      "owner": "Jack",
+      "team": "The Shibuya Gibbsident",
+      "date": "2026-09-23T03:38",
+      "sourceTime": "Sep 23, 3:38 am",
+      "added": {
+        "name": "Adonai Mitchell",
+        "nfl": "NYJ",
+        "position": "WR",
+        "designation": "D"
+      },
+      "dropped": {
+        "name": "Xavier Hutchinson",
+        "nfl": "HOU",
+        "position": "WR",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 15,
+      "losingBids": [
+        {
+          "owner": "Brock",
+          "amount": 7,
+          "reason": "Lower Offer"
+        },
+        {
+          "owner": "Leo",
+          "amount": 1,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "id": "2026-tx-078",
+      "owner": "Liam",
+      "team": "That's What Cheesehead",
+      "date": "2026-09-23T03:38",
+      "sourceTime": "Sep 23, 3:38 am",
+      "added": {
+        "name": "Jonah Coleman",
+        "nfl": "DEN",
+        "position": "RB",
+        "designation": "IR"
+      },
+      "dropped": {
+        "name": "Chris Rodriguez Jr.",
+        "nfl": "JAX",
+        "position": "RB",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 16,
+      "losingBids": [
+        {
+          "owner": "Mitchell",
+          "amount": 15,
+          "reason": "Lower Offer"
+        },
+        {
+          "owner": "Jack",
+          "amount": 12,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "id": "2026-tx-068",
+      "owner": "Quinn",
+      "team": "Pax Amon-Ra",
+      "date": "2026-09-23T08:47",
+      "sourceTime": "Sep 23, 8:47 am",
+      "added": {
+        "name": "Carolina",
+        "nfl": "CAR",
+        "position": "DEF",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Green Bay",
+        "nfl": "GB",
+        "position": "DEF",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-067",
+      "owner": "Nick",
+      "team": "Longhorny",
+      "date": "2026-09-23T10:22",
+      "sourceTime": "Sep 23, 10:22 am",
+      "added": {
+        "name": "Malik Washington",
+        "nfl": "MIA",
+        "position": "WR",
+        "designation": ""
+      },
+      "dropped": null,
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-066",
+      "owner": "Nick",
+      "team": "Longhorny",
+      "date": "2026-09-23T10:45",
+      "sourceTime": "Sep 23, 10:45 am",
+      "added": {
+        "name": "Kyler Murray",
+        "nfl": "MIN",
+        "position": "QB",
+        "designation": ""
+      },
+      "dropped": null,
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-065",
+      "owner": "Nick",
+      "team": "Longhorny",
+      "date": "2026-09-23T10:48",
+      "sourceTime": "Sep 23, 10:48 am",
+      "added": {
+        "name": "Joshua Palmer",
+        "nfl": "BUF",
+        "position": "WR",
+        "designation": "Q"
+      },
+      "dropped": {
+        "name": "Jayden Reed",
+        "nfl": "GB",
+        "position": "WR",
+        "designation": "IR"
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-064",
+      "owner": "Tina",
+      "team": "Big Nix Energy",
+      "date": "2026-09-23T22:00",
+      "sourceTime": "Sep 23, 10:00 pm",
+      "added": {
+        "name": "Keon Coleman",
+        "nfl": "BUF",
+        "position": "WR",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Jaxson Dart",
+        "nfl": "NYG",
+        "position": "QB",
+        "designation": "IR"
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-063",
+      "owner": "Brock",
+      "team": "Seahawks Super Bowl LX Champs",
+      "date": "2026-09-24T10:24",
+      "sourceTime": "Sep 24, 10:24 am",
+      "added": {
+        "name": "Ja'Kobi Lane",
+        "nfl": "BAL",
+        "position": "WR",
+        "designation": "IR"
+      },
+      "dropped": null,
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-062",
+      "owner": "Leo",
+      "team": "Garrett’s Mix",
+      "date": "2026-09-24T11:03",
+      "sourceTime": "Sep 24, 11:03 am",
+      "added": {
+        "name": "T.J. Hockenson",
+        "nfl": "MIN",
+        "position": "TE",
+        "designation": "Q"
+      },
+      "dropped": {
+        "name": "Mike Washington Jr.",
+        "nfl": "LV",
+        "position": "RB",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-061",
+      "owner": "Leo",
+      "team": "Garrett’s Mix",
+      "date": "2026-09-25T02:29",
+      "sourceTime": "Sep 25, 2:29 am",
+      "added": {
+        "name": "De'Zhaun Stribling",
+        "nfl": "SF",
+        "position": "WR",
+        "designation": "IR"
+      },
+      "dropped": {
+        "name": "Isiah Pacheco",
+        "nfl": "DET",
+        "position": "RB",
+        "designation": "IR"
+      },
+      "method": "waiver",
+      "faab": 0,
+      "losingBids": [
+        {
+          "owner": "Brock",
+          "amount": 0,
+          "reason": "Lower waiver priority"
+        }
+      ]
+    },
+    {
+      "id": "2026-tx-058",
+      "owner": "Leo",
+      "team": "Garrett’s Mix",
+      "date": "2026-09-26T02:48",
+      "sourceTime": "Sep 26, 2:48 am",
+      "added": {
+        "name": "Hunter Henry",
+        "nfl": "NE",
+        "position": "TE",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "T.J. Hockenson",
+        "nfl": "MIN",
+        "position": "TE",
+        "designation": "Q"
+      },
+      "method": "waiver",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-059",
+      "owner": "Brock",
+      "team": "Seahawks Super Bowl LX Champs",
+      "date": "2026-09-26T02:48",
+      "sourceTime": "Sep 26, 2:48 am",
+      "added": {
+        "name": "Jordan Addison",
+        "nfl": "MIN",
+        "position": "WR",
+        "designation": "Q"
+      },
+      "dropped": {
+        "name": "Rashid Shaheed",
+        "nfl": "SEA",
+        "position": "WR",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-060",
+      "owner": "Quinn",
+      "team": "Pax Amon-Ra",
+      "date": "2026-09-26T02:48",
+      "sourceTime": "Sep 26, 2:48 am",
+      "added": {
+        "name": "Justin Herbert",
+        "nfl": "LAC",
+        "position": "QB",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Kayshon Boutte",
+        "nfl": "HOU",
+        "position": "WR",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 12,
+      "losingBids": [
+        {
+          "owner": "Brock",
+          "amount": 1,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "id": "2026-tx-057",
+      "owner": "Tina",
+      "team": "Big Nix Energy",
+      "date": "2026-09-26T10:28",
+      "sourceTime": "Sep 26, 10:28 am",
+      "added": {
+        "name": "Terrance Ferguson",
+        "nfl": "LAR",
+        "position": "TE",
+        "designation": "IR"
+      },
+      "dropped": {
+        "name": "Malachi Fields",
+        "nfl": "NYG",
+        "position": "WR",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-056",
+      "owner": "Liam",
+      "team": "That's What Cheesehead",
+      "date": "2026-09-27T10:08",
+      "sourceTime": "Sep 27, 10:08 am",
+      "added": {
+        "name": "Mike Washington Jr.",
+        "nfl": "LV",
+        "position": "RB",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Dylan Sampson",
+        "nfl": "CLE",
+        "position": "RB",
+        "designation": "IR-R"
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-055",
+      "owner": "Brock",
+      "team": "Seahawks Super Bowl LX Champs",
+      "date": "2026-09-27T10:29",
+      "sourceTime": "Sep 27, 10:29 am",
+      "added": {
+        "name": "Ted Hurst III",
+        "nfl": "TB",
+        "position": "WR",
+        "designation": ""
+      },
+      "dropped": null,
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-049",
+      "owner": "Brock",
+      "team": "Seahawks Super Bowl LX Champs",
+      "date": "2026-09-30T03:32",
+      "sourceTime": "Sep 30, 3:32 am",
+      "added": {
+        "name": "Sam Darnold",
+        "nfl": "SEA",
+        "position": "QB",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Malik Willis",
+        "nfl": "MIA",
+        "position": "QB",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-050",
+      "owner": "Mitchell",
+      "team": "Brownian Motion",
+      "date": "2026-09-30T03:32",
+      "sourceTime": "Sep 30, 3:32 am",
+      "added": {
+        "name": "Buffalo",
+        "nfl": "BUF",
+        "position": "DEF",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Detroit",
+        "nfl": "DET",
+        "position": "DEF",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-051",
+      "owner": "Isaac",
+      "team": "Chiang Kai-Shough",
+      "date": "2026-09-30T03:32",
+      "sourceTime": "Sep 30, 3:32 am",
+      "added": {
+        "name": "Pittsburgh",
+        "nfl": "PIT",
+        "position": "DEF",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "San Francisco",
+        "nfl": "SF",
+        "position": "DEF",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 3,
+      "losingBids": [
+        {
+          "owner": "Quinn",
+          "amount": 1,
+          "reason": "Lower Offer"
+        },
+        {
+          "owner": "Mitchell",
+          "amount": 0,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "id": "2026-tx-052",
+      "owner": "Jack",
+      "team": "The Shibuya Gibbsident",
+      "date": "2026-09-30T03:32",
+      "sourceTime": "Sep 30, 3:32 am",
+      "added": {
+        "name": "Kalif Raymond",
+        "nfl": "CHI",
+        "position": "WR",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Brian Thomas Jr.",
+        "nfl": "JAX",
+        "position": "WR",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 9
+    },
+    {
+      "id": "2026-tx-053",
+      "owner": "Santi",
+      "team": "Bench Warmers United",
+      "date": "2026-09-30T03:32",
+      "sourceTime": "Sep 30, 3:32 am",
+      "added": {
+        "name": "Kenyon Sadiq",
+        "nfl": "NYJ",
+        "position": "TE",
+        "designation": "Q"
+      },
+      "dropped": {
+        "name": "Mark Andrews",
+        "nfl": "BAL",
+        "position": "TE",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 17,
+      "losingBids": [
+        {
+          "owner": "Jack",
+          "amount": 10,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "id": "2026-tx-054",
+      "owner": "Brock",
+      "team": "Seahawks Super Bowl LX Champs",
+      "date": "2026-09-30T03:32",
+      "sourceTime": "Sep 30, 3:32 am",
+      "added": {
+        "name": "Ollie Gordon II",
+        "nfl": "MIA",
+        "position": "RB",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Dalton Schultz",
+        "nfl": "HOU",
+        "position": "TE",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 30,
+      "losingBids": [
+        {
+          "owner": "Quinn",
+          "amount": 16,
+          "reason": "Lower Offer"
+        },
+        {
+          "owner": "Liam",
+          "amount": 8,
+          "reason": "Lower Offer"
+        },
+        {
+          "owner": "Jack",
+          "amount": 3,
+          "reason": "Lower Offer"
+        },
+        {
+          "owner": "Tina",
+          "amount": 0,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "id": "2026-tx-048",
+      "owner": "Quinn",
+      "team": "Pax Amon-Ra",
+      "date": "2026-09-30T07:46",
+      "sourceTime": "Sep 30, 7:46 am",
+      "added": {
+        "name": "Chicago",
+        "nfl": "CHI",
+        "position": "DEF",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Carolina",
+        "nfl": "CAR",
+        "position": "DEF",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-047",
+      "owner": "Jack",
+      "team": "The Shibuya Gibbsident",
+      "date": "2026-09-30T09:38",
+      "sourceTime": "Sep 30, 9:38 am",
+      "added": {
+        "name": "Mack Hollins",
+        "nfl": "NE",
+        "position": "WR",
+        "designation": "IR"
+      },
+      "dropped": {
+        "name": "Emanuel Wilson",
+        "nfl": "SEA",
+        "position": "RB",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-046",
+      "owner": "Quinn",
+      "team": "Pax Amon-Ra",
+      "date": "2026-09-30T21:14",
+      "sourceTime": "Sep 30, 9:14 pm",
+      "added": {
+        "name": "Jayden Reed",
+        "nfl": "GB",
+        "position": "WR",
+        "designation": "IR"
+      },
+      "dropped": null,
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-045",
+      "owner": "Santi",
+      "team": "Bench Warmers United",
+      "date": "2026-10-01T15:38",
+      "sourceTime": "Oct 1, 3:38 pm",
+      "added": {
+        "name": "Cleveland",
+        "nfl": "CLE",
+        "position": "DEF",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Tyjae Spears",
+        "nfl": "TEN",
+        "position": "RB",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-044",
+      "owner": "Brock",
+      "team": "Seahawks Super Bowl LX Champs",
+      "date": "2026-10-01T15:42",
+      "sourceTime": "Oct 1, 3:42 pm",
+      "added": null,
+      "dropped": {
+        "name": "Ted Hurst III",
+        "nfl": "TB",
+        "position": "WR",
+        "designation": ""
+      },
+      "method": "drop",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-043",
+      "owner": "Brock",
+      "team": "Seahawks Super Bowl LX Champs",
+      "date": "2026-10-01T15:43",
+      "sourceTime": "Oct 1, 3:43 pm",
+      "added": {
+        "name": "Kendre Miller",
+        "nfl": "NO",
+        "position": "RB",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Tyler Allgeier",
+        "nfl": "ARI",
+        "position": "RB",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-042",
+      "owner": "Jack",
+      "team": "The Shibuya Gibbsident",
+      "date": "2026-10-02T09:58",
+      "sourceTime": "Oct 2, 9:58 am",
+      "added": {
+        "name": "Jaylen Wright",
+        "nfl": "MIA",
+        "position": "RB",
+        "designation": ""
+      },
+      "dropped": null,
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-041",
+      "owner": "Quinn",
+      "team": "Pax Amon-Ra",
+      "date": "2026-10-02T12:24",
+      "sourceTime": "Oct 2, 12:24 pm",
+      "added": {
+        "name": "C.J. Stroud",
+        "nfl": "HOU",
+        "position": "QB",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Justin Herbert",
+        "nfl": "LAC",
+        "position": "QB",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-040",
+      "owner": "Nick",
+      "team": "Longhorny",
+      "date": "2026-10-02T12:31",
+      "sourceTime": "Oct 2, 12:31 pm",
+      "added": {
+        "name": "Jordan Love",
+        "nfl": "GB",
+        "position": "QB",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Joshua Palmer",
+        "nfl": "BUF",
+        "position": "WR",
+        "designation": "Q"
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-039",
+      "owner": "Brock",
+      "team": "Seahawks Super Bowl LX Champs",
+      "date": "2026-10-02T16:10",
+      "sourceTime": "Oct 2, 4:10 pm",
+      "added": {
+        "name": "Isaiah Davis",
+        "nfl": "NYJ",
+        "position": "RB",
+        "designation": ""
+      },
+      "dropped": null,
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-038",
+      "owner": "Jack",
+      "team": "The Shibuya Gibbsident",
+      "date": "2026-10-03T02:44",
+      "sourceTime": "Oct 3, 2:44 am",
+      "added": {
+        "name": "Emanuel Wilson",
+        "nfl": "SEA",
+        "position": "RB",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Tre Tucker",
+        "nfl": "LV",
+        "position": "WR",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 5,
+      "losingBids": [
+        {
+          "owner": "Brock",
+          "amount": 0,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "id": "2026-tx-037",
+      "owner": "Quinn",
+      "team": "Pax Amon-Ra",
+      "date": "2026-10-03T18:47",
+      "sourceTime": "Oct 3, 6:47 pm",
+      "added": {
+        "name": "Tyler Bass",
+        "nfl": "BUF",
+        "position": "K",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Chase McLaughlin",
+        "nfl": "TB",
+        "position": "K",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-036",
+      "owner": "Nick",
+      "team": "Longhorny",
+      "date": "2026-10-04T10:52",
+      "sourceTime": "Oct 4, 10:52 am",
+      "added": {
+        "name": "Green Bay",
+        "nfl": "GB",
+        "position": "DEF",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Kansas City",
+        "nfl": "KC",
+        "position": "DEF",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-035",
+      "owner": "Nick",
+      "team": "Longhorny",
+      "date": "2026-10-04T10:56",
+      "sourceTime": "Oct 4, 10:56 am",
+      "added": {
+        "name": "George Holani",
+        "nfl": "SEA",
+        "position": "RB",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Alec Pierce",
+        "nfl": "IND",
+        "position": "WR",
+        "designation": "IR"
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-027",
+      "owner": "Leo",
+      "team": "Garrett’s Mix",
+      "date": "2026-10-07T03:30",
+      "sourceTime": "Oct 7, 3:30 am",
+      "added": {
+        "name": "Brian Thomas Jr.",
+        "nfl": "JAX",
+        "position": "WR",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "De'Von Achane",
+        "nfl": "MIA",
+        "position": "RB",
+        "designation": "IR"
+      },
+      "method": "waiver",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-028",
+      "owner": "Brock",
+      "team": "Seahawks Super Bowl LX Champs",
+      "date": "2026-10-07T03:30",
+      "sourceTime": "Oct 7, 3:30 am",
+      "added": {
+        "name": "Jake Bates",
+        "nfl": "DET",
+        "position": "K",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Harrison Butker",
+        "nfl": "KC",
+        "position": "K",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-029",
+      "owner": "Brock",
+      "team": "Seahawks Super Bowl LX Champs",
+      "date": "2026-10-07T03:30",
+      "sourceTime": "Oct 7, 3:30 am",
+      "added": {
+        "name": "Dohnte Meyers",
+        "nfl": "CIN",
+        "position": "WR",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Isaiah Davis",
+        "nfl": "NYJ",
+        "position": "RB",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 1
+    },
+    {
+      "id": "2026-tx-030",
+      "owner": "Mitchell",
+      "team": "Brownian Motion",
+      "date": "2026-10-07T03:30",
+      "sourceTime": "Oct 7, 3:30 am",
+      "added": {
+        "name": "Cincinnati",
+        "nfl": "CIN",
+        "position": "DEF",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Buffalo",
+        "nfl": "BUF",
+        "position": "DEF",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 1,
+      "losingBids": [
+        {
+          "owner": "Isaac",
+          "amount": 1,
+          "reason": "Lower waiver priority"
+        }
+      ]
+    },
+    {
+      "id": "2026-tx-031",
+      "owner": "Quinn",
+      "team": "Pax Amon-Ra",
+      "date": "2026-10-07T03:30",
+      "sourceTime": "Oct 7, 3:30 am",
+      "added": {
+        "name": "Alec Pierce",
+        "nfl": "IND",
+        "position": "WR",
+        "designation": "IR"
+      },
+      "dropped": {
+        "name": "Jayden Reed",
+        "nfl": "GB",
+        "position": "WR",
+        "designation": "IR"
+      },
+      "method": "waiver",
+      "faab": 2
+    },
+    {
+      "id": "2026-tx-032",
+      "owner": "Jack",
+      "team": "The Shibuya Gibbsident",
+      "date": "2026-10-07T03:30",
+      "sourceTime": "Oct 7, 3:30 am",
+      "added": {
+        "name": "T.J. Hockenson",
+        "nfl": "MIN",
+        "position": "TE",
+        "designation": "Q"
+      },
+      "dropped": {
+        "name": "Kalif Raymond",
+        "nfl": "CHI",
+        "position": "WR",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 3
+    },
+    {
+      "id": "2026-tx-033",
+      "owner": "Tina",
+      "team": "Big Nix Energy",
+      "date": "2026-10-07T03:30",
+      "sourceTime": "Oct 7, 3:30 am",
+      "added": {
+        "name": "Tyreek Hill",
+        "nfl": "MIA",
+        "position": "WR",
+        "designation": "NA"
+      },
+      "dropped": {
+        "name": "Matthew Stafford",
+        "nfl": "LAR",
+        "position": "QB",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 5,
+      "losingBids": [
+        {
+          "owner": "Jack",
+          "amount": 4,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "id": "2026-tx-034",
+      "owner": "Quinn",
+      "team": "Pax Amon-Ra",
+      "date": "2026-10-07T03:30",
+      "sourceTime": "Oct 7, 3:30 am",
+      "added": {
+        "name": "Will Shipley",
+        "nfl": "PHI",
+        "position": "RB",
+        "designation": "D"
+      },
+      "dropped": {
+        "name": "Tank Bigsby",
+        "nfl": "PHI",
+        "position": "RB",
+        "designation": "IR"
+      },
+      "method": "waiver",
+      "faab": 7
+    },
+    {
+      "id": "2026-tx-026",
+      "owner": "Jack",
+      "team": "The Shibuya Gibbsident",
+      "date": "2026-10-07T04:04",
+      "sourceTime": "Oct 7, 4:04 am",
+      "added": {
+        "name": "Tre' Harris",
+        "nfl": "LAC",
+        "position": "WR",
+        "designation": "D"
+      },
+      "dropped": {
+        "name": "Jaylen Wright",
+        "nfl": "MIA",
+        "position": "RB",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-025",
+      "owner": "Brock",
+      "team": "Seahawks Super Bowl LX Champs",
+      "date": "2026-10-07T07:27",
+      "sourceTime": "Oct 7, 7:27 am",
+      "added": {
+        "name": "Tyler Allgeier",
+        "nfl": "ARI",
+        "position": "RB",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Kendre Miller",
+        "nfl": "NO",
+        "position": "RB",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-023",
+      "owner": "Quinn",
+      "team": "Pax Amon-Ra",
+      "date": "2026-10-07T07:48",
+      "sourceTime": "Oct 7, 7:48 am",
+      "added": {
+        "name": "Nick Folk",
+        "nfl": "ATL",
+        "position": "K",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Tyler Bass",
+        "nfl": "BUF",
+        "position": "K",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-024",
+      "owner": "Quinn",
+      "team": "Pax Amon-Ra",
+      "date": "2026-10-07T07:48",
+      "sourceTime": "Oct 7, 7:48 am",
+      "added": {
+        "name": "Jaguars",
+        "nfl": "JAX",
+        "position": "DEF",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Bears",
+        "nfl": "CHI",
+        "position": "DEF",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-021",
+      "owner": "Nick",
+      "team": "Longhorny",
+      "date": "2026-10-07T08:24",
+      "sourceTime": "Oct 7, 8:24 am",
+      "added": {
+        "name": "Jets",
+        "nfl": "NYJ",
+        "position": "DEF",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Packers",
+        "nfl": "GB",
+        "position": "DEF",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-022",
+      "owner": "Nick",
+      "team": "Longhorny",
+      "date": "2026-10-07T08:24",
+      "sourceTime": "Oct 7, 8:24 am",
+      "added": null,
+      "dropped": {
+        "name": "Kyler Murray",
+        "nfl": "MIN",
+        "position": "QB",
+        "designation": ""
+      },
+      "method": "drop",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-020",
+      "owner": "Jack",
+      "team": "The Shibuya Gibbsident",
+      "date": "2026-10-07T23:11",
+      "sourceTime": "Oct 7, 11:11 pm",
+      "added": {
+        "name": "Jacoby Brissett",
+        "nfl": "ARI",
+        "position": "QB",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "T.J. Hockenson",
+        "nfl": "MIN",
+        "position": "TE",
+        "designation": "Q"
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-019",
+      "owner": "Isaac",
+      "team": "Chiang Kai-Shough",
+      "date": "2026-10-08T00:15",
+      "sourceTime": "Oct 8, 12:15 am",
+      "added": {
+        "name": "Cowboys",
+        "nfl": "DAL",
+        "position": "DEF",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Steelers",
+        "nfl": "PIT",
+        "position": "DEF",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-018",
+      "owner": "Tina",
+      "team": "Big Nix Energy",
+      "date": "2026-10-08T21:48",
+      "sourceTime": "Oct 8, 9:48 pm",
+      "added": {
+        "name": "Roman Wilson",
+        "nfl": "PIT",
+        "position": "WR",
+        "designation": "O"
+      },
+      "dropped": null,
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-017",
+      "owner": "Isaac",
+      "team": "Chiang Kai-Shough",
+      "date": "2026-10-10T02:53",
+      "sourceTime": "Oct 10, 2:53 am",
+      "added": {
+        "name": "Matthew Stafford",
+        "nfl": "LAR",
+        "position": "QB",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Jalen Hurts",
+        "nfl": "PHI",
+        "position": "QB",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 3
+    },
+    {
+      "id": "2026-tx-016",
+      "owner": "Jack",
+      "team": "The Shibuya Gibbsident",
+      "date": "2026-10-10T20:45",
+      "sourceTime": "Oct 10, 8:45 pm",
+      "added": {
+        "name": "Tre Tucker",
+        "nfl": "LV",
+        "position": "WR",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Mack Hollins",
+        "nfl": "NE",
+        "position": "WR",
+        "designation": "IR"
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-015",
+      "owner": "Brock",
+      "team": "Seahawks Super Bowl LX Champs",
+      "date": "2026-10-11T11:04",
+      "sourceTime": "Oct 11, 11:04 am",
+      "added": {
+        "name": "Kendrick Bourne",
+        "nfl": "ARI",
+        "position": "WR",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Caleb Douglas",
+        "nfl": "MIA",
+        "position": "WR",
+        "designation": "Q"
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-014",
+      "owner": "Chuck",
+      "team": "Bower Patch Kids",
+      "date": "2026-10-11T13:44",
+      "sourceTime": "Oct 11, 1:44 pm",
+      "added": {
+        "name": "Tyler Huntley",
+        "nfl": "BAL",
+        "position": "QB",
+        "designation": ""
+      },
+      "dropped": null,
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-013",
+      "owner": "Brock",
+      "team": "Seahawks Super Bowl LX Champs",
+      "date": "2026-10-13T21:28",
+      "sourceTime": "Oct 13, 9:28 pm",
+      "added": null,
+      "dropped": {
+        "name": "Dohnte Meyers",
+        "nfl": "CIN",
+        "position": "WR",
+        "designation": ""
+      },
+      "method": "drop",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-005",
+      "owner": "Brock",
+      "team": "Seahawks Super Bowl LX Champs",
+      "date": "2026-10-14T03:33",
+      "sourceTime": "Oct 14, 3:33 am",
+      "added": {
+        "name": "Cairo Santos",
+        "nfl": "CHI",
+        "position": "K",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Jake Bates",
+        "nfl": "DET",
+        "position": "K",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-006",
+      "owner": "Isaac",
+      "team": "Chiang Kai-Shough",
+      "date": "2026-10-14T03:33",
+      "sourceTime": "Oct 14, 3:33 am",
+      "added": {
+        "name": "Tyler Bass",
+        "nfl": "BUF",
+        "position": "K",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Evan McPherson",
+        "nfl": "CIN",
+        "position": "K",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 1
+    },
+    {
+      "id": "2026-tx-007",
+      "owner": "Quinn",
+      "team": "Pax Amon-Ra",
+      "date": "2026-10-14T03:33",
+      "sourceTime": "Oct 14, 3:33 am",
+      "added": {
+        "name": "Steelers",
+        "nfl": "PIT",
+        "position": "DEF",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Jaguars",
+        "nfl": "JAX",
+        "position": "DEF",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 2,
+      "losingBids": [
+        {
+          "owner": "Leo",
+          "amount": 0,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "id": "2026-tx-008",
+      "owner": "Jack",
+      "team": "The Shibuya Gibbsident",
+      "date": "2026-10-14T03:33",
+      "sourceTime": "Oct 14, 3:33 am",
+      "added": {
+        "name": "Brenton Strange",
+        "nfl": "JAX",
+        "position": "TE",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Tre' Harris",
+        "nfl": "LAC",
+        "position": "WR",
+        "designation": "D"
+      },
+      "method": "waiver",
+      "faab": 2,
+      "losingBids": [
+        {
+          "owner": "Leo",
+          "amount": 2,
+          "reason": "Lower waiver priority"
+        }
+      ]
+    },
+    {
+      "id": "2026-tx-009",
+      "owner": "Jack",
+      "team": "The Shibuya Gibbsident",
+      "date": "2026-10-14T03:33",
+      "sourceTime": "Oct 14, 3:33 am",
+      "added": {
+        "name": "Kendre Miller",
+        "nfl": "NO",
+        "position": "RB",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Jacoby Brissett",
+        "nfl": "ARI",
+        "position": "QB",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 3
+    },
+    {
+      "id": "2026-tx-010",
+      "owner": "Isaac",
+      "team": "Chiang Kai-Shough",
+      "date": "2026-10-14T03:33",
+      "sourceTime": "Oct 14, 3:33 am",
+      "added": {
+        "name": "Chiefs",
+        "nfl": "KC",
+        "position": "DEF",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Cowboys",
+        "nfl": "DAL",
+        "position": "DEF",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 3,
+      "losingBids": [
+        {
+          "owner": "Leo",
+          "amount": 2,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "id": "2026-tx-011",
+      "owner": "Quinn",
+      "team": "Pax Amon-Ra",
+      "date": "2026-10-14T03:33",
+      "sourceTime": "Oct 14, 3:33 am",
+      "added": {
+        "name": "Dameon Pierce",
+        "nfl": "PHI",
+        "position": "RB",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Will Shipley",
+        "nfl": "PHI",
+        "position": "RB",
+        "designation": "D"
+      },
+      "method": "waiver",
+      "faab": 5,
+      "losingBids": [
+        {
+          "owner": "Jack",
+          "amount": 5,
+          "reason": "Lower waiver priority"
+        }
+      ]
+    },
+    {
+      "id": "2026-tx-012",
+      "owner": "Brock",
+      "team": "Seahawks Super Bowl LX Champs",
+      "date": "2026-10-14T03:33",
+      "sourceTime": "Oct 14, 3:33 am",
+      "added": {
+        "name": "Germie Bernard",
+        "nfl": "PIT",
+        "position": "WR",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Sam Darnold",
+        "nfl": "SEA",
+        "position": "QB",
+        "designation": ""
+      },
+      "method": "waiver",
+      "faab": 6,
+      "losingBids": [
+        {
+          "owner": "Quinn",
+          "amount": 5,
+          "reason": "Lower Offer"
+        },
+        {
+          "owner": "Jack",
+          "amount": 3,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "id": "2026-tx-004",
+      "owner": "Isaac",
+      "team": "Chiang Kai-Shough",
+      "date": "2026-10-14T04:11",
+      "sourceTime": "Oct 14, 4:11 am",
+      "added": {
+        "name": "Harrison Butker",
+        "nfl": "KC",
+        "position": "K",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Tyler Bass",
+        "nfl": "BUF",
+        "position": "K",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-003",
+      "owner": "Mitchell",
+      "team": "Brownian Motion",
+      "date": "2026-10-14T07:53",
+      "sourceTime": "Oct 14, 7:53 am",
+      "added": {
+        "name": "Colts",
+        "nfl": "IND",
+        "position": "DEF",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Bengals",
+        "nfl": "CIN",
+        "position": "DEF",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-002",
+      "owner": "Leo",
+      "team": "Garrett’s Mix",
+      "date": "2026-10-14T09:31",
+      "sourceTime": "Oct 14, 9:31 am",
+      "added": {
+        "name": "Saints",
+        "nfl": "NO",
+        "position": "DEF",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "De'Zhaun Stribling",
+        "nfl": "SF",
+        "position": "WR",
+        "designation": "IR"
+      },
+      "method": "free-agent",
+      "faab": 0
+    },
+    {
+      "id": "2026-tx-001",
+      "owner": "Quinn",
+      "team": "Pax Amon-Ra",
+      "date": "2026-10-14T09:38",
+      "sourceTime": "Oct 14, 9:38 am",
+      "added": {
+        "name": "Matt Gay",
+        "nfl": "LV",
+        "position": "K",
+        "designation": ""
+      },
+      "dropped": {
+        "name": "Nick Folk",
+        "nfl": "ATL",
+        "position": "K",
+        "designation": ""
+      },
+      "method": "free-agent",
+      "faab": 0
+    }
+  ],
+  "contestedAwards": [
+    {
+      "transactionId": "2026-tx-007",
+      "winningOffer": 2,
+      "losingBids": [
+        {
+          "owner": "Leo",
+          "amount": 0,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "transactionId": "2026-tx-008",
+      "winningOffer": 2,
+      "losingBids": [
+        {
+          "owner": "Leo",
+          "amount": 2,
+          "reason": "Lower waiver priority"
+        }
+      ]
+    },
+    {
+      "transactionId": "2026-tx-010",
+      "winningOffer": 3,
+      "losingBids": [
+        {
+          "owner": "Leo",
+          "amount": 2,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "transactionId": "2026-tx-011",
+      "winningOffer": 5,
+      "losingBids": [
+        {
+          "owner": "Jack",
+          "amount": 5,
+          "reason": "Lower waiver priority"
+        }
+      ]
+    },
+    {
+      "transactionId": "2026-tx-012",
+      "winningOffer": 6,
+      "losingBids": [
+        {
+          "owner": "Quinn",
+          "amount": 5,
+          "reason": "Lower Offer"
+        },
+        {
+          "owner": "Jack",
+          "amount": 3,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "transactionId": "2026-tx-030",
+      "winningOffer": 1,
+      "losingBids": [
+        {
+          "owner": "Isaac",
+          "amount": 1,
+          "reason": "Lower waiver priority"
+        }
+      ]
+    },
+    {
+      "transactionId": "2026-tx-033",
+      "winningOffer": 5,
+      "losingBids": [
+        {
+          "owner": "Jack",
+          "amount": 4,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "transactionId": "2026-tx-038",
+      "winningOffer": 5,
+      "losingBids": [
+        {
+          "owner": "Brock",
+          "amount": 0,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "transactionId": "2026-tx-051",
+      "winningOffer": 3,
+      "losingBids": [
+        {
+          "owner": "Quinn",
+          "amount": 1,
+          "reason": "Lower Offer"
+        },
+        {
+          "owner": "Mitchell",
+          "amount": 0,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "transactionId": "2026-tx-053",
+      "winningOffer": 17,
+      "losingBids": [
+        {
+          "owner": "Jack",
+          "amount": 10,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "transactionId": "2026-tx-054",
+      "winningOffer": 30,
+      "losingBids": [
+        {
+          "owner": "Quinn",
+          "amount": 16,
+          "reason": "Lower Offer"
+        },
+        {
+          "owner": "Liam",
+          "amount": 8,
+          "reason": "Lower Offer"
+        },
+        {
+          "owner": "Jack",
+          "amount": 3,
+          "reason": "Lower Offer"
+        },
+        {
+          "owner": "Tina",
+          "amount": 0,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "transactionId": "2026-tx-060",
+      "winningOffer": 12,
+      "losingBids": [
+        {
+          "owner": "Brock",
+          "amount": 1,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "transactionId": "2026-tx-061",
+      "winningOffer": 0,
+      "losingBids": [
+        {
+          "owner": "Brock",
+          "amount": 0,
+          "reason": "Lower waiver priority"
+        }
+      ]
+    },
+    {
+      "transactionId": "2026-tx-073",
+      "winningOffer": 3,
+      "losingBids": [
+        {
+          "owner": "Isaac",
+          "amount": 2,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "transactionId": "2026-tx-074",
+      "winningOffer": 4,
+      "losingBids": [
+        {
+          "owner": "Nick",
+          "amount": 0,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "transactionId": "2026-tx-076",
+      "winningOffer": 8,
+      "losingBids": [
+        {
+          "owner": "Nick",
+          "amount": 7,
+          "reason": "Lower Offer"
+        },
+        {
+          "owner": "Brock",
+          "amount": 0,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "transactionId": "2026-tx-077",
+      "winningOffer": 15,
+      "losingBids": [
+        {
+          "owner": "Brock",
+          "amount": 7,
+          "reason": "Lower Offer"
+        },
+        {
+          "owner": "Leo",
+          "amount": 1,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "transactionId": "2026-tx-078",
+      "winningOffer": 16,
+      "losingBids": [
+        {
+          "owner": "Mitchell",
+          "amount": 15,
+          "reason": "Lower Offer"
+        },
+        {
+          "owner": "Jack",
+          "amount": 12,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "transactionId": "2026-tx-097",
+      "winningOffer": 3,
+      "losingBids": [
+        {
+          "owner": "Isaac",
+          "amount": 0,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "transactionId": "2026-tx-098",
+      "winningOffer": 8,
+      "losingBids": [
+        {
+          "owner": "Liam",
+          "amount": 0,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "transactionId": "2026-tx-099",
+      "winningOffer": 17,
+      "losingBids": [
+        {
+          "owner": "Jack",
+          "amount": 3,
+          "reason": "Lower Offer"
+        }
+      ]
+    },
+    {
+      "transactionId": "2026-tx-112",
+      "winningOffer": 2,
+      "losingBids": [
+        {
+          "owner": "Isaac",
+          "amount": 0,
+          "reason": "Lower Offer"
+        },
+        {
+          "owner": "Tina",
+          "amount": 0,
+          "reason": "Lower Offer"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "Jack": {
+      "transactions": 17,
+      "adds": 16,
+      "drops": 14,
+      "waiverWins": 10,
+      "faabSpent": 55,
+      "losingBids": 7
+    },
+    "Quinn": {
+      "transactions": 18,
+      "adds": 18,
+      "drops": 16,
+      "waiverWins": 7,
+      "faabSpent": 30,
+      "losingBids": 3
+    },
+    "Chuck": {
+      "transactions": 1,
+      "adds": 1,
+      "drops": 0,
+      "waiverWins": 0,
+      "faabSpent": 0,
+      "losingBids": 0
+    },
+    "Mitchell": {
+      "transactions": 5,
+      "adds": 5,
+      "drops": 4,
+      "waiverWins": 4,
+      "faabSpent": 1,
+      "losingBids": 2
+    },
+    "Leo": {
+      "transactions": 7,
+      "adds": 7,
+      "drops": 6,
+      "waiverWins": 5,
+      "faabSpent": 8,
+      "losingBids": 4
+    },
+    "Liam": {
+      "transactions": 5,
+      "adds": 5,
+      "drops": 3,
+      "waiverWins": 3,
+      "faabSpent": 16,
+      "losingBids": 2
+    },
+    "Akhil": {
+      "transactions": 2,
+      "adds": 2,
+      "drops": 1,
+      "waiverWins": 1,
+      "faabSpent": 0,
+      "losingBids": 0
+    },
+    "Santi": {
+      "transactions": 3,
+      "adds": 3,
+      "drops": 3,
+      "waiverWins": 2,
+      "faabSpent": 34,
+      "losingBids": 0
+    },
+    "Brock": {
+      "transactions": 20,
+      "adds": 17,
+      "drops": 16,
+      "waiverWins": 9,
+      "faabSpent": 37,
+      "losingBids": 5
+    },
+    "Nick": {
+      "transactions": 14,
+      "adds": 12,
+      "drops": 11,
+      "waiverWins": 3,
+      "faabSpent": 5,
+      "losingBids": 2
+    },
+    "Tina": {
+      "transactions": 11,
+      "adds": 11,
+      "drops": 10,
+      "waiverWins": 2,
+      "faabSpent": 9,
+      "losingBids": 2
+    },
+    "Isaac": {
+      "transactions": 9,
+      "adds": 9,
+      "drops": 8,
+      "waiverWins": 5,
+      "faabSpent": 10,
+      "losingBids": 4
+    }
+  }
+}

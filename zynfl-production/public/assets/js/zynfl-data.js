@@ -59,13 +59,13 @@ window.ZYNFL_DATA={
   "wallOfShame": [
     {
       "year": 2024,
-      "owner": "Isaac",
-      "team": "Olave Garden"
+      "owner": "Calvin",
+      "team": "ChatGPT"
     },
     {
       "year": 2025,
-      "owner": "Tina",
-      "team": "Big Nix Energy"
+      "owner": "Isaac",
+      "team": "Olave Garden"
     }
   ],
   "owners": {
@@ -91,7 +91,8 @@ window.ZYNFL_DATA={
           "transactions": 24,
           "faabSpent": 20,
           "faabWins": 2,
-          "trades": 0
+          "trades": 0,
+          "finalRank": 6
         },
         {
           "year": 2025,
@@ -106,7 +107,8 @@ window.ZYNFL_DATA={
           "transactions": 20,
           "faabSpent": 0,
           "faabWins": 0,
-          "trades": 1
+          "trades": 1,
+          "finalRank": 11
         },
         {
           "year": 2026,
@@ -132,7 +134,7 @@ window.ZYNFL_DATA={
       "titles": 0,
       "silver": 0,
       "bronze": 0,
-      "brown": 1,
+      "brown": 0,
       "avgLineupEff": 0.8955364798320712,
       "missed": 383.26,
       "transactions": 44,
@@ -249,7 +251,8 @@ window.ZYNFL_DATA={
           "transactions": 43,
           "faabSpent": 95,
           "faabWins": 4,
-          "trades": 4
+          "trades": 4,
+          "finalRank": 3
         },
         {
           "year": 2025,
@@ -264,7 +267,8 @@ window.ZYNFL_DATA={
           "transactions": 32,
           "faabSpent": 4,
           "faabWins": 1,
-          "trades": 2
+          "trades": 2,
+          "finalRank": 2
         },
         {
           "year": 2026,
@@ -406,7 +410,8 @@ window.ZYNFL_DATA={
           "transactions": 17,
           "faabSpent": 40,
           "faabWins": 4,
-          "trades": 1
+          "trades": 1,
+          "finalRank": 1
         },
         {
           "year": 2025,
@@ -421,7 +426,8 @@ window.ZYNFL_DATA={
           "transactions": 13,
           "faabSpent": 7,
           "faabWins": 1,
-          "trades": 0
+          "trades": 0,
+          "finalRank": 7
         },
         {
           "year": 2026,
@@ -563,7 +569,8 @@ window.ZYNFL_DATA={
           "transactions": 23,
           "faabSpent": 16,
           "faabWins": 3,
-          "trades": 0
+          "trades": 0,
+          "finalRank": 1
         },
         {
           "year": 2026,
@@ -705,7 +712,8 @@ window.ZYNFL_DATA={
           "transactions": 19,
           "faabSpent": 0,
           "faabWins": 1,
-          "trades": 1
+          "trades": 1,
+          "finalRank": 2
         },
         {
           "year": 2025,
@@ -720,7 +728,8 @@ window.ZYNFL_DATA={
           "transactions": 12,
           "faabSpent": 0,
           "faabWins": 0,
-          "trades": 0
+          "trades": 0,
+          "finalRank": 10
         }
       ],
       "regular": {
@@ -849,7 +858,8 @@ window.ZYNFL_DATA={
           "transactions": 15,
           "faabSpent": 0,
           "faabWins": 0,
-          "trades": 0
+          "trades": 0,
+          "finalRank": 4
         },
         {
           "year": 2025,
@@ -864,7 +874,8 @@ window.ZYNFL_DATA={
           "transactions": 12,
           "faabSpent": 0,
           "faabWins": 0,
-          "trades": 0
+          "trades": 0,
+          "finalRank": 4
         }
       ],
       "regular": {
@@ -994,7 +1005,8 @@ window.ZYNFL_DATA={
           "transactions": 46,
           "faabSpent": 38,
           "faabWins": 4,
-          "trades": 4
+          "trades": 4,
+          "finalRank": 8
         },
         {
           "year": 2025,
@@ -1009,7 +1021,8 @@ window.ZYNFL_DATA={
           "transactions": 37,
           "faabSpent": 65,
           "faabWins": 4,
-          "trades": 0
+          "trades": 0,
+          "finalRank": 6
         },
         {
           "year": 2026,
@@ -1151,7 +1164,8 @@ window.ZYNFL_DATA={
           "transactions": 22,
           "faabSpent": 47,
           "faabWins": 2,
-          "trades": 2
+          "trades": 2,
+          "finalRank": 10
         },
         {
           "year": 2025,
@@ -1166,7 +1180,8 @@ window.ZYNFL_DATA={
           "transactions": 19,
           "faabSpent": 32,
           "faabWins": 2,
-          "trades": 0
+          "trades": 0,
+          "finalRank": 3
         },
         {
           "year": 2026,
@@ -1309,7 +1324,8 @@ window.ZYNFL_DATA={
           "transactions": 17,
           "faabSpent": 100,
           "faabWins": 1,
-          "trades": 3
+          "trades": 3,
+          "finalRank": 11
         },
         {
           "year": 2025,
@@ -1324,7 +1340,8 @@ window.ZYNFL_DATA={
           "transactions": 28,
           "faabSpent": 25,
           "faabWins": 3,
-          "trades": 2
+          "trades": 2,
+          "finalRank": 12
         },
         {
           "year": 2026,
@@ -1468,7 +1485,8 @@ window.ZYNFL_DATA={
           "transactions": 47,
           "faabSpent": 32,
           "faabWins": 5,
-          "trades": 4
+          "trades": 4,
+          "finalRank": 5
         },
         {
           "year": 2025,
@@ -1483,7 +1501,8 @@ window.ZYNFL_DATA={
           "transactions": 32,
           "faabSpent": 82,
           "faabWins": 2,
-          "trades": 0
+          "trades": 0,
+          "finalRank": 5
         },
         {
           "year": 2026,
@@ -1626,7 +1645,8 @@ window.ZYNFL_DATA={
           "transactions": 29,
           "faabSpent": 20,
           "faabWins": 2,
-          "trades": 0
+          "trades": 0,
+          "finalRank": 7
         },
         {
           "year": 2025,
@@ -1641,7 +1661,8 @@ window.ZYNFL_DATA={
           "transactions": 32,
           "faabSpent": 30,
           "faabWins": 2,
-          "trades": 1
+          "trades": 1,
+          "finalRank": 8
         },
         {
           "year": 2026,
@@ -1783,7 +1804,8 @@ window.ZYNFL_DATA={
           "transactions": 19,
           "faabSpent": 37,
           "faabWins": 2,
-          "trades": 1
+          "trades": 1,
+          "finalRank": 9
         },
         {
           "year": 2025,
@@ -1798,7 +1820,8 @@ window.ZYNFL_DATA={
           "transactions": 22,
           "faabSpent": 19,
           "faabWins": 2,
-          "trades": 2
+          "trades": 2,
+          "finalRank": 9
         },
         {
           "year": 2026,
@@ -1939,7 +1962,8 @@ window.ZYNFL_DATA={
           "transactions": 27,
           "faabSpent": 0,
           "faabWins": 1,
-          "trades": 0
+          "trades": 0,
+          "finalRank": 12
         }
       ],
       "regular": {
@@ -1952,7 +1976,7 @@ window.ZYNFL_DATA={
       "titles": 0,
       "silver": 0,
       "bronze": 0,
-      "brown": 0,
+      "brown": 1,
       "avgLineupEff": 0.8918891660560011,
       "missed": 173.6,
       "transactions": 27,
@@ -2174,7 +2198,8 @@ window.ZYNFL_DATA={
         "pf": 1587.44,
         "pa": 1464.6599999999999,
         "g": 14,
-        "diff": 122.7800000000002
+        "diff": 122.7800000000002,
+        "finalRank": 3
       },
       {
         "rank": 2,
@@ -2187,7 +2212,8 @@ window.ZYNFL_DATA={
         "pf": 1629.26,
         "pa": 1428.02,
         "g": 14,
-        "diff": 201.24
+        "diff": 201.24,
+        "finalRank": 1
       },
       {
         "rank": 3,
@@ -2200,7 +2226,8 @@ window.ZYNFL_DATA={
         "pf": 1521.0799999999997,
         "pa": 1515.82,
         "g": 14,
-        "diff": 5.2599999999997635
+        "diff": 5.2599999999997635,
+        "finalRank": 6
       },
       {
         "rank": 4,
@@ -2213,7 +2240,8 @@ window.ZYNFL_DATA={
         "pf": 1553.1799999999998,
         "pa": 1461.24,
         "g": 14,
-        "diff": 91.93999999999983
+        "diff": 91.93999999999983,
+        "finalRank": 4
       },
       {
         "rank": 5,
@@ -2226,7 +2254,8 @@ window.ZYNFL_DATA={
         "pf": 1489.76,
         "pa": 1466,
         "g": 14,
-        "diff": 23.75999999999999
+        "diff": 23.75999999999999,
+        "finalRank": 5
       },
       {
         "rank": 6,
@@ -2239,7 +2268,8 @@ window.ZYNFL_DATA={
         "pf": 1533.94,
         "pa": 1533.4999999999998,
         "g": 14,
-        "diff": 0.44000000000028194
+        "diff": 0.44000000000028194,
+        "finalRank": 2
       },
       {
         "rank": 7,
@@ -2252,7 +2282,8 @@ window.ZYNFL_DATA={
         "pf": 1502.28,
         "pa": 1351.86,
         "g": 14,
-        "diff": 150.42000000000007
+        "diff": 150.42000000000007,
+        "finalRank": 7
       },
       {
         "rank": 8,
@@ -2265,7 +2296,8 @@ window.ZYNFL_DATA={
         "pf": 1468.3800000000003,
         "pa": 1575.06,
         "g": 14,
-        "diff": -106.67999999999961
+        "diff": -106.67999999999961,
+        "finalRank": 8
       },
       {
         "rank": 9,
@@ -2278,7 +2310,8 @@ window.ZYNFL_DATA={
         "pf": 1481.7599999999998,
         "pa": 1458.78,
         "g": 14,
-        "diff": 22.97999999999979
+        "diff": 22.97999999999979,
+        "finalRank": 10
       },
       {
         "rank": 10,
@@ -2291,7 +2324,8 @@ window.ZYNFL_DATA={
         "pf": 1376.62,
         "pa": 1511.2800000000002,
         "g": 14,
-        "diff": -134.6600000000003
+        "diff": -134.6600000000003,
+        "finalRank": 9
       },
       {
         "rank": 11,
@@ -2304,7 +2338,8 @@ window.ZYNFL_DATA={
         "pf": 1336.22,
         "pa": 1480.7400000000002,
         "g": 14,
-        "diff": -144.5200000000002
+        "diff": -144.5200000000002,
+        "finalRank": 12
       },
       {
         "rank": 12,
@@ -2317,7 +2352,8 @@ window.ZYNFL_DATA={
         "pf": 1311.48,
         "pa": 1544.44,
         "g": 14,
-        "diff": -232.96000000000004
+        "diff": -232.96000000000004,
+        "finalRank": 11
       }
     ],
     "2025": [
@@ -2332,7 +2368,8 @@ window.ZYNFL_DATA={
         "pf": 1554.4599999999998,
         "pa": 1454.1399999999999,
         "g": 14,
-        "diff": 100.31999999999994
+        "diff": 100.31999999999994,
+        "finalRank": 1
       },
       {
         "rank": 2,
@@ -2345,7 +2382,8 @@ window.ZYNFL_DATA={
         "pf": 1458.76,
         "pa": 1429.1000000000004,
         "g": 14,
-        "diff": 29.659999999999627
+        "diff": 29.659999999999627,
+        "finalRank": 4
       },
       {
         "rank": 3,
@@ -2358,7 +2396,8 @@ window.ZYNFL_DATA={
         "pf": 1622.36,
         "pa": 1535.7200000000003,
         "g": 14,
-        "diff": 86.63999999999965
+        "diff": 86.63999999999965,
+        "finalRank": 2
       },
       {
         "rank": 4,
@@ -2371,7 +2410,8 @@ window.ZYNFL_DATA={
         "pf": 1540.86,
         "pa": 1474.5199999999998,
         "g": 14,
-        "diff": 66.34000000000015
+        "diff": 66.34000000000015,
+        "finalRank": 3
       },
       {
         "rank": 5,
@@ -2384,7 +2424,8 @@ window.ZYNFL_DATA={
         "pf": 1529.06,
         "pa": 1421.14,
         "g": 14,
-        "diff": 107.91999999999985
+        "diff": 107.91999999999985,
+        "finalRank": 6
       },
       {
         "rank": 6,
@@ -2397,7 +2438,8 @@ window.ZYNFL_DATA={
         "pf": 1485.96,
         "pa": 1336.4,
         "g": 14,
-        "diff": 149.55999999999995
+        "diff": 149.55999999999995,
+        "finalRank": 5
       },
       {
         "rank": 7,
@@ -2410,7 +2452,8 @@ window.ZYNFL_DATA={
         "pf": 1473.1599999999999,
         "pa": 1462.7,
         "g": 14,
-        "diff": 10.459999999999809
+        "diff": 10.459999999999809,
+        "finalRank": 10
       },
       {
         "rank": 8,
@@ -2423,7 +2466,8 @@ window.ZYNFL_DATA={
         "pf": 1438.1200000000003,
         "pa": 1417.0600000000002,
         "g": 14,
-        "diff": 21.060000000000173
+        "diff": 21.060000000000173,
+        "finalRank": 9
       },
       {
         "rank": 9,
@@ -2436,7 +2480,8 @@ window.ZYNFL_DATA={
         "pf": 1404.5,
         "pa": 1467.92,
         "g": 14,
-        "diff": -63.42000000000007
+        "diff": -63.42000000000007,
+        "finalRank": 8
       },
       {
         "rank": 10,
@@ -2449,7 +2494,8 @@ window.ZYNFL_DATA={
         "pf": 1396.3400000000001,
         "pa": 1555.5600000000002,
         "g": 14,
-        "diff": -159.22000000000003
+        "diff": -159.22000000000003,
+        "finalRank": 7
       },
       {
         "rank": 11,
@@ -2462,7 +2508,8 @@ window.ZYNFL_DATA={
         "pf": 1340.5400000000002,
         "pa": 1521.22,
         "g": 14,
-        "diff": -180.67999999999984
+        "diff": -180.67999999999984,
+        "finalRank": 12
       },
       {
         "rank": 12,
@@ -2475,7 +2522,8 @@ window.ZYNFL_DATA={
         "pf": 1381.62,
         "pa": 1550.26,
         "g": 14,
-        "diff": -168.6400000000001
+        "diff": -168.6400000000001,
+        "finalRank": 11
       }
     ],
     "2026": [
@@ -3814,7 +3862,8 @@ window.ZYNFL_DATA={
       "aScore": 96.94,
       "bScore": 164.38,
       "winner": "Rick",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "Championship quarterfinal"
     },
     {
       "year": 2024,
@@ -3828,7 +3877,8 @@ window.ZYNFL_DATA={
       "aScore": 85.34,
       "bScore": 102.6,
       "winner": "Daniel",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "Championship quarterfinal"
     },
     {
       "year": 2024,
@@ -3842,7 +3892,8 @@ window.ZYNFL_DATA={
       "aScore": 58.92,
       "bScore": 100.84,
       "winner": "Santi",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "Consolation quarterfinal"
     },
     {
       "year": 2024,
@@ -3856,7 +3907,8 @@ window.ZYNFL_DATA={
       "aScore": 135.4,
       "bScore": 88.96,
       "winner": "Liam",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "Consolation quarterfinal"
     },
     {
       "year": 2024,
@@ -3870,7 +3922,9 @@ window.ZYNFL_DATA={
       "aScore": 145.98,
       "bScore": 129.06,
       "winner": "Jack",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "5th-place game",
+      "placement": 5
     },
     {
       "year": 2024,
@@ -3884,7 +3938,8 @@ window.ZYNFL_DATA={
       "aScore": 137.12,
       "bScore": 168.04,
       "winner": "Daniel",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "Championship semifinal"
     },
     {
       "year": 2024,
@@ -3898,7 +3953,8 @@ window.ZYNFL_DATA={
       "aScore": 132.38,
       "bScore": 99.56,
       "winner": "Chuck",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "Championship semifinal"
     },
     {
       "year": 2024,
@@ -3912,7 +3968,9 @@ window.ZYNFL_DATA={
       "aScore": 80.32,
       "bScore": 101,
       "winner": "Isaac",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "11th-place game",
+      "placement": 11
     },
     {
       "year": 2024,
@@ -3926,7 +3984,8 @@ window.ZYNFL_DATA={
       "aScore": 121.88,
       "bScore": 86.74,
       "winner": "Brock",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "Consolation semifinal"
     },
     {
       "year": 2024,
@@ -3940,7 +3999,8 @@ window.ZYNFL_DATA={
       "aScore": 118.62,
       "bScore": 111.1,
       "winner": "Nick",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "Consolation semifinal"
     },
     {
       "year": 2024,
@@ -3954,7 +4014,9 @@ window.ZYNFL_DATA={
       "aScore": 127.02,
       "bScore": 99.38,
       "winner": "Chuck",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "Championship",
+      "placement": 1
     },
     {
       "year": 2024,
@@ -3968,7 +4030,9 @@ window.ZYNFL_DATA={
       "aScore": 143.46,
       "bScore": 94.68,
       "winner": "Quinn",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "3rd-place game",
+      "placement": 3
     },
     {
       "year": 2024,
@@ -3982,7 +4046,9 @@ window.ZYNFL_DATA={
       "aScore": 109.64,
       "bScore": 121.48,
       "winner": "Nick",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "7th-place game",
+      "placement": 7
     },
     {
       "year": 2024,
@@ -3996,7 +4062,9 @@ window.ZYNFL_DATA={
       "aScore": 74.9,
       "bScore": 130.16,
       "winner": "Santi",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "9th-place game",
+      "placement": 9
     },
     {
       "year": 2025,
@@ -5186,7 +5254,9 @@ window.ZYNFL_DATA={
       "aScore": 105.5,
       "bScore": 94.56,
       "winner": "Jack",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "5th-place game",
+      "placement": 5
     },
     {
       "year": 2025,
@@ -5200,7 +5270,8 @@ window.ZYNFL_DATA={
       "aScore": 137.56,
       "bScore": 88.6,
       "winner": "Quinn",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "Championship semifinal"
     },
     {
       "year": 2025,
@@ -5214,7 +5285,8 @@ window.ZYNFL_DATA={
       "aScore": 106.02,
       "bScore": 66.2,
       "winner": "Leo",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "Championship semifinal"
     },
     {
       "year": 2025,
@@ -5228,7 +5300,9 @@ window.ZYNFL_DATA={
       "aScore": 146.58,
       "bScore": 122.08,
       "winner": "Tina",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "11th-place game",
+      "placement": 11
     },
     {
       "year": 2025,
@@ -5242,7 +5316,8 @@ window.ZYNFL_DATA={
       "aScore": 117.5,
       "bScore": 78.74,
       "winner": "Chuck",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "Consolation semifinal"
     },
     {
       "year": 2025,
@@ -5256,7 +5331,8 @@ window.ZYNFL_DATA={
       "aScore": 127.3,
       "bScore": 125.78,
       "winner": "Nick",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "Consolation semifinal"
     },
     {
       "year": 2025,
@@ -5270,7 +5346,9 @@ window.ZYNFL_DATA={
       "aScore": 96.88,
       "bScore": 98.22,
       "winner": "Leo",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "Championship",
+      "placement": 1
     },
     {
       "year": 2025,
@@ -5284,7 +5362,9 @@ window.ZYNFL_DATA={
       "aScore": 108.32,
       "bScore": 91,
       "winner": "Chuck",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "7th-place game",
+      "placement": 7
     },
     {
       "year": 2025,
@@ -5298,7 +5378,9 @@ window.ZYNFL_DATA={
       "aScore": 67.9,
       "bScore": 77.6,
       "winner": "Santi",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "9th-place game",
+      "placement": 9
     },
     {
       "year": 2025,
@@ -5312,7 +5394,9 @@ window.ZYNFL_DATA={
       "aScore": 60.28,
       "bScore": 129.68,
       "winner": "Liam",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "3rd-place game",
+      "placement": 3
     },
     {
       "year": 2025,
@@ -5326,7 +5410,8 @@ window.ZYNFL_DATA={
       "aScore": 103.56,
       "bScore": 144.42,
       "winner": "Quinn",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "Championship quarterfinal"
     },
     {
       "year": 2025,
@@ -5340,7 +5425,8 @@ window.ZYNFL_DATA={
       "aScore": 79.7,
       "bScore": 124.52,
       "winner": "Liam",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "Championship quarterfinal"
     },
     {
       "year": 2025,
@@ -5354,7 +5440,8 @@ window.ZYNFL_DATA={
       "aScore": 104.12,
       "bScore": 128.9,
       "winner": "Nick",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "Consolation quarterfinal"
     },
     {
       "year": 2025,
@@ -5368,7 +5455,8 @@ window.ZYNFL_DATA={
       "aScore": 119.5,
       "bScore": 111.1,
       "winner": "Chuck",
-      "scope": "Playoffs"
+      "scope": "Playoffs",
+      "stage": "Consolation quarterfinal"
     },
     {
       "year": 2026,
@@ -43178,7 +43266,7 @@ window.ZYNFL_DATA={
       "bronze": "Quinn",
       "bronzeTeam": "McCaffreaky",
       "finalScore": "127.02–99.38",
-      "wall": "Isaac",
+      "wall": "Calvin",
       "record": "9-5",
       "topPF": "Chuck",
       "topPFValue": 1629.26,
@@ -43339,7 +43427,21 @@ window.ZYNFL_DATA={
           "g": 14,
           "diff": -232.96000000000004
         }
-      ]
+      ],
+      "finalPlacements": {
+        "Chuck": 1,
+        "Daniel": 2,
+        "Quinn": 3,
+        "Rick": 4,
+        "Jack": 5,
+        "Tina": 6,
+        "Nick": 7,
+        "Brock": 8,
+        "Santi": 9,
+        "Liam": 10,
+        "Isaac": 11,
+        "Calvin": 12
+      }
     },
     "2025": {
       "champion": "Leo",
@@ -43349,7 +43451,7 @@ window.ZYNFL_DATA={
       "bronze": "Liam",
       "bronzeTeam": "That's What Cheesehead",
       "finalScore": "98.22–96.88",
-      "wall": "Tina",
+      "wall": "Isaac",
       "record": "9-5",
       "topPF": "Quinn",
       "topPFValue": 1622.36,
@@ -43510,7 +43612,51 @@ window.ZYNFL_DATA={
           "g": 14,
           "diff": -168.6400000000001
         }
-      ]
+      ],
+      "finalPlacements": {
+        "Leo": 1,
+        "Quinn": 2,
+        "Liam": 3,
+        "Rick": 4,
+        "Jack": 5,
+        "Brock": 6,
+        "Chuck": 7,
+        "Nick": 8,
+        "Santi": 9,
+        "Daniel": 10,
+        "Tina": 11,
+        "Isaac": 12
+      }
+    }
+  },
+  "finalPlacements": {
+    "2024": {
+      "Chuck": 1,
+      "Daniel": 2,
+      "Quinn": 3,
+      "Rick": 4,
+      "Jack": 5,
+      "Tina": 6,
+      "Nick": 7,
+      "Brock": 8,
+      "Santi": 9,
+      "Liam": 10,
+      "Isaac": 11,
+      "Calvin": 12
+    },
+    "2025": {
+      "Leo": 1,
+      "Quinn": 2,
+      "Liam": 3,
+      "Rick": 4,
+      "Jack": 5,
+      "Brock": 6,
+      "Chuck": 7,
+      "Nick": 8,
+      "Santi": 9,
+      "Daniel": 10,
+      "Tina": 11,
+      "Isaac": 12
     }
   }
 };

@@ -1,0 +1,16 @@
+ZYNFL PLACEMENT / PLAYER POPUP / TRANSACTION FIXES
+
+Extract the ZIP. Open https://github.com/dunnigann/zynfl-site on main.
+Choose Add file > Upload files. Drag the extracted zynfl-production folder and the included Markdown/text files into the upload page. Commit everything together.
+
+Do not upload the ZIP itself or create an extra enclosing folder.
+The HTML must replace zynfl-production/public/index.html.
+
+After your hosting deployment completes, hard-refresh zynfl.com (Ctrl+Shift+R).
+Check League History: Calvin is last in 2024; Isaac is last in 2025.
+Check Tina's manager file: 2024 finish 6th, 2025 finish 11th, no last-place trophy.
+Check Players > Bijan Robinson: clean rows and no false 2026 Quinn roster entry.
+Check Week 5 > Jack's rankings: your supplied order is published.
+Check League History > 2026 roster activity: 112 transactions, 51 waiver wins, $205 spent.
+
+This ZIP contains only changed/new files and is based on your latest repository commit, 780ab24. Existing image assets and earlier weekly data remain in place.
