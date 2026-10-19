@@ -1,0 +1,2974 @@
+{
+  "generatedAt": "2026-10-16T20:17:06.386Z",
+  "source": "Yahoo Fantasy Sports API; existing published archive for comparison",
+  "coverage": [
+    {
+      "year": 2024,
+      "games": 98,
+      "requiredRosters": 196,
+      "verifiedRosters": 196,
+      "rostersComplete": true,
+      "transactionsComplete": true,
+      "draftPicks": 180,
+      "transactionEvents": 327
+    },
+    {
+      "year": 2025,
+      "games": 98,
+      "requiredRosters": 196,
+      "verifiedRosters": 196,
+      "rostersComplete": true,
+      "transactionsComplete": true,
+      "draftPicks": 180,
+      "transactionEvents": 345
+    },
+    {
+      "year": 2026,
+      "games": 30,
+      "requiredRosters": 60,
+      "verifiedRosters": 60,
+      "rostersComplete": true,
+      "transactionsComplete": true,
+      "draftPicks": 180,
+      "transactionEvents": 127
+    }
+  ],
+  "scores": [],
+  "winners": [],
+  "placements": [],
+  "standings": [],
+  "drafts": [
+    {
+      "year": 2024,
+      "pick": 37,
+      "field": "starts",
+      "before": 15,
+      "after": 16
+    },
+    {
+      "year": 2024,
+      "pick": 61,
+      "field": "starts",
+      "before": 7,
+      "after": 8
+    },
+    {
+      "year": 2024,
+      "pick": 90,
+      "field": "playerId",
+      "before": null,
+      "after": "100025"
+    },
+    {
+      "year": 2024,
+      "pick": 101,
+      "field": "starts",
+      "before": 11,
+      "after": 12
+    },
+    {
+      "year": 2024,
+      "pick": 116,
+      "field": "playerId",
+      "before": null,
+      "after": "100033"
+    },
+    {
+      "year": 2024,
+      "pick": 130,
+      "field": "playerId",
+      "before": null,
+      "after": "100012"
+    },
+    {
+      "year": 2024,
+      "pick": 130,
+      "field": "starts",
+      "before": 14,
+      "after": 15
+    },
+    {
+      "year": 2024,
+      "pick": 135,
+      "field": "starts",
+      "before": 10,
+      "after": 11
+    },
+    {
+      "year": 2024,
+      "pick": 136,
+      "field": "playerId",
+      "before": null,
+      "after": "100006"
+    },
+    {
+      "year": 2024,
+      "pick": 139,
+      "field": "playerId",
+      "before": null,
+      "after": "100020"
+    },
+    {
+      "year": 2024,
+      "pick": 152,
+      "field": "playerId",
+      "before": null,
+      "after": "100005"
+    },
+    {
+      "year": 2024,
+      "pick": 157,
+      "field": "playerId",
+      "before": null,
+      "after": "100003"
+    },
+    {
+      "year": 2024,
+      "pick": 157,
+      "field": "starts",
+      "before": 9,
+      "after": 10
+    },
+    {
+      "year": 2024,
+      "pick": 168,
+      "field": "playerId",
+      "before": null,
+      "after": "100021"
+    },
+    {
+      "year": 2024,
+      "pick": 170,
+      "field": "playerId",
+      "before": null,
+      "after": "100015"
+    },
+    {
+      "year": 2024,
+      "pick": 171,
+      "field": "playerId",
+      "before": null,
+      "after": "100004"
+    },
+    {
+      "year": 2024,
+      "pick": 172,
+      "field": "playerId",
+      "before": null,
+      "after": "100016"
+    },
+    {
+      "year": 2024,
+      "pick": 175,
+      "field": "playerId",
+      "before": null,
+      "after": "100023"
+    },
+    {
+      "year": 2024,
+      "pick": 179,
+      "field": "playerId",
+      "before": null,
+      "after": "100026"
+    },
+    {
+      "year": 2025,
+      "pick": 76,
+      "field": "playerId",
+      "before": "41787",
+      "after": "99001"
+    },
+    {
+      "year": 2025,
+      "pick": 100,
+      "field": "starts",
+      "before": 7,
+      "after": 8
+    },
+    {
+      "year": 2025,
+      "pick": 111,
+      "field": "playerId",
+      "before": null,
+      "after": "100007"
+    },
+    {
+      "year": 2025,
+      "pick": 143,
+      "field": "starts",
+      "before": 13,
+      "after": 14
+    },
+    {
+      "year": 2025,
+      "pick": 148,
+      "field": "playerId",
+      "before": null,
+      "after": "100021"
+    },
+    {
+      "year": 2025,
+      "pick": 152,
+      "field": "playerId",
+      "before": null,
+      "after": "100033"
+    },
+    {
+      "year": 2025,
+      "pick": 155,
+      "field": "playerId",
+      "before": null,
+      "after": "100023"
+    },
+    {
+      "year": 2025,
+      "pick": 168,
+      "field": "playerId",
+      "before": null,
+      "after": "100009"
+    },
+    {
+      "year": 2025,
+      "pick": 170,
+      "field": "playerId",
+      "before": null,
+      "after": "100016"
+    },
+    {
+      "year": 2025,
+      "pick": 171,
+      "field": "playerId",
+      "before": null,
+      "after": "100012"
+    },
+    {
+      "year": 2025,
+      "pick": 173,
+      "field": "playerId",
+      "before": null,
+      "after": "100008"
+    },
+    {
+      "year": 2025,
+      "pick": 174,
+      "field": "playerId",
+      "before": null,
+      "after": "100002"
+    },
+    {
+      "year": 2025,
+      "pick": 175,
+      "field": "playerId",
+      "before": null,
+      "after": "100024"
+    },
+    {
+      "year": 2025,
+      "pick": 177,
+      "field": "playerId",
+      "before": null,
+      "after": "100026"
+    },
+    {
+      "year": 2025,
+      "pick": 180,
+      "field": "playerId",
+      "before": null,
+      "after": "100022"
+    },
+    {
+      "year": 2026,
+      "pick": 1,
+      "field": "teamId",
+      "before": 1,
+      "after": 10
+    },
+    {
+      "year": 2026,
+      "pick": 2,
+      "field": "teamId",
+      "before": 2,
+      "after": 7
+    },
+    {
+      "year": 2026,
+      "pick": 3,
+      "field": "teamId",
+      "before": 3,
+      "after": 11
+    },
+    {
+      "year": 2026,
+      "pick": 4,
+      "field": "teamId",
+      "before": 4,
+      "after": 1
+    },
+    {
+      "year": 2026,
+      "pick": 5,
+      "field": "teamId",
+      "before": 5,
+      "after": 4
+    },
+    {
+      "year": 2026,
+      "pick": 6,
+      "field": "teamId",
+      "before": 6,
+      "after": 9
+    },
+    {
+      "year": 2026,
+      "pick": 7,
+      "field": "teamId",
+      "before": 7,
+      "after": 5
+    },
+    {
+      "year": 2026,
+      "pick": 8,
+      "field": "teamId",
+      "before": 8,
+      "after": 2
+    },
+    {
+      "year": 2026,
+      "pick": 9,
+      "field": "teamId",
+      "before": 9,
+      "after": 8
+    },
+    {
+      "year": 2026,
+      "pick": 10,
+      "field": "teamId",
+      "before": 10,
+      "after": 3
+    },
+    {
+      "year": 2026,
+      "pick": 11,
+      "field": "teamId",
+      "before": 11,
+      "after": 12
+    },
+    {
+      "year": 2026,
+      "pick": 12,
+      "field": "teamId",
+      "before": 12,
+      "after": 6
+    },
+    {
+      "year": 2026,
+      "pick": 13,
+      "field": "teamId",
+      "before": 12,
+      "after": 6
+    },
+    {
+      "year": 2026,
+      "pick": 14,
+      "field": "teamId",
+      "before": 11,
+      "after": 12
+    },
+    {
+      "year": 2026,
+      "pick": 15,
+      "field": "teamId",
+      "before": 10,
+      "after": 3
+    },
+    {
+      "year": 2026,
+      "pick": 16,
+      "field": "teamId",
+      "before": 9,
+      "after": 8
+    },
+    {
+      "year": 2026,
+      "pick": 17,
+      "field": "teamId",
+      "before": 8,
+      "after": 2
+    },
+    {
+      "year": 2026,
+      "pick": 18,
+      "field": "teamId",
+      "before": 7,
+      "after": 5
+    },
+    {
+      "year": 2026,
+      "pick": 19,
+      "field": "teamId",
+      "before": 6,
+      "after": 9
+    },
+    {
+      "year": 2026,
+      "pick": 20,
+      "field": "teamId",
+      "before": 5,
+      "after": 4
+    },
+    {
+      "year": 2026,
+      "pick": 21,
+      "field": "teamId",
+      "before": 4,
+      "after": 1
+    },
+    {
+      "year": 2026,
+      "pick": 22,
+      "field": "teamId",
+      "before": 3,
+      "after": 11
+    },
+    {
+      "year": 2026,
+      "pick": 23,
+      "field": "teamId",
+      "before": 2,
+      "after": 7
+    },
+    {
+      "year": 2026,
+      "pick": 24,
+      "field": "teamId",
+      "before": 1,
+      "after": 10
+    },
+    {
+      "year": 2026,
+      "pick": 25,
+      "field": "teamId",
+      "before": 1,
+      "after": 10
+    },
+    {
+      "year": 2026,
+      "pick": 26,
+      "field": "teamId",
+      "before": 2,
+      "after": 7
+    },
+    {
+      "year": 2026,
+      "pick": 27,
+      "field": "teamId",
+      "before": 3,
+      "after": 11
+    },
+    {
+      "year": 2026,
+      "pick": 28,
+      "field": "teamId",
+      "before": 4,
+      "after": 1
+    },
+    {
+      "year": 2026,
+      "pick": 29,
+      "field": "teamId",
+      "before": 5,
+      "after": 4
+    },
+    {
+      "year": 2026,
+      "pick": 30,
+      "field": "teamId",
+      "before": 6,
+      "after": 9
+    },
+    {
+      "year": 2026,
+      "pick": 31,
+      "field": "teamId",
+      "before": 7,
+      "after": 5
+    },
+    {
+      "year": 2026,
+      "pick": 32,
+      "field": "teamId",
+      "before": 8,
+      "after": 2
+    },
+    {
+      "year": 2026,
+      "pick": 33,
+      "field": "teamId",
+      "before": 9,
+      "after": 8
+    },
+    {
+      "year": 2026,
+      "pick": 34,
+      "field": "teamId",
+      "before": 10,
+      "after": 3
+    },
+    {
+      "year": 2026,
+      "pick": 35,
+      "field": "teamId",
+      "before": 11,
+      "after": 12
+    },
+    {
+      "year": 2026,
+      "pick": 36,
+      "field": "teamId",
+      "before": 12,
+      "after": 6
+    },
+    {
+      "year": 2026,
+      "pick": 37,
+      "field": "teamId",
+      "before": 12,
+      "after": 6
+    },
+    {
+      "year": 2026,
+      "pick": 38,
+      "field": "teamId",
+      "before": 11,
+      "after": 12
+    },
+    {
+      "year": 2026,
+      "pick": 39,
+      "field": "teamId",
+      "before": 10,
+      "after": 3
+    },
+    {
+      "year": 2026,
+      "pick": 40,
+      "field": "teamId",
+      "before": 9,
+      "after": 8
+    },
+    {
+      "year": 2026,
+      "pick": 41,
+      "field": "teamId",
+      "before": 8,
+      "after": 2
+    },
+    {
+      "year": 2026,
+      "pick": 42,
+      "field": "teamId",
+      "before": 7,
+      "after": 5
+    },
+    {
+      "year": 2026,
+      "pick": 43,
+      "field": "teamId",
+      "before": 6,
+      "after": 9
+    },
+    {
+      "year": 2026,
+      "pick": 44,
+      "field": "teamId",
+      "before": 5,
+      "after": 4
+    },
+    {
+      "year": 2026,
+      "pick": 45,
+      "field": "teamId",
+      "before": 4,
+      "after": 1
+    },
+    {
+      "year": 2026,
+      "pick": 46,
+      "field": "teamId",
+      "before": 3,
+      "after": 11
+    },
+    {
+      "year": 2026,
+      "pick": 47,
+      "field": "teamId",
+      "before": 2,
+      "after": 7
+    },
+    {
+      "year": 2026,
+      "pick": 48,
+      "field": "teamId",
+      "before": 1,
+      "after": 10
+    },
+    {
+      "year": 2026,
+      "pick": 49,
+      "field": "teamId",
+      "before": 1,
+      "after": 10
+    },
+    {
+      "year": 2026,
+      "pick": 50,
+      "field": "teamId",
+      "before": 2,
+      "after": 7
+    },
+    {
+      "year": 2026,
+      "pick": 51,
+      "field": "teamId",
+      "before": 3,
+      "after": 11
+    },
+    {
+      "year": 2026,
+      "pick": 52,
+      "field": "teamId",
+      "before": 4,
+      "after": 1
+    },
+    {
+      "year": 2026,
+      "pick": 53,
+      "field": "teamId",
+      "before": 5,
+      "after": 4
+    },
+    {
+      "year": 2026,
+      "pick": 54,
+      "field": "teamId",
+      "before": 6,
+      "after": 9
+    },
+    {
+      "year": 2026,
+      "pick": 55,
+      "field": "teamId",
+      "before": 7,
+      "after": 5
+    },
+    {
+      "year": 2026,
+      "pick": 56,
+      "field": "teamId",
+      "before": 8,
+      "after": 2
+    },
+    {
+      "year": 2026,
+      "pick": 57,
+      "field": "teamId",
+      "before": 9,
+      "after": 8
+    },
+    {
+      "year": 2026,
+      "pick": 58,
+      "field": "teamId",
+      "before": 10,
+      "after": 3
+    },
+    {
+      "year": 2026,
+      "pick": 59,
+      "field": "teamId",
+      "before": 11,
+      "after": 12
+    },
+    {
+      "year": 2026,
+      "pick": 60,
+      "field": "teamId",
+      "before": 12,
+      "after": 6
+    },
+    {
+      "year": 2026,
+      "pick": 61,
+      "field": "teamId",
+      "before": 12,
+      "after": 6
+    },
+    {
+      "year": 2026,
+      "pick": 62,
+      "field": "teamId",
+      "before": 11,
+      "after": 12
+    },
+    {
+      "year": 2026,
+      "pick": 63,
+      "field": "teamId",
+      "before": 10,
+      "after": 3
+    },
+    {
+      "year": 2026,
+      "pick": 64,
+      "field": "teamId",
+      "before": 9,
+      "after": 8
+    },
+    {
+      "year": 2026,
+      "pick": 65,
+      "field": "teamId",
+      "before": 8,
+      "after": 2
+    },
+    {
+      "year": 2026,
+      "pick": 66,
+      "field": "teamId",
+      "before": 7,
+      "after": 5
+    },
+    {
+      "year": 2026,
+      "pick": 67,
+      "field": "teamId",
+      "before": 6,
+      "after": 9
+    },
+    {
+      "year": 2026,
+      "pick": 68,
+      "field": "teamId",
+      "before": 5,
+      "after": 4
+    },
+    {
+      "year": 2026,
+      "pick": 69,
+      "field": "teamId",
+      "before": 4,
+      "after": 1
+    },
+    {
+      "year": 2026,
+      "pick": 70,
+      "field": "teamId",
+      "before": 3,
+      "after": 11
+    },
+    {
+      "year": 2026,
+      "pick": 71,
+      "field": "teamId",
+      "before": 2,
+      "after": 7
+    },
+    {
+      "year": 2026,
+      "pick": 72,
+      "field": "teamId",
+      "before": 1,
+      "after": 10
+    },
+    {
+      "year": 2026,
+      "pick": 73,
+      "field": "teamId",
+      "before": 1,
+      "after": 10
+    },
+    {
+      "year": 2026,
+      "pick": 74,
+      "field": "teamId",
+      "before": 2,
+      "after": 7
+    },
+    {
+      "year": 2026,
+      "pick": 75,
+      "field": "teamId",
+      "before": 3,
+      "after": 11
+    },
+    {
+      "year": 2026,
+      "pick": 76,
+      "field": "teamId",
+      "before": 4,
+      "after": 1
+    },
+    {
+      "year": 2026,
+      "pick": 77,
+      "field": "teamId",
+      "before": 5,
+      "after": 4
+    },
+    {
+      "year": 2026,
+      "pick": 78,
+      "field": "teamId",
+      "before": 6,
+      "after": 9
+    },
+    {
+      "year": 2026,
+      "pick": 79,
+      "field": "teamId",
+      "before": 7,
+      "after": 5
+    },
+    {
+      "year": 2026,
+      "pick": 80,
+      "field": "teamId",
+      "before": 8,
+      "after": 2
+    },
+    {
+      "year": 2026,
+      "pick": 81,
+      "field": "teamId",
+      "before": 9,
+      "after": 8
+    },
+    {
+      "year": 2026,
+      "pick": 82,
+      "field": "teamId",
+      "before": 10,
+      "after": 3
+    },
+    {
+      "year": 2026,
+      "pick": 83,
+      "field": "teamId",
+      "before": 11,
+      "after": 12
+    },
+    {
+      "year": 2026,
+      "pick": 84,
+      "field": "teamId",
+      "before": 12,
+      "after": 6
+    },
+    {
+      "year": 2026,
+      "pick": 85,
+      "field": "teamId",
+      "before": 12,
+      "after": 6
+    },
+    {
+      "year": 2026,
+      "pick": 86,
+      "field": "teamId",
+      "before": 11,
+      "after": 12
+    },
+    {
+      "year": 2026,
+      "pick": 87,
+      "field": "teamId",
+      "before": 10,
+      "after": 3
+    },
+    {
+      "year": 2026,
+      "pick": 88,
+      "field": "teamId",
+      "before": 9,
+      "after": 8
+    },
+    {
+      "year": 2026,
+      "pick": 89,
+      "field": "teamId",
+      "before": 8,
+      "after": 2
+    },
+    {
+      "year": 2026,
+      "pick": 90,
+      "field": "teamId",
+      "before": 7,
+      "after": 5
+    },
+    {
+      "year": 2026,
+      "pick": 91,
+      "field": "teamId",
+      "before": 6,
+      "after": 9
+    },
+    {
+      "year": 2026,
+      "pick": 92,
+      "field": "teamId",
+      "before": 5,
+      "after": 4
+    },
+    {
+      "year": 2026,
+      "pick": 93,
+      "field": "teamId",
+      "before": 4,
+      "after": 1
+    },
+    {
+      "year": 2026,
+      "pick": 94,
+      "field": "teamId",
+      "before": 3,
+      "after": 11
+    },
+    {
+      "year": 2026,
+      "pick": 95,
+      "field": "teamId",
+      "before": 2,
+      "after": 7
+    },
+    {
+      "year": 2026,
+      "pick": 96,
+      "field": "teamId",
+      "before": 1,
+      "after": 10
+    },
+    {
+      "year": 2026,
+      "pick": 97,
+      "field": "teamId",
+      "before": 1,
+      "after": 10
+    },
+    {
+      "year": 2026,
+      "pick": 98,
+      "field": "teamId",
+      "before": 2,
+      "after": 7
+    },
+    {
+      "year": 2026,
+      "pick": 99,
+      "field": "teamId",
+      "before": 3,
+      "after": 11
+    },
+    {
+      "year": 2026,
+      "pick": 100,
+      "field": "teamId",
+      "before": 4,
+      "after": 1
+    },
+    {
+      "year": 2026,
+      "pick": 100,
+      "field": "playerId",
+      "before": null,
+      "after": "100014"
+    },
+    {
+      "year": 2026,
+      "pick": 100,
+      "field": "starts",
+      "before": 0,
+      "after": 5
+    },
+    {
+      "year": 2026,
+      "pick": 100,
+      "field": "starterPoints",
+      "before": 0,
+      "after": 22
+    },
+    {
+      "year": 2026,
+      "pick": 101,
+      "field": "teamId",
+      "before": 5,
+      "after": 4
+    },
+    {
+      "year": 2026,
+      "pick": 102,
+      "field": "teamId",
+      "before": 6,
+      "after": 9
+    },
+    {
+      "year": 2026,
+      "pick": 103,
+      "field": "teamId",
+      "before": 7,
+      "after": 5
+    },
+    {
+      "year": 2026,
+      "pick": 103,
+      "field": "player",
+      "before": "KC Concepcion",
+      "after": "KC Concepcion Jr."
+    },
+    {
+      "year": 2026,
+      "pick": 104,
+      "field": "teamId",
+      "before": 8,
+      "after": 2
+    },
+    {
+      "year": 2026,
+      "pick": 105,
+      "field": "teamId",
+      "before": 9,
+      "after": 8
+    },
+    {
+      "year": 2026,
+      "pick": 106,
+      "field": "teamId",
+      "before": 10,
+      "after": 3
+    },
+    {
+      "year": 2026,
+      "pick": 107,
+      "field": "teamId",
+      "before": 11,
+      "after": 12
+    },
+    {
+      "year": 2026,
+      "pick": 108,
+      "field": "teamId",
+      "before": 12,
+      "after": 6
+    },
+    {
+      "year": 2026,
+      "pick": 109,
+      "field": "teamId",
+      "before": 12,
+      "after": 6
+    },
+    {
+      "year": 2026,
+      "pick": 110,
+      "field": "teamId",
+      "before": 11,
+      "after": 12
+    },
+    {
+      "year": 2026,
+      "pick": 111,
+      "field": "teamId",
+      "before": 10,
+      "after": 3
+    },
+    {
+      "year": 2026,
+      "pick": 112,
+      "field": "teamId",
+      "before": 9,
+      "after": 8
+    },
+    {
+      "year": 2026,
+      "pick": 113,
+      "field": "teamId",
+      "before": 8,
+      "after": 2
+    },
+    {
+      "year": 2026,
+      "pick": 114,
+      "field": "teamId",
+      "before": 7,
+      "after": 5
+    },
+    {
+      "year": 2026,
+      "pick": 115,
+      "field": "teamId",
+      "before": 6,
+      "after": 9
+    },
+    {
+      "year": 2026,
+      "pick": 116,
+      "field": "teamId",
+      "before": 5,
+      "after": 4
+    },
+    {
+      "year": 2026,
+      "pick": 117,
+      "field": "teamId",
+      "before": 4,
+      "after": 1
+    },
+    {
+      "year": 2026,
+      "pick": 118,
+      "field": "teamId",
+      "before": 3,
+      "after": 11
+    },
+    {
+      "year": 2026,
+      "pick": 119,
+      "field": "teamId",
+      "before": 2,
+      "after": 7
+    },
+    {
+      "year": 2026,
+      "pick": 120,
+      "field": "teamId",
+      "before": 1,
+      "after": 10
+    },
+    {
+      "year": 2026,
+      "pick": 121,
+      "field": "teamId",
+      "before": 1,
+      "after": 10
+    },
+    {
+      "year": 2026,
+      "pick": 122,
+      "field": "teamId",
+      "before": 2,
+      "after": 7
+    },
+    {
+      "year": 2026,
+      "pick": 123,
+      "field": "teamId",
+      "before": 3,
+      "after": 11
+    },
+    {
+      "year": 2026,
+      "pick": 124,
+      "field": "teamId",
+      "before": 4,
+      "after": 1
+    },
+    {
+      "year": 2026,
+      "pick": 125,
+      "field": "teamId",
+      "before": 5,
+      "after": 4
+    },
+    {
+      "year": 2026,
+      "pick": 126,
+      "field": "teamId",
+      "before": 6,
+      "after": 9
+    },
+    {
+      "year": 2026,
+      "pick": 127,
+      "field": "teamId",
+      "before": 7,
+      "after": 5
+    },
+    {
+      "year": 2026,
+      "pick": 128,
+      "field": "teamId",
+      "before": 8,
+      "after": 2
+    },
+    {
+      "year": 2026,
+      "pick": 129,
+      "field": "teamId",
+      "before": 9,
+      "after": 8
+    },
+    {
+      "year": 2026,
+      "pick": 130,
+      "field": "teamId",
+      "before": 10,
+      "after": 3
+    },
+    {
+      "year": 2026,
+      "pick": 131,
+      "field": "teamId",
+      "before": 11,
+      "after": 12
+    },
+    {
+      "year": 2026,
+      "pick": 132,
+      "field": "teamId",
+      "before": 12,
+      "after": 6
+    },
+    {
+      "year": 2026,
+      "pick": 133,
+      "field": "teamId",
+      "before": 12,
+      "after": 6
+    },
+    {
+      "year": 2026,
+      "pick": 134,
+      "field": "teamId",
+      "before": 11,
+      "after": 12
+    },
+    {
+      "year": 2026,
+      "pick": 135,
+      "field": "teamId",
+      "before": 10,
+      "after": 3
+    },
+    {
+      "year": 2026,
+      "pick": 136,
+      "field": "teamId",
+      "before": 9,
+      "after": 8
+    },
+    {
+      "year": 2026,
+      "pick": 137,
+      "field": "teamId",
+      "before": 8,
+      "after": 2
+    },
+    {
+      "year": 2026,
+      "pick": 138,
+      "field": "teamId",
+      "before": 7,
+      "after": 5
+    },
+    {
+      "year": 2026,
+      "pick": 139,
+      "field": "teamId",
+      "before": 6,
+      "after": 9
+    },
+    {
+      "year": 2026,
+      "pick": 140,
+      "field": "teamId",
+      "before": 5,
+      "after": 4
+    },
+    {
+      "year": 2026,
+      "pick": 141,
+      "field": "teamId",
+      "before": 4,
+      "after": 1
+    },
+    {
+      "year": 2026,
+      "pick": 142,
+      "field": "teamId",
+      "before": 3,
+      "after": 11
+    },
+    {
+      "year": 2026,
+      "pick": 143,
+      "field": "teamId",
+      "before": 2,
+      "after": 7
+    },
+    {
+      "year": 2026,
+      "pick": 144,
+      "field": "teamId",
+      "before": 1,
+      "after": 10
+    },
+    {
+      "year": 2026,
+      "pick": 145,
+      "field": "teamId",
+      "before": 1,
+      "after": 10
+    },
+    {
+      "year": 2026,
+      "pick": 146,
+      "field": "teamId",
+      "before": 2,
+      "after": 7
+    },
+    {
+      "year": 2026,
+      "pick": 146,
+      "field": "playerId",
+      "before": null,
+      "after": "100026"
+    },
+    {
+      "year": 2026,
+      "pick": 146,
+      "field": "starts",
+      "before": 0,
+      "after": 5
+    },
+    {
+      "year": 2026,
+      "pick": 146,
+      "field": "starterPoints",
+      "before": 0,
+      "after": 44
+    },
+    {
+      "year": 2026,
+      "pick": 147,
+      "field": "teamId",
+      "before": 3,
+      "after": 11
+    },
+    {
+      "year": 2026,
+      "pick": 148,
+      "field": "teamId",
+      "before": 4,
+      "after": 1
+    },
+    {
+      "year": 2026,
+      "pick": 149,
+      "field": "teamId",
+      "before": 5,
+      "after": 4
+    },
+    {
+      "year": 2026,
+      "pick": 149,
+      "field": "playerId",
+      "before": null,
+      "after": "100034"
+    },
+    {
+      "year": 2026,
+      "pick": 149,
+      "field": "starts",
+      "before": 0,
+      "after": 5
+    },
+    {
+      "year": 2026,
+      "pick": 149,
+      "field": "starterPoints",
+      "before": 0,
+      "after": 34
+    },
+    {
+      "year": 2026,
+      "pick": 150,
+      "field": "teamId",
+      "before": 6,
+      "after": 9
+    },
+    {
+      "year": 2026,
+      "pick": 151,
+      "field": "teamId",
+      "before": 7,
+      "after": 5
+    },
+    {
+      "year": 2026,
+      "pick": 152,
+      "field": "teamId",
+      "before": 8,
+      "after": 2
+    },
+    {
+      "year": 2026,
+      "pick": 153,
+      "field": "teamId",
+      "before": 9,
+      "after": 8
+    },
+    {
+      "year": 2026,
+      "pick": 153,
+      "field": "playerId",
+      "before": null,
+      "after": "100007"
+    },
+    {
+      "year": 2026,
+      "pick": 153,
+      "field": "starts",
+      "before": 0,
+      "after": 5
+    },
+    {
+      "year": 2026,
+      "pick": 153,
+      "field": "starterPoints",
+      "before": 0,
+      "after": 39
+    },
+    {
+      "year": 2026,
+      "pick": 154,
+      "field": "teamId",
+      "before": 10,
+      "after": 3
+    },
+    {
+      "year": 2026,
+      "pick": 155,
+      "field": "teamId",
+      "before": 11,
+      "after": 12
+    },
+    {
+      "year": 2026,
+      "pick": 155,
+      "field": "playerId",
+      "before": null,
+      "after": "100021"
+    },
+    {
+      "year": 2026,
+      "pick": 155,
+      "field": "starts",
+      "before": 0,
+      "after": 3
+    },
+    {
+      "year": 2026,
+      "pick": 155,
+      "field": "starterPoints",
+      "before": 0,
+      "after": 6
+    },
+    {
+      "year": 2026,
+      "pick": 156,
+      "field": "teamId",
+      "before": 12,
+      "after": 6
+    },
+    {
+      "year": 2026,
+      "pick": 157,
+      "field": "teamId",
+      "before": 12,
+      "after": 6
+    },
+    {
+      "year": 2026,
+      "pick": 158,
+      "field": "teamId",
+      "before": 11,
+      "after": 12
+    },
+    {
+      "year": 2026,
+      "pick": 159,
+      "field": "teamId",
+      "before": 10,
+      "after": 3
+    },
+    {
+      "year": 2026,
+      "pick": 160,
+      "field": "teamId",
+      "before": 9,
+      "after": 8
+    },
+    {
+      "year": 2026,
+      "pick": 161,
+      "field": "teamId",
+      "before": 8,
+      "after": 2
+    },
+    {
+      "year": 2026,
+      "pick": 162,
+      "field": "teamId",
+      "before": 7,
+      "after": 5
+    },
+    {
+      "year": 2026,
+      "pick": 162,
+      "field": "playerId",
+      "before": null,
+      "after": "100016"
+    },
+    {
+      "year": 2026,
+      "pick": 162,
+      "field": "starts",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "year": 2026,
+      "pick": 162,
+      "field": "starterPoints",
+      "before": 0,
+      "after": 8
+    },
+    {
+      "year": 2026,
+      "pick": 163,
+      "field": "teamId",
+      "before": 6,
+      "after": 9
+    },
+    {
+      "year": 2026,
+      "pick": 163,
+      "field": "playerId",
+      "before": null,
+      "after": "100017"
+    },
+    {
+      "year": 2026,
+      "pick": 164,
+      "field": "teamId",
+      "before": 5,
+      "after": 4
+    },
+    {
+      "year": 2026,
+      "pick": 165,
+      "field": "teamId",
+      "before": 4,
+      "after": 1
+    },
+    {
+      "year": 2026,
+      "pick": 166,
+      "field": "teamId",
+      "before": 3,
+      "after": 11
+    },
+    {
+      "year": 2026,
+      "pick": 167,
+      "field": "teamId",
+      "before": 2,
+      "after": 7
+    },
+    {
+      "year": 2026,
+      "pick": 168,
+      "field": "teamId",
+      "before": 1,
+      "after": 10
+    },
+    {
+      "year": 2026,
+      "pick": 168,
+      "field": "playerId",
+      "before": null,
+      "after": "100024"
+    },
+    {
+      "year": 2026,
+      "pick": 168,
+      "field": "starts",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "year": 2026,
+      "pick": 168,
+      "field": "starterPoints",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "year": 2026,
+      "pick": 169,
+      "field": "teamId",
+      "before": 1,
+      "after": 10
+    },
+    {
+      "year": 2026,
+      "pick": 170,
+      "field": "teamId",
+      "before": 2,
+      "after": 7
+    },
+    {
+      "year": 2026,
+      "pick": 171,
+      "field": "teamId",
+      "before": 3,
+      "after": 11
+    },
+    {
+      "year": 2026,
+      "pick": 171,
+      "field": "playerId",
+      "before": null,
+      "after": "100030"
+    },
+    {
+      "year": 2026,
+      "pick": 171,
+      "field": "starts",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "year": 2026,
+      "pick": 171,
+      "field": "starterPoints",
+      "before": 0,
+      "after": 13
+    },
+    {
+      "year": 2026,
+      "pick": 172,
+      "field": "teamId",
+      "before": 4,
+      "after": 1
+    },
+    {
+      "year": 2026,
+      "pick": 173,
+      "field": "teamId",
+      "before": 5,
+      "after": 4
+    },
+    {
+      "year": 2026,
+      "pick": 174,
+      "field": "teamId",
+      "before": 6,
+      "after": 9
+    },
+    {
+      "year": 2026,
+      "pick": 175,
+      "field": "teamId",
+      "before": 7,
+      "after": 5
+    },
+    {
+      "year": 2026,
+      "pick": 176,
+      "field": "teamId",
+      "before": 8,
+      "after": 2
+    },
+    {
+      "year": 2026,
+      "pick": 176,
+      "field": "playerId",
+      "before": null,
+      "after": "100023"
+    },
+    {
+      "year": 2026,
+      "pick": 176,
+      "field": "starts",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "year": 2026,
+      "pick": 176,
+      "field": "starterPoints",
+      "before": 0,
+      "after": 18
+    },
+    {
+      "year": 2026,
+      "pick": 177,
+      "field": "teamId",
+      "before": 9,
+      "after": 8
+    },
+    {
+      "year": 2026,
+      "pick": 178,
+      "field": "teamId",
+      "before": 10,
+      "after": 3
+    },
+    {
+      "year": 2026,
+      "pick": 178,
+      "field": "playerId",
+      "before": null,
+      "after": "100033"
+    },
+    {
+      "year": 2026,
+      "pick": 178,
+      "field": "starts",
+      "before": 0,
+      "after": 5
+    },
+    {
+      "year": 2026,
+      "pick": 178,
+      "field": "starterPoints",
+      "before": 0,
+      "after": 25
+    },
+    {
+      "year": 2026,
+      "pick": 179,
+      "field": "teamId",
+      "before": 11,
+      "after": 12
+    },
+    {
+      "year": 2026,
+      "pick": 180,
+      "field": "teamId",
+      "before": 12,
+      "after": 6
+    },
+    {
+      "year": 2026,
+      "pick": 180,
+      "field": "playerId",
+      "before": null,
+      "after": "100008"
+    },
+    {
+      "year": 2026,
+      "pick": 180,
+      "field": "starts",
+      "before": 0,
+      "after": 3
+    },
+    {
+      "year": 2026,
+      "pick": 180,
+      "field": "starterPoints",
+      "before": 0,
+      "after": 15
+    }
+  ],
+  "players": [
+    {
+      "player": "Zach Charbonnet",
+      "playerId": "40075",
+      "field": "ir",
+      "before": 4,
+      "after": 5
+    },
+    {
+      "player": "Josh Jacobs",
+      "playerId": "31856",
+      "field": "ir",
+      "before": 1,
+      "after": 2
+    },
+    {
+      "player": "James Conner",
+      "playerId": "30218",
+      "field": "ir",
+      "before": 4,
+      "after": 5
+    },
+    {
+      "player": "Jonathon Brooks",
+      "playerId": "40926",
+      "field": "ir",
+      "before": 11,
+      "after": 12
+    },
+    {
+      "player": "Tank Dell",
+      "playerId": "40097",
+      "field": "ir",
+      "before": 4,
+      "after": 5
+    },
+    {
+      "player": "Isiah Pacheco",
+      "playerId": "34207",
+      "field": "ir",
+      "before": 11,
+      "after": 12
+    },
+    {
+      "player": "Kenny Gainwell",
+      "playerId": "33538",
+      "field": "bench",
+      "before": 9,
+      "after": 10
+    },
+    {
+      "player": "Kenny Gainwell",
+      "playerId": "33538",
+      "field": "rosterPoints",
+      "before": 98.1,
+      "after": 100.4
+    },
+    {
+      "player": "Malik Davis",
+      "playerId": "34610",
+      "field": "ir",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "player": "Carnell Tate",
+      "playerId": "42626",
+      "field": "bench",
+      "before": 2,
+      "after": 3
+    },
+    {
+      "player": "Carnell Tate",
+      "playerId": "42626",
+      "field": "rosterPoints",
+      "before": 19.9,
+      "after": 36.9
+    },
+    {
+      "player": "Makai Lemon",
+      "playerId": "42642",
+      "field": "bench",
+      "before": 3,
+      "after": 5
+    },
+    {
+      "player": "Makai Lemon",
+      "playerId": "42642",
+      "field": "rosterPoints",
+      "before": 9.2,
+      "after": 17.8
+    },
+    {
+      "player": "Jordyn Tyson",
+      "playerId": "42630",
+      "field": "ir",
+      "before": 2,
+      "after": 5
+    },
+    {
+      "player": "Ja'Kobi Lane",
+      "playerId": "42702",
+      "field": "ir",
+      "before": 2,
+      "after": 3
+    }
+  ],
+  "lineups": [],
+  "awards": [
+    {
+      "year": "2024",
+      "award": "COTY",
+      "before": {
+        "owner": "Chuck",
+        "value": "93.7%"
+      },
+      "after": {
+        "owner": "Chuck",
+        "value": "92.6%"
+      },
+      "detail": "Mean weekly actual ÷ best legal lineup points in completed fantasy games"
+    },
+    {
+      "year": "2024",
+      "award": "Spectator Sport",
+      "before": {
+        "owner": "Daniel",
+        "value": "309.38"
+      },
+      "after": {
+        "owner": "Daniel",
+        "value": "321.46"
+      },
+      "detail": "Most legal-lineup points left unused"
+    },
+    {
+      "year": "2024",
+      "award": "God's Favorite",
+      "before": {
+        "owner": "Chuck",
+        "value": "273.54"
+      },
+      "after": {
+        "owner": "Chuck",
+        "value": "283.24"
+      },
+      "detail": "Opponent legal-lineup points left unused"
+    },
+    {
+      "year": "2024",
+      "award": "The Nick Special",
+      "before": {
+        "owner": "Jack",
+        "value": "4.44"
+      },
+      "after": {
+        "owner": "Liam",
+        "value": "6.70"
+      },
+      "detail": "Waiver-acquired starter points per FAAB dollar during acquired stints"
+    },
+    {
+      "year": "2024",
+      "award": "Waiver Wire Warrior",
+      "before": {
+        "owner": "Jack",
+        "value": "47"
+      },
+      "after": {
+        "owner": "Jack",
+        "value": "43"
+      },
+      "detail": "Successful add/drop events; a paired add/drop is one move"
+    },
+    {
+      "year": "2024",
+      "award": "Fewest QB Points",
+      "before": {
+        "owner": "Tina",
+        "value": "230.98"
+      },
+      "after": {
+        "owner": "Tina",
+        "value": "244.18"
+      },
+      "detail": "Starter points in completed fantasy games; byes and eliminated weeks excluded"
+    },
+    {
+      "year": "2025",
+      "award": "COTY",
+      "before": {
+        "owner": "Jack",
+        "value": "91.8%"
+      },
+      "after": {
+        "owner": "Rick",
+        "value": "91.1%"
+      },
+      "detail": "Mean weekly actual ÷ best legal lineup points in completed fantasy games"
+    },
+    {
+      "year": "2025",
+      "award": "Spectator Sport",
+      "before": {
+        "owner": "Santi",
+        "value": "323.38"
+      },
+      "after": {
+        "owner": "Nick",
+        "value": "346.94"
+      },
+      "detail": "Most legal-lineup points left unused"
+    },
+    {
+      "year": "2025",
+      "award": "God's Favorite",
+      "before": {
+        "owner": "Tina",
+        "value": "279.82"
+      },
+      "after": {
+        "owner": "Jack",
+        "value": "296.04"
+      },
+      "detail": "Opponent legal-lineup points left unused"
+    },
+    {
+      "year": "2025",
+      "award": "The Nick Special",
+      "before": {
+        "owner": "Quinn",
+        "value": "4.75"
+      },
+      "after": {
+        "owner": "Tina",
+        "value": "5.51"
+      },
+      "detail": "Waiver-acquired starter points per FAAB dollar during acquired stints"
+    },
+    {
+      "year": "2025",
+      "award": "Waiver Wire Warrior",
+      "before": {
+        "owner": "Brock",
+        "value": "37"
+      },
+      "after": {
+        "owner": "Brock",
+        "value": "47"
+      },
+      "detail": "Successful add/drop events; a paired add/drop is one move"
+    },
+    {
+      "year": "2025",
+      "award": "Daddy Warbucks",
+      "before": {
+        "owner": "Jack",
+        "value": "$82"
+      },
+      "after": {
+        "owner": "Quinn",
+        "value": "$100"
+      },
+      "detail": "FAAB spent on successful waiver claims"
+    },
+    {
+      "year": "all",
+      "award": "COTY",
+      "before": {
+        "owner": "Chuck",
+        "value": "93.7%"
+      },
+      "after": {
+        "owner": "Chuck",
+        "value": "92.6%"
+      },
+      "detail": "Mean weekly actual ÷ best legal lineup points in completed fantasy games · single-season record"
+    },
+    {
+      "year": "all",
+      "award": "Spectator Sport",
+      "before": {
+        "owner": "Santi",
+        "value": "323.38"
+      },
+      "after": {
+        "owner": "Nick",
+        "value": "346.94"
+      },
+      "detail": "Most legal-lineup points left unused · single-season record"
+    },
+    {
+      "year": "all",
+      "award": "God's Favorite",
+      "before": {
+        "owner": "Tina",
+        "value": "279.82"
+      },
+      "after": {
+        "owner": "Jack",
+        "value": "296.04"
+      },
+      "detail": "Opponent legal-lineup points left unused · single-season record"
+    },
+    {
+      "year": "all",
+      "award": "The Nick Special",
+      "before": {
+        "owner": "Leo",
+        "value": "14.18"
+      },
+      "after": {
+        "owner": "Liam",
+        "value": "6.70"
+      },
+      "detail": "Waiver-acquired starter points per FAAB dollar during acquired stints · single-season record"
+    },
+    {
+      "year": "all",
+      "award": "Waiver Wire Warrior",
+      "before": {
+        "owner": "Jack",
+        "value": "47"
+      },
+      "after": {
+        "owner": "Brock",
+        "value": "47"
+      },
+      "detail": "Successful add/drop events; a paired add/drop is one move · single-season record"
+    }
+  ],
+  "transactions": [
+    {
+      "year": 2024,
+      "owner": "Quinn",
+      "field": "transactions",
+      "before": 43,
+      "after": 39
+    },
+    {
+      "year": 2024,
+      "owner": "Quinn",
+      "field": "faabSpent",
+      "before": 95,
+      "after": 100
+    },
+    {
+      "year": 2024,
+      "owner": "Quinn",
+      "field": "faabWins",
+      "before": 4,
+      "after": 6
+    },
+    {
+      "year": 2024,
+      "owner": "Chuck",
+      "field": "transactions",
+      "before": 17,
+      "after": 16
+    },
+    {
+      "year": 2024,
+      "owner": "Chuck",
+      "field": "faabSpent",
+      "before": 40,
+      "after": 48
+    },
+    {
+      "year": 2024,
+      "owner": "Chuck",
+      "field": "faabWins",
+      "before": 4,
+      "after": 5
+    },
+    {
+      "year": 2024,
+      "owner": "Tina",
+      "field": "faabWins",
+      "before": 2,
+      "after": 4
+    },
+    {
+      "year": 2024,
+      "owner": "Jack",
+      "field": "transactions",
+      "before": 47,
+      "after": 43
+    },
+    {
+      "year": 2024,
+      "owner": "Jack",
+      "field": "faabSpent",
+      "before": 32,
+      "after": 100
+    },
+    {
+      "year": 2024,
+      "owner": "Jack",
+      "field": "faabWins",
+      "before": 5,
+      "after": 20
+    },
+    {
+      "year": 2024,
+      "owner": "Daniel",
+      "field": "transactions",
+      "before": 19,
+      "after": 18
+    },
+    {
+      "year": 2024,
+      "owner": "Daniel",
+      "field": "faabSpent",
+      "before": 0,
+      "after": 100
+    },
+    {
+      "year": 2024,
+      "owner": "Daniel",
+      "field": "faabWins",
+      "before": 1,
+      "after": 8
+    },
+    {
+      "year": 2024,
+      "owner": "Nick",
+      "field": "faabSpent",
+      "before": 20,
+      "after": 72
+    },
+    {
+      "year": 2024,
+      "owner": "Nick",
+      "field": "faabWins",
+      "before": 2,
+      "after": 6
+    },
+    {
+      "year": 2024,
+      "owner": "Brock",
+      "field": "transactions",
+      "before": 46,
+      "after": 41
+    },
+    {
+      "year": 2024,
+      "owner": "Brock",
+      "field": "faabSpent",
+      "before": 38,
+      "after": 100
+    },
+    {
+      "year": 2024,
+      "owner": "Brock",
+      "field": "faabWins",
+      "before": 4,
+      "after": 20
+    },
+    {
+      "year": 2024,
+      "owner": "Liam",
+      "field": "transactions",
+      "before": 22,
+      "after": 20
+    },
+    {
+      "year": 2024,
+      "owner": "Liam",
+      "field": "faabSpent",
+      "before": 47,
+      "after": 57
+    },
+    {
+      "year": 2024,
+      "owner": "Liam",
+      "field": "faabWins",
+      "before": 2,
+      "after": 12
+    },
+    {
+      "year": 2024,
+      "owner": "Santi",
+      "field": "transactions",
+      "before": 19,
+      "after": 18
+    },
+    {
+      "year": 2024,
+      "owner": "Santi",
+      "field": "faabSpent",
+      "before": 37,
+      "after": 89
+    },
+    {
+      "year": 2024,
+      "owner": "Santi",
+      "field": "faabWins",
+      "before": 2,
+      "after": 6
+    },
+    {
+      "year": 2024,
+      "owner": "Calvin",
+      "field": "transactions",
+      "before": 27,
+      "after": 26
+    },
+    {
+      "year": 2024,
+      "owner": "Calvin",
+      "field": "faabSpent",
+      "before": 0,
+      "after": 32
+    },
+    {
+      "year": 2024,
+      "owner": "Calvin",
+      "field": "faabWins",
+      "before": 1,
+      "after": 4
+    },
+    {
+      "year": 2024,
+      "owner": "Isaac",
+      "field": "transactions",
+      "before": 17,
+      "after": 14
+    },
+    {
+      "year": 2024,
+      "owner": "Isaac",
+      "field": "faabWins",
+      "before": 1,
+      "after": 5
+    },
+    {
+      "year": 2025,
+      "owner": "Leo",
+      "field": "transactions",
+      "before": 23,
+      "after": 26
+    },
+    {
+      "year": 2025,
+      "owner": "Leo",
+      "field": "faabSpent",
+      "before": 16,
+      "after": 66
+    },
+    {
+      "year": 2025,
+      "owner": "Leo",
+      "field": "faabWins",
+      "before": 3,
+      "after": 12
+    },
+    {
+      "year": 2025,
+      "owner": "Rick",
+      "field": "transactions",
+      "before": 12,
+      "after": 19
+    },
+    {
+      "year": 2025,
+      "owner": "Rick",
+      "field": "faabSpent",
+      "before": 0,
+      "after": 50
+    },
+    {
+      "year": 2025,
+      "owner": "Rick",
+      "field": "faabWins",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "year": 2025,
+      "owner": "Quinn",
+      "field": "transactions",
+      "before": 32,
+      "after": 37
+    },
+    {
+      "year": 2025,
+      "owner": "Quinn",
+      "field": "faabSpent",
+      "before": 4,
+      "after": 100
+    },
+    {
+      "year": 2025,
+      "owner": "Quinn",
+      "field": "faabWins",
+      "before": 1,
+      "after": 9
+    },
+    {
+      "year": 2025,
+      "owner": "Liam",
+      "field": "transactions",
+      "before": 19,
+      "after": 22
+    },
+    {
+      "year": 2025,
+      "owner": "Liam",
+      "field": "faabSpent",
+      "before": 32,
+      "after": 73
+    },
+    {
+      "year": 2025,
+      "owner": "Liam",
+      "field": "faabWins",
+      "before": 2,
+      "after": 7
+    },
+    {
+      "year": 2025,
+      "owner": "Brock",
+      "field": "transactions",
+      "before": 37,
+      "after": 47
+    },
+    {
+      "year": 2025,
+      "owner": "Brock",
+      "field": "faabSpent",
+      "before": 65,
+      "after": 89
+    },
+    {
+      "year": 2025,
+      "owner": "Brock",
+      "field": "faabWins",
+      "before": 4,
+      "after": 16
+    },
+    {
+      "year": 2025,
+      "owner": "Jack",
+      "field": "transactions",
+      "before": 32,
+      "after": 45
+    },
+    {
+      "year": 2025,
+      "owner": "Jack",
+      "field": "faabSpent",
+      "before": 82,
+      "after": 98
+    },
+    {
+      "year": 2025,
+      "owner": "Jack",
+      "field": "faabWins",
+      "before": 2,
+      "after": 10
+    },
+    {
+      "year": 2025,
+      "owner": "Daniel",
+      "field": "transactions",
+      "before": 12,
+      "after": 13
+    },
+    {
+      "year": 2025,
+      "owner": "Daniel",
+      "field": "faabSpent",
+      "before": 0,
+      "after": 50
+    },
+    {
+      "year": 2025,
+      "owner": "Daniel",
+      "field": "faabWins",
+      "before": 0,
+      "after": 2
+    },
+    {
+      "year": 2025,
+      "owner": "Santi",
+      "field": "faabSpent",
+      "before": 19,
+      "after": 50
+    },
+    {
+      "year": 2025,
+      "owner": "Santi",
+      "field": "faabWins",
+      "before": 2,
+      "after": 12
+    },
+    {
+      "year": 2025,
+      "owner": "Nick",
+      "field": "transactions",
+      "before": 32,
+      "after": 36
+    },
+    {
+      "year": 2025,
+      "owner": "Nick",
+      "field": "faabSpent",
+      "before": 30,
+      "after": 49
+    },
+    {
+      "year": 2025,
+      "owner": "Nick",
+      "field": "faabWins",
+      "before": 2,
+      "after": 6
+    },
+    {
+      "year": 2025,
+      "owner": "Chuck",
+      "field": "transactions",
+      "before": 13,
+      "after": 15
+    },
+    {
+      "year": 2025,
+      "owner": "Chuck",
+      "field": "faabSpent",
+      "before": 7,
+      "after": 47
+    },
+    {
+      "year": 2025,
+      "owner": "Chuck",
+      "field": "faabWins",
+      "before": 1,
+      "after": 9
+    },
+    {
+      "year": 2025,
+      "owner": "Isaac",
+      "field": "transactions",
+      "before": 28,
+      "after": 31
+    },
+    {
+      "year": 2025,
+      "owner": "Isaac",
+      "field": "faabSpent",
+      "before": 25,
+      "after": 62
+    },
+    {
+      "year": 2025,
+      "owner": "Isaac",
+      "field": "faabWins",
+      "before": 3,
+      "after": 12
+    },
+    {
+      "year": 2025,
+      "owner": "Tina",
+      "field": "transactions",
+      "before": 20,
+      "after": 22
+    },
+    {
+      "year": 2025,
+      "owner": "Tina",
+      "field": "faabSpent",
+      "before": 0,
+      "after": 10
+    },
+    {
+      "year": 2025,
+      "owner": "Tina",
+      "field": "faabWins",
+      "before": 0,
+      "after": 7
+    },
+    {
+      "year": 2026,
+      "owner": "Jack",
+      "field": "transactions",
+      "before": 17,
+      "after": 18
+    },
+    {
+      "year": 2026,
+      "owner": "Jack",
+      "field": "trades",
+      "before": null,
+      "after": 0
+    },
+    {
+      "year": 2026,
+      "owner": "Liam",
+      "field": "trades",
+      "before": null,
+      "after": 0
+    },
+    {
+      "year": 2026,
+      "owner": "Chuck",
+      "field": "transactions",
+      "before": 1,
+      "after": 2
+    },
+    {
+      "year": 2026,
+      "owner": "Chuck",
+      "field": "trades",
+      "before": null,
+      "after": 0
+    },
+    {
+      "year": 2026,
+      "owner": "Mitchell",
+      "field": "trades",
+      "before": null,
+      "after": 0
+    },
+    {
+      "year": 2026,
+      "owner": "Santi",
+      "field": "transactions",
+      "before": 3,
+      "after": 4
+    },
+    {
+      "year": 2026,
+      "owner": "Santi",
+      "field": "trades",
+      "before": null,
+      "after": 0
+    },
+    {
+      "year": 2026,
+      "owner": "Akhil",
+      "field": "transactions",
+      "before": 2,
+      "after": 4
+    },
+    {
+      "year": 2026,
+      "owner": "Akhil",
+      "field": "trades",
+      "before": null,
+      "after": 0
+    },
+    {
+      "year": 2026,
+      "owner": "Tina",
+      "field": "transactions",
+      "before": 11,
+      "after": 12
+    },
+    {
+      "year": 2026,
+      "owner": "Tina",
+      "field": "trades",
+      "before": null,
+      "after": 0
+    },
+    {
+      "year": 2026,
+      "owner": "Isaac",
+      "field": "trades",
+      "before": null,
+      "after": 0
+    },
+    {
+      "year": 2026,
+      "owner": "Leo",
+      "field": "trades",
+      "before": null,
+      "after": 0
+    },
+    {
+      "year": 2026,
+      "owner": "Quinn",
+      "field": "transactions",
+      "before": 18,
+      "after": 19
+    },
+    {
+      "year": 2026,
+      "owner": "Quinn",
+      "field": "trades",
+      "before": null,
+      "after": 0
+    },
+    {
+      "year": 2026,
+      "owner": "Brock",
+      "field": "trades",
+      "before": null,
+      "after": 0
+    },
+    {
+      "year": 2026,
+      "owner": "Nick",
+      "field": "transactions",
+      "before": 14,
+      "after": 15
+    },
+    {
+      "year": 2026,
+      "owner": "Nick",
+      "field": "trades",
+      "before": null,
+      "after": 0
+    }
+  ],
+  "faabBalances": [
+    {
+      "year": 2024,
+      "owner": "Quinn",
+      "spent": 100,
+      "balance": 0,
+      "matches": true
+    },
+    {
+      "year": 2024,
+      "owner": "Chuck",
+      "spent": 48,
+      "balance": 52,
+      "matches": true
+    },
+    {
+      "year": 2024,
+      "owner": "Tina",
+      "spent": 20,
+      "balance": 80,
+      "matches": true
+    },
+    {
+      "year": 2024,
+      "owner": "Rick",
+      "spent": 0,
+      "balance": 100,
+      "matches": true
+    },
+    {
+      "year": 2024,
+      "owner": "Jack",
+      "spent": 100,
+      "balance": 0,
+      "matches": true
+    },
+    {
+      "year": 2024,
+      "owner": "Daniel",
+      "spent": 100,
+      "balance": 0,
+      "matches": true
+    },
+    {
+      "year": 2024,
+      "owner": "Nick",
+      "spent": 72,
+      "balance": 28,
+      "matches": true
+    },
+    {
+      "year": 2024,
+      "owner": "Brock",
+      "spent": 100,
+      "balance": 0,
+      "matches": true
+    },
+    {
+      "year": 2024,
+      "owner": "Liam",
+      "spent": 57,
+      "balance": 43,
+      "matches": true
+    },
+    {
+      "year": 2024,
+      "owner": "Santi",
+      "spent": 89,
+      "balance": 11,
+      "matches": true
+    },
+    {
+      "year": 2024,
+      "owner": "Calvin",
+      "spent": 32,
+      "balance": 68,
+      "matches": true
+    },
+    {
+      "year": 2024,
+      "owner": "Isaac",
+      "spent": 100,
+      "balance": 0,
+      "matches": true
+    },
+    {
+      "year": 2025,
+      "owner": "Leo",
+      "spent": 66,
+      "balance": 34,
+      "matches": true
+    },
+    {
+      "year": 2025,
+      "owner": "Rick",
+      "spent": 50,
+      "balance": 50,
+      "matches": true
+    },
+    {
+      "year": 2025,
+      "owner": "Quinn",
+      "spent": 100,
+      "balance": 0,
+      "matches": true
+    },
+    {
+      "year": 2025,
+      "owner": "Liam",
+      "spent": 73,
+      "balance": 27,
+      "matches": true
+    },
+    {
+      "year": 2025,
+      "owner": "Brock",
+      "spent": 89,
+      "balance": 11,
+      "matches": true
+    },
+    {
+      "year": 2025,
+      "owner": "Jack",
+      "spent": 98,
+      "balance": 2,
+      "matches": true
+    },
+    {
+      "year": 2025,
+      "owner": "Daniel",
+      "spent": 50,
+      "balance": 50,
+      "matches": true
+    },
+    {
+      "year": 2025,
+      "owner": "Santi",
+      "spent": 50,
+      "balance": 50,
+      "matches": true
+    },
+    {
+      "year": 2025,
+      "owner": "Nick",
+      "spent": 49,
+      "balance": 51,
+      "matches": true
+    },
+    {
+      "year": 2025,
+      "owner": "Chuck",
+      "spent": 47,
+      "balance": 53,
+      "matches": true
+    },
+    {
+      "year": 2025,
+      "owner": "Isaac",
+      "spent": 62,
+      "balance": 38,
+      "matches": true
+    },
+    {
+      "year": 2025,
+      "owner": "Tina",
+      "spent": 10,
+      "balance": 90,
+      "matches": true
+    },
+    {
+      "year": 2026,
+      "owner": "Jack",
+      "spent": 55,
+      "balance": 45,
+      "matches": true
+    },
+    {
+      "year": 2026,
+      "owner": "Liam",
+      "spent": 16,
+      "balance": 84,
+      "matches": true
+    },
+    {
+      "year": 2026,
+      "owner": "Chuck",
+      "spent": 0,
+      "balance": 100,
+      "matches": true
+    },
+    {
+      "year": 2026,
+      "owner": "Mitchell",
+      "spent": 1,
+      "balance": 99,
+      "matches": true
+    },
+    {
+      "year": 2026,
+      "owner": "Santi",
+      "spent": 34,
+      "balance": 66,
+      "matches": true
+    },
+    {
+      "year": 2026,
+      "owner": "Akhil",
+      "spent": 0,
+      "balance": 100,
+      "matches": true
+    },
+    {
+      "year": 2026,
+      "owner": "Tina",
+      "spent": 9,
+      "balance": 91,
+      "matches": true
+    },
+    {
+      "year": 2026,
+      "owner": "Isaac",
+      "spent": 10,
+      "balance": 90,
+      "matches": true
+    },
+    {
+      "year": 2026,
+      "owner": "Leo",
+      "spent": 8,
+      "balance": 92,
+      "matches": true
+    },
+    {
+      "year": 2026,
+      "owner": "Quinn",
+      "spent": 30,
+      "balance": 70,
+      "matches": true
+    },
+    {
+      "year": 2026,
+      "owner": "Brock",
+      "spent": 37,
+      "balance": 63,
+      "matches": true
+    },
+    {
+      "year": 2026,
+      "owner": "Nick",
+      "spent": 5,
+      "balance": 95,
+      "matches": true
+    }
+  ],
+  "identityReview": [
+    {
+      "year": 2024,
+      "teamId": 9,
+      "archiveManager": "Isaac",
+      "yahooNickname": "Kole",
+      "status": "Owner identity needs confirmation. Established archive mapping retained; scores and team ID are verified."
+    }
+  ],
+  "summary": {
+    "scoreChanges": 0,
+    "winnerChanges": 0,
+    "placementChanges": 0,
+    "standingsChanges": 0,
+    "draftFieldChanges": 249,
+    "playerMetricChanges": 15,
+    "starterScoreDiscrepancies": 0,
+    "awardChanges": 17,
+    "transactionMetricChanges": 83,
+    "faabBalanceMismatches": 0
+  }
+}

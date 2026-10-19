@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 
 const source = (await readFile(new URL('../src/worker.mjs', import.meta.url), 'utf8'))
+  .replace("import { SeasonCache } from './yahoo-cache.mjs';", `import { SeasonCache } from '${new URL('../src/yahoo-cache.mjs', import.meta.url).href}';`)
   .replace("import { DurableObject } from 'cloudflare:workers';", 'class DurableObject { constructor(ctx, env) { this.ctx = ctx; this.env = env; } }');
 const { default: worker, YahooConnection } = await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`);
 
@@ -52,4 +53,12 @@ test('authorization rejects a callback without the matching browser cookie', asy
   const connection = new YahooConnection({ storage: storage() }, {});
   const { state } = await connection.begin();
   await assert.rejects(connection.finish(state, 'wrong-browser', 'unused'), /invalid_oauth_state/);
+});
+
+test('Yahoo throttling pauses shared reads instead of retrying for every visitor',async t=>{
+ const store=storage({tokens:{refresh_token:'refresh',access_token:'access',expires_at:Date.now()+600000}}),c=new YahooConnection({storage:store},{});let calls=0;
+ t.mock.method(globalThis,'fetch',async()=>{calls++;return {status:999,ok:false,body:{cancel:async()=>{}}};});
+ await assert.rejects(c.read('league/470.l.800556'),/yahoo_api_999/);
+ await assert.rejects(c.read('league/470.l.800556'),/yahoo_rate_limited/);
+ assert.equal(calls,1);assert.ok(await store.get('yahooBlockedUntil')>Date.now());
 });

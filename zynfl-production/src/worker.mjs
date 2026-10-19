@@ -1,4 +1,5 @@
 import { DurableObject } from 'cloudflare:workers';
+import { SeasonCache } from './yahoo-cache.mjs';
 
 const ORIGIN = 'https://zynfl.com';
 const CALLBACK = `${ORIGIN}/auth/yahoo/callback`;
@@ -70,6 +71,9 @@ export class YahooConnection extends DurableObject {
   constructor(ctx, env) {
     super(ctx, env);
     this.tail = Promise.resolve();
+    this.readTail = Promise.resolve();
+    this.lastRead = 0;
+    this.cache = null;
   }
 
   // A single OAuth connection is the coordination unit. Refreshes and nonce
@@ -127,13 +131,45 @@ export class YahooConnection extends DurableObject {
   }
 
   async read(path) {
-    const send = async force => fetch(`${API}${path}?format=json`, {
-      headers: { Authorization: `Bearer ${await this.accessToken(force)}` }, signal: AbortSignal.timeout(20_000)
-    });
-    let response = await send(false);
-    if (response.status === 401) { await response.body?.cancel(); response = await send(true); }
-    if (!response.ok) { await response.body?.cancel(); throw new Error(`yahoo_api_${response.status}`); }
-    return boundedJSON(response);
+    const work = async () => {
+      if (Number(await this.ctx.storage.get('yahooBlockedUntil') || 0) > Date.now()) throw new Error('yahoo_rate_limited');
+      const delay = Math.max(0, 900 - (Date.now() - this.lastRead));
+      if (delay) await new Promise(resolve => setTimeout(resolve, delay));
+      this.lastRead = Date.now();
+      const send = async force => fetch(`${API}${path}?format=json`, {headers:{Authorization:`Bearer ${await this.accessToken(force)}`},signal:AbortSignal.timeout(20000)});
+      let response = await send(false);
+      if (response.status === 401) { await response.body?.cancel(); response = await send(true); }
+      if (!response.ok) {
+        await response.body?.cancel();
+        if ([429,999].includes(response.status)) await this.ctx.storage.put('yahooBlockedUntil', Date.now()+60*60*1000);
+        throw new Error(`yahoo_api_${response.status}`);
+      }
+      return boundedJSON(response);
+    };
+    const result=this.readTail.then(work);this.readTail=result.catch(()=>{});return result;
+  }
+
+  seasonCache(){return this.cache ||= new SeasonCache(this);}
+  async publicSeason(year){return this.seasonCache().public(year);}
+  async scheduledRefresh(){
+    const cache=this.seasonCache();
+    await cache.refresh(2026,{maintenance:true});
+    // Historical data is resumable and gets a slow correction sweep afterward.
+    const next=Number(await this.ctx.storage.get('archiveCursor')||0);
+    await cache.refresh([2024,2025][next%2],{maintenance:true});
+    await this.ctx.storage.put('archiveCursor',next+1);
+  }
+
+  async nflWeek(week){
+    const cache=this.seasonCache(),key=`nfl:2026:${week}`,old=cache.read(key);
+    if(old&&Date.now()-old.at<120000)return old.data;
+    try{
+      const response=await fetch(`https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=${week}`,{signal:AbortSignal.timeout(12000)});
+      if(!response.ok)throw Error('nfl_unavailable');
+      const raw=await boundedJSON(response),alias=x=>({WSH:'WAS',JAC:'JAX'}[x]||x);
+      const games=(raw.events||[]).flatMap(e=>{const c=e.competitions?.[0],teams=c?.competitors||[];if(teams.length!==2)return [];return [[alias(teams[0].team.abbreviation),alias(teams[1].team.abbreviation),Number(teams[0].score||0),Number(teams[1].score||0),e.status?.type?.completed?'FINAL':e.status?.type?.state==='in'?'LIVE':'UPCOMING',e.date]];});
+      const data={games,updatedAt:new Date().toISOString(),source:'ESPN'};cache.write(key,{at:Date.now(),data});return data;
+    }catch(error){if(old)return old.data;return {games:[],error:'nfl_unavailable'};}
   }
 
   async discover() {
@@ -178,6 +214,30 @@ export class YahooConnection extends DurableObject {
     if (!(resource in resources)) throw new Error('invalid_resource');
     return this.read(`league/${key}${resources[resource]}`);
   }
+
+  async sourceRead(year, kind, week, start = 0, position = 'ALL', keys = '') {
+    const selected = await this.ctx.storage.get('selected') || {};
+    const key = selected[String(year)];
+    if (!key) throw new Error('league_not_selected');
+    const resources = {
+      rosters: `/teams/roster;week=${week}/players/stats;type=week;week=${week}`,
+      schedule: '/teams/matchups',
+      transactions: `/transactions;start=${start};count=100`,
+      players: `/players;start=${start};count=25;sort=PTS${position === 'ALL' ? '' : `;position=${position}`}/stats`,
+      metadata: '', settings: '/settings', standings: '/standings', draft: '/draftresults',
+      scoreboard: `/scoreboard;week=${week}`
+    };
+    if (kind === 'player-week') {
+      if (!keys || keys.split(',').length > 25 || !keys.split(',').every(k => new RegExp(`^${key.split('.')[0]}\\.p\\.\\d+$`).test(k))) throw new Error('invalid_resource');
+      return this.read(`league/${key}/players;player_keys=${keys}/stats;type=week;week=${week}`);
+    }
+    if (kind === 'team-roster') {
+      if (start < 1 || start > 12) throw new Error('invalid_resource');
+      return this.read(`team/${key}.t.${start}/roster;week=${week}/players/stats;type=week;week=${week}`);
+    }
+    if (!(kind in resources)) throw new Error('invalid_resource');
+    return this.read(`league/${key}${resources[kind]}`);
+  }
 }
 
 function page(title, text, status = 200) {
@@ -185,6 +245,7 @@ function page(title, text, status = 200) {
 }
 
 export default {
+  async scheduled(event,env,ctx){ctx.waitUntil(env.YAHOO_CONNECTION.getByName('zynfl-owner').scheduledRefresh());},
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const dynamic = url.pathname.startsWith('/auth/yahoo') || url.pathname.startsWith('/api/yahoo/');
@@ -204,10 +265,13 @@ export default {
         await connection.finish(state, cookieValue(request, '__Host-yahoo-flow'), code);
         // League discovery is independently retryable if Yahoo times out.
         ctx.waitUntil(connection.discover().catch(() => console.warn(JSON.stringify({ event: 'yahoo_discovery_retry_required' }))));
-        const response = page('Yahoo is connected', 'Your authorization is saved securely. Tell Jack’s site assistant that the connection succeeded so it can finish the live data integration and historical audit.');
+        const response = page('Yahoo is connected', 'Your Yahoo connection is saved securely. The site will refresh automatically.');
         response.headers.set('Set-Cookie', cookie('__Host-yahoo-flow', '', 0));
         return response;
       }
+      if(url.pathname==='/api/yahoo/nfl'){const week=Number(url.searchParams.get('week'));if(!Number.isInteger(week)||week<1||week>18)return json({error:'invalid_week'},400);return json(await connection.nflWeek(week));}
+      const publicMatch=url.pathname.match(/^\/api\/yahoo\/season\/(2024|2025|2026)$/);
+      if(publicMatch)return json(await connection.publicSeason(Number(publicMatch[1])));
       const authorized = await sameSecret(url.searchParams.get('setup') || request.headers.get('X-ZYNFL-Setup'), env.YAHOO_SETUP_TOKEN);
       if (!authorized) return json({ error: 'owner_authorization_required' }, 403);
       if (url.pathname === '/auth/yahoo/start') {
@@ -217,8 +281,16 @@ export default {
         auth.search = new URLSearchParams({ client_id: env.YAHOO_CLIENT_ID, redirect_uri: CALLBACK, response_type: 'code', state }).toString();
         return new Response(null, { status: 302, headers: { Location: auth.toString(), 'Set-Cookie': cookie('__Host-yahoo-flow', browser), 'Cache-Control': 'no-store', 'Referrer-Policy': 'no-referrer' } });
       }
+      if (url.pathname === '/api/yahoo/refresh') { await connection.scheduledRefresh(); return json({ok:true}); }
       if (url.pathname === '/api/yahoo/discover') return json(await connection.discover());
       if (url.pathname === '/api/yahoo/diagnostics') return json(await connection.diagnostics());
+      const source = url.pathname.match(/^\/api\/yahoo\/source\/(2024|2025|2026)\/(metadata|settings|standings|draft|scoreboard|rosters|schedule|transactions|players|player-week|team-roster)$/);
+      if (source) {
+        const week = Number(url.searchParams.get('week') || 1), start = Number(url.searchParams.get('start') || 0);
+        const position = url.searchParams.get('position') || 'ALL';
+        if (!Number.isInteger(week) || week < 1 || week > 18 || !Number.isInteger(start) || start < 0 || start > 10000 || !['ALL','QB','RB','WR','TE','K','DEF'].includes(position)) return json({ error: 'invalid_parameters' }, 400);
+        return json(await connection.sourceRead(Number(source[1]), source[2], week, start, position, url.searchParams.get('keys') || ''));
+      }
       const match = url.pathname.match(/^\/api\/yahoo\/league\/(2024|2025|2026)\/(metadata|settings|standings|teams|transactions|draft|scoreboard)$/);
       if (match) {
         const week = url.searchParams.get('week');
@@ -228,7 +300,7 @@ export default {
       return json({ error: 'not_found' }, 404);
     } catch (error) {
       const message = error instanceof Error ? error.message : 'unknown';
-      const safe = /^(?:yahoo_(?:api|token)_\d{3}|yahoo_not_connected|credentials_missing|invalid_oauth_state|league_not_selected|too_many_authorizations|refresh_token_missing)$/.test(message) ? message : 'yahoo_request_failed';
+      const safe = /^(?:yahoo_(?:api|token)_\d{3}|yahoo_not_connected|yahoo_rate_limited|credentials_missing|invalid_oauth_state|league_not_selected|too_many_authorizations|refresh_token_missing)$/.test(message) ? message : 'yahoo_request_failed';
       console.warn(JSON.stringify({ event: 'yahoo_request_error', error: safe }));
       if (url.pathname.startsWith('/auth/')) return page('Yahoo connection could not finish', `Connection status: ${safe}. Tell your site assistant this message.`, 502);
       return json({ error: safe }, 502);
