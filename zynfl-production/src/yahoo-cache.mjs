@@ -1,5 +1,23 @@
 import * as Y from './yahoo-data.mjs';
+import '../public/assets/js/power-outlook.js';
 const MINUTE=60000, HOUR=60*MINUTE, DAY=24*HOUR;
+export function publishDueRankings(s,inputs,now=Date.now()){
+  if(s.year!==2026)return false;
+  s.powerRankings ||= {};let changed=false;
+  for(let week=1;week<=s.league.currentWeek;week++){
+    if(s.powerRankings[week])continue;
+    const games=s.games.filter(g=>g.week===week&&!g.playoffs),release=globalThis.ZYNFL_OUTLOOK.releaseAt(s,week);
+    if(!release||now<Date.parse(release)||games.length!==6||games.some(g=>!g.complete))continue;
+    if(games.some(g=>[g.aId,g.bId].some(id=>!s.rosterFinal?.[`${week}:${id}`])))continue;
+    const reconstructed=week<=5||now-Date.parse(release)>DAY;
+    const currentReady=s.teams.every(t=>(s.weeks[s.league.currentWeek]?.players||[]).filter(p=>p.owner===t.owner).length>=9);
+    if(!reconstructed&&(!currentReady||s.lastError||now-Date.parse(s.updatedAt)>10*MINUTE))continue;
+    const rosterWeek=!reconstructed&&currentReady?s.league.currentWeek:week;
+    s.powerRankings[week]=globalThis.ZYNFL_OUTLOOK.build(s,week,inputs,{reconstructed,rosterWeek,capturedAt:new Date(now).toISOString()});
+    changed=true;
+  }
+  return changed;
+}
 export const compactPlayer = p => {const {stats,...rest}=p;return rest;};
 export function coverage(s){
   const required=new Set();
@@ -23,7 +41,15 @@ export class SeasonCache {
     this.memory.set(year,season);return season;
   }
   save(s){s.coverage=coverage(s);const {weeks,...header}=s;this.c.ctx.storage.transactionSync(()=>{this.write(`season:${s.year}`,{...header,weekKeys:Object.keys(weeks)});for(const [w,data]of Object.entries(weeks))this.write(`week:${s.year}:${w}`,data);});this.memory.set(s.year,s);}
-  async public(year){const s=await this.load(year);const blocked=Number(await this.c.ctx.storage.get('yahooBlockedUntil')||0);const stale=!!s.lastError||Date.now()-Date.parse(s.updatedAt)>(s.league.finished?7*DAY:5*MINUTE);
+  async ensureOutlook(s){
+    if(s.year!==2026)return;
+    this.outlookInputs ||= (async()=>{const r=await this.c.env.ASSETS.fetch(new Request('https://zynfl.com/data/outlook-inputs.json'));if(!r.ok)throw Error('outlook_inputs_unavailable');return r.json();})();
+    const inputs=await this.outlookInputs;
+    // Keep editions already published by a concurrent visitor refresh.
+    s.powerRankings={...s.powerRankings,...this.memory.get(s.year)?.powerRankings};
+    if(publishDueRankings(s,inputs))this.save(s);
+  }
+  async public(year){const s=await this.load(year);await this.ensureOutlook(s);const blocked=Number(await this.c.ctx.storage.get('yahooBlockedUntil')||0);const stale=!!s.lastError||Date.now()-Date.parse(s.updatedAt)>(s.league.finished?7*DAY:5*MINUTE);
     if(!s.league.finished&&Date.now()-Date.parse(s.checkedAt||0)>MINUTE&&blocked<Date.now())this.c.ctx.waitUntil(this.refresh(year).catch(()=>{}));
     return {...s,sync:{state:stale?'stale':'ready',updatedAt:s.updatedAt,checkedAt:s.checkedAt||null,retryAt:blocked>Date.now()?new Date(blocked).toISOString():null,error:s.lastError||null}};
   }
@@ -92,6 +118,6 @@ export class SeasonCache {
       // replaces a good roster with an empty list or zeroes out a season.
       if(changed)s.updatedAt=new Date().toISOString();
     }
-    this.save(s);return s;
+    await this.ensureOutlook(s);this.save(s);return s;
   }
 }

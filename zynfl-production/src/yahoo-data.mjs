@@ -36,7 +36,8 @@ export function leagueSettings(payload) {
 }
 export function teamRecord(raw,year) {
   const t=flat(raw),s=t.team_standings||{},out=s.outcome_totals||{};
-  return { id:Number(t.team_id), key:t.team_key, owner:ownerFor(year,t.team_key), name:str(t.name), rank:number(s.rank), seed:number(s.playoff_seed), w:Number(out.wins||0), l:Number(out.losses||0), t:Number(out.ties||0), pf:number(s.points_for), pa:number(s.points_against), moves:Number(t.number_of_moves||0), trades:Number(t.number_of_trades||0), faabBalance:number(t.faab_balance), score:number(t.team_points?.total), projected:number(t.team_projected_points?.total) };
+  const probability=number(t.win_probability);
+  return { id:Number(t.team_id), key:t.team_key, owner:ownerFor(year,t.team_key), name:str(t.name), rank:number(s.rank), seed:number(s.playoff_seed), w:Number(out.wins||0), l:Number(out.losses||0), t:Number(out.ties||0), pf:number(s.points_for), pa:number(s.points_against), moves:Number(t.number_of_moves||0), trades:Number(t.number_of_trades||0), faabBalance:number(t.faab_balance), score:number(t.team_points?.total), projected:number(t.team_projected_points?.total), winProbability:probability!=null&&probability>=0&&probability<=1?probability:null };
 }
 export function standings(payload,year) { return find(payload,'team').map(t=>teamRecord(t,year)); }
 export function schedule(payload,year) {
@@ -46,7 +47,7 @@ export function schedule(payload,year) {
     if(teams.length!==2)continue; // A playoff bye is not a played game.
     const [a,b]=teams,week=Number(m.week),id=`${year}:${week}:${[a.id,b.id].sort((x,y)=>x-y).join('-')}`;
     const status=m.status||'preevent',complete=status==='postevent';
-    games.set(id,{id,year,week,start:m.week_start,end:m.week_end,status,complete,playoffs:Number(m.is_playoffs)===1,consolation:Number(m.is_consolation)===1,aId:a.id,bId:b.id,aOwner:a.owner,bOwner:b.owner,aTeam:a.name,bTeam:b.name,aScore:a.score,bScore:b.score,aProjected:a.projected,bProjected:b.projected,winner:complete?(m.winner_team_key?ownerFor(year,m.winner_team_key):null):null,tied:!!Number(m.is_tied)});
+    games.set(id,{id,year,week,start:m.week_start,end:m.week_end,status,complete,playoffs:Number(m.is_playoffs)===1,consolation:Number(m.is_consolation)===1,aId:a.id,bId:b.id,aOwner:a.owner,bOwner:b.owner,aTeam:a.name,bTeam:b.name,aScore:a.score,bScore:b.score,aProjected:a.projected,bProjected:b.projected,aWinProbability:a.winProbability,bWinProbability:b.winProbability,winner:complete?(m.winner_team_key?ownerFor(year,m.winner_team_key):null):null,tied:!!Number(m.is_tied)});
   }
   return [...games.values()].sort((a,b)=>a.week-b.week||a.aId-b.aId);
 }

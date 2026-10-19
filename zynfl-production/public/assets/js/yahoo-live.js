@@ -3,8 +3,6 @@
 (()=>{
  const base=structuredClone({ZYNFL_DATA:window.ZYNFL_DATA,ZYNFL_2026:window.ZYNFL_2026,ZYNFL_2026_LEADERS:window.ZYNFL_2026_LEADERS});
  const seasons=new Map();let busy=false,applied=false,revision='',lastArchive=0,pendingView=false;
- const bar=document.createElement('div');bar.className='yahoo-status';bar.setAttribute('role','status');bar.setAttribute('aria-live','polite');bar.textContent='Connecting to Yahoo…';document.querySelector('.site-header').after(bar);
- const date=s=>s?new Date(s).toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZone:'America/Chicago'})+' CT':'—';
  async function get(year){const r=await fetch(`/api/yahoo/season/${year}`,{cache:'no-store',signal:AbortSignal.timeout(15000)});if(!r.ok)throw Error('Yahoo data is temporarily unavailable');const s=await r.json();if(s.year!==year||s.schema!==1||s.teams?.length!==12||!Array.isArray(s.games)||!s.weeks)throw Error('Incomplete Yahoo response');return s;}
  function refreshView(){
   if(!document.getElementById('modalBackdrop').hidden||document.querySelector('dialog[open]')||['INPUT','TEXTAREA'].includes(document.activeElement?.tagName)){pendingView=true;return;}pendingView=false;
@@ -18,7 +16,7 @@
    const results=await Promise.allSettled(years.map(get));
    results.forEach((r,i)=>{if(r.status==='fulfilled')seasons.set(years[i],r.value);});
    if(seasons.size!==3)throw Error('Some Yahoo history is temporarily unavailable');
-   const all=[...seasons.values()].sort((a,b)=>a.year-b.year),latest=seasons.get(2026),key=all.map(s=>`${s.updatedAt}:${s.coverage?.verifiedRosters}:${s.transactions.length}`).join('|');
+   const all=[...seasons.values()].sort((a,b)=>a.year-b.year),latest=seasons.get(2026),key=all.map(s=>`${s.updatedAt}:${s.coverage?.verifiedRosters}:${s.transactions.length}:${Object.keys(s.powerRankings||{}).length}`).join('|');
    window.ZYNFL_YAHOO_SEASONS=all;
    if(key!==revision){
     const model=window.ZYNFL_YAHOO_MODEL.build(base,all);
@@ -27,11 +25,9 @@
     if(!applied){const page=(location.hash||'#home').slice(1);zState.week=page==='matchups'?(Z26.currentWeek||Z26.week):Z26.week||Z26.currentWeek;}
     revision=key;refreshView();
    }
-   const stale=latest.sync?.state==='stale'||!!latest.sync?.error;
-   bar.dataset.state=stale?'stale':'ready';bar.textContent=stale?`Yahoo update delayed · Showing saved data from ${date(latest.updatedAt)} · Retrying automatically`:`Yahoo · Updated ${date(latest.updatedAt)} · Refreshes automatically${latest.coverage?.rostersComplete===false?' · Final player stats syncing':''}`;
-   document.getElementById('footerMeta').textContent=`Records through ${D.meta.dataThrough} · Yahoo updated ${date(latest.updatedAt)}`;
+   document.getElementById('footerMeta').textContent=`Records through ${D.meta.dataThrough}`;
    applied=true;if(years.length===3&&results.every(r=>r.status==='fulfilled'))lastArchive=Date.now();
-  }catch(error){bar.dataset.state='stale';bar.textContent=applied?'Yahoo update delayed · Showing the last successful update · Retrying automatically':'Showing saved league data · Yahoo connection is retrying automatically';}
+  }catch(error){console.warn('ZYNFL live update delayed; retrying automatically.');}
   finally{busy=false;}
  }
  document.addEventListener('focusout',()=>{if(pendingView)setTimeout(refreshView,0);});document.addEventListener('click',()=>{if(pendingView)setTimeout(refreshView,0);});

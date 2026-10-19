@@ -1,0 +1,44 @@
+/* Clip table backgrounds to the same rounded frame as their border. */
+.season-table-shell{overflow:hidden;isolation:isolate;background:#1b2633;border-radius:15px}
+.season-table{border-collapse:separate;border-spacing:0}
+.season-table tbody tr:last-child td{border-bottom:0}
+.rank-badge.gold{background:#f5cc66;color:#172330}
+.rank-badge.silver{background:#ced8e2;color:#192431}
+.rank-badge.bronze{background:#c98e63;color:#1d1920}
+
+.z-probability{display:grid;gap:7px;min-width:100px;max-width:210px;font-variant-numeric:tabular-nums}
+.z-probability>span{font-weight:750;color:#f5f7fb}
+.z-probability-track{height:9px;overflow:hidden;background:#344556;border-radius:999px}
+.z-probability-track>span{display:block;height:100%;background:linear-gradient(90deg,#559fce,#8bd3ff);border-radius:inherit;transition:width .4s ease}
+td:nth-child(3) .z-probability-track>span{background:linear-gradient(90deg,#bc8c3c,#f5cc66)}
+
+.z-ranking-list>li{display:grid;grid-template-columns:42px 45px minmax(0,1fr) 60px;gap:18px;align-items:start}
+.z-rank-copy{min-width:0}.z-rank-copy h3{line-height:1.4}
+.z-rank-movement{font-size:17px;font-weight:850;white-space:nowrap;text-align:right;padding-top:5px;font-variant-numeric:tabular-nums}
+.z-rank-movement.up{color:#73e2b5}.z-rank-movement.down{color:#f18294}.z-rank-movement.unchanged{color:#9daaba}
+.z-rank-pending{background:#1b2633;border:1px solid #405367;border-radius:14px;padding:30px;color:#c6d5e2;line-height:1.7}
+.z-win-chance{color:#8ee3bd;font-size:11px;font-weight:750;letter-spacing:0;text-transform:none;white-space:nowrap}
+.z-team-header .z-win-chance{display:inline-block;margin-left:10px}
+.z-match-choice>span .z-win-chance{font-size:9px;margin-left:5px;margin-right:auto}
+
+/* Specialists and running backs share a row; the line faces midfield. */
+.z-field .z-formation{grid-template-rows:132px 120px 130px 44px;align-items:stretch;padding:8px 0}
+.z-field .z-place-k,.z-field .z-place-def,.z-field .z-place-rb1,.z-field .z-place-rb2,.z-field .z-place-flex-rb{grid-row:1}
+.z-field .z-place-qb{grid-row:2}
+.z-field .z-place-wr1,.z-field .z-place-wr2,.z-field .z-place-te,.z-field .z-place-flex{grid-row:3}
+.z-field .z-formation .z-line{grid-column:3/6;grid-row:4;align-self:center;padding:0!important}
+.z-field .z-formation.z-bottom{grid-template-rows:44px 130px 120px 132px}
+.z-field .z-bottom .z-line{grid-row:1}
+.z-field .z-bottom .z-place-wr1,.z-field .z-bottom .z-place-wr2,.z-field .z-bottom .z-place-te,.z-field .z-bottom .z-place-flex{grid-row:2}
+.z-field .z-bottom .z-place-qb{grid-row:3}
+.z-field .z-bottom .z-place-k,.z-field .z-bottom .z-place-def,.z-field .z-bottom .z-place-rb1,.z-field .z-bottom .z-place-rb2,.z-field .z-bottom .z-place-flex-rb{grid-row:4}
+@media(max-width:700px){
+ .season-table-shell:has(.responsive-table){overflow:visible;border:0;background:transparent;box-shadow:none}
+ .season-table-shell .responsive-table tbody tr{background:#1b2633;border-color:#405367}
+ .z-ranking-list>li{grid-template-columns:26px 34px minmax(0,1fr) 40px;gap:9px;padding:17px 12px}
+ .z-ranking-list .z-rank{font-size:23px;min-width:0}.z-ranking-list .z-photo{width:34px;height:34px}
+ .z-rank-movement{font-size:14px}
+ .z-ranking-list h3{font-size:16px}.z-ranking-list p{font-size:14px;line-height:1.75}
+ .z-probability{width:100%;max-width:none;min-width:0}
+ .z-team-header .z-win-chance{margin-left:5px}
+}

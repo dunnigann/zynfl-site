@@ -1,0 +1,799 @@
+{
+  "version": 1,
+  "priorSource": "Fantasy Football Calculator preseason half-PPR ADP, August 27, 2026",
+  "priors": {
+    "jahmyrgibbs": {
+      "position": "RB",
+      "positionRank": 1
+    },
+    "bijanrobinson": {
+      "position": "RB",
+      "positionRank": 2
+    },
+    "pukanacua": {
+      "position": "WR",
+      "positionRank": 1
+    },
+    "jamarrchase": {
+      "position": "WR",
+      "positionRank": 2
+    },
+    "jaxonsmithnjigba": {
+      "position": "WR",
+      "positionRank": 3
+    },
+    "jonathantaylor": {
+      "position": "RB",
+      "positionRank": 3
+    },
+    "christianmccaffrey": {
+      "position": "RB",
+      "positionRank": 4
+    },
+    "amonrastbrown": {
+      "position": "WR",
+      "positionRank": 4
+    },
+    "jamescook": {
+      "position": "RB",
+      "positionRank": 5
+    },
+    "derrickhenry": {
+      "position": "RB",
+      "positionRank": 6
+    },
+    "devonachane": {
+      "position": "RB",
+      "positionRank": 7
+    },
+    "drakelondon": {
+      "position": "WR",
+      "positionRank": 5
+    },
+    "ceedeelamb": {
+      "position": "WR",
+      "positionRank": 6
+    },
+    "justinjefferson": {
+      "position": "WR",
+      "positionRank": 7
+    },
+    "rasheerice": {
+      "position": "WR",
+      "positionRank": 8
+    },
+    "chasebrown": {
+      "position": "RB",
+      "positionRank": 8
+    },
+    "saquonbarkley": {
+      "position": "RB",
+      "positionRank": 9
+    },
+    "nicocollins": {
+      "position": "WR",
+      "positionRank": 9
+    },
+    "ajbrown": {
+      "position": "WR",
+      "positionRank": 10
+    },
+    "georgepickens": {
+      "position": "WR",
+      "positionRank": 11
+    },
+    "kennethwalker": {
+      "position": "RB",
+      "positionRank": 10
+    },
+    "ashtonjeanty": {
+      "position": "RB",
+      "positionRank": 11
+    },
+    "chrisolave": {
+      "position": "WR",
+      "positionRank": 12
+    },
+    "omarionhampton": {
+      "position": "RB",
+      "positionRank": 12
+    },
+    "zayflowers": {
+      "position": "WR",
+      "positionRank": 13
+    },
+    "maliknabers": {
+      "position": "WR",
+      "positionRank": 14
+    },
+    "joshjacobs": {
+      "position": "RB",
+      "positionRank": 13
+    },
+    "kyrenwilliams": {
+      "position": "RB",
+      "positionRank": 14
+    },
+    "jeremiyahlove": {
+      "position": "RB",
+      "positionRank": 15
+    },
+    "tetairoamcmillan": {
+      "position": "WR",
+      "positionRank": 15
+    },
+    "garrettwilson": {
+      "position": "WR",
+      "positionRank": 16
+    },
+    "devontasmith": {
+      "position": "WR",
+      "positionRank": 17
+    },
+    "joshallen": {
+      "position": "QB",
+      "positionRank": 1
+    },
+    "breecehall": {
+      "position": "RB",
+      "positionRank": 16
+    },
+    "javontewilliams": {
+      "position": "RB",
+      "positionRank": 17
+    },
+    "emekaegbuka": {
+      "position": "WR",
+      "positionRank": 18
+    },
+    "teehiggins": {
+      "position": "WR",
+      "positionRank": 19
+    },
+    "travisetienne": {
+      "position": "RB",
+      "positionRank": 18
+    },
+    "davanteadams": {
+      "position": "WR",
+      "positionRank": 20
+    },
+    "treymcbride": {
+      "position": "TE",
+      "positionRank": 1
+    },
+    "jamesonwilliams": {
+      "position": "WR",
+      "positionRank": 21
+    },
+    "camskattebo": {
+      "position": "RB",
+      "positionRank": 19
+    },
+    "laddmcconkey": {
+      "position": "WR",
+      "positionRank": 22
+    },
+    "dandreswift": {
+      "position": "RB",
+      "positionRank": 20
+    },
+    "brockbowers": {
+      "position": "TE",
+      "positionRank": 2
+    },
+    "terrymclaurin": {
+      "position": "WR",
+      "positionRank": 23
+    },
+    "djmoore": {
+      "position": "WR",
+      "positionRank": 24
+    },
+    "jaylenwaddle": {
+      "position": "WR",
+      "positionRank": 25
+    },
+    "buckyirving": {
+      "position": "RB",
+      "positionRank": 21
+    },
+    "romeodunze": {
+      "position": "WR",
+      "positionRank": 26
+    },
+    "drakemaye": {
+      "position": "QB",
+      "positionRank": 2
+    },
+    "quinshonjudkins": {
+      "position": "RB",
+      "positionRank": 22
+    },
+    "bhayshultuten": {
+      "position": "RB",
+      "positionRank": 23
+    },
+    "mikeevans": {
+      "position": "WR",
+      "positionRank": 27
+    },
+    "lamarjackson": {
+      "position": "QB",
+      "positionRank": 3
+    },
+    "christianwatson": {
+      "position": "WR",
+      "positionRank": 28
+    },
+    "davidmontgomery": {
+      "position": "RB",
+      "positionRank": 24
+    },
+    "lutherburden": {
+      "position": "WR",
+      "positionRank": 29
+    },
+    "joeburrow": {
+      "position": "QB",
+      "positionRank": 4
+    },
+    "courtlandsutton": {
+      "position": "WR",
+      "positionRank": 30
+    },
+    "jaylenwarren": {
+      "position": "RB",
+      "positionRank": 25
+    },
+    "colstonloveland": {
+      "position": "TE",
+      "positionRank": 3
+    },
+    "alecpierce": {
+      "position": "WR",
+      "positionRank": 31
+    },
+    "rhamondrestevenson": {
+      "position": "RB",
+      "positionRank": 26
+    },
+    "treveyonhenderson": {
+      "position": "RB",
+      "positionRank": 27
+    },
+    "dkmetcalf": {
+      "position": "WR",
+      "positionRank": 32
+    },
+    "parkerwashington": {
+      "position": "WR",
+      "positionRank": 33
+    },
+    "dakprescott": {
+      "position": "QB",
+      "positionRank": 5
+    },
+    "marvinharrison": {
+      "position": "WR",
+      "positionRank": 34
+    },
+    "tonypollard": {
+      "position": "RB",
+      "positionRank": 28
+    },
+    "brianthomas": {
+      "position": "WR",
+      "positionRank": 35
+    },
+    "jaydendaniels": {
+      "position": "QB",
+      "positionRank": 6
+    },
+    "tylerwarren": {
+      "position": "TE",
+      "positionRank": 4
+    },
+    "jadarianprice": {
+      "position": "RB",
+      "positionRank": 29
+    },
+    "michaelwilson": {
+      "position": "WR",
+      "positionRank": 36
+    },
+    "ricodowdle": {
+      "position": "RB",
+      "positionRank": 30
+    },
+    "matthewstafford": {
+      "position": "QB",
+      "positionRank": 7
+    },
+    "carnelltate": {
+      "position": "WR",
+      "positionRank": 37
+    },
+    "chrisgodwin": {
+      "position": "WR",
+      "positionRank": 38
+    },
+    "jkdobbins": {
+      "position": "RB",
+      "positionRank": 31
+    },
+    "jalenhurts": {
+      "position": "QB",
+      "positionRank": 8
+    },
+    "seattledefense": {
+      "position": "DEF",
+      "positionRank": 1
+    },
+    "michaelpittman": {
+      "position": "WR",
+      "positionRank": 39
+    },
+    "kylepitts": {
+      "position": "TE",
+      "positionRank": 5
+    },
+    "haroldfannin": {
+      "position": "TE",
+      "positionRank": 6
+    },
+    "jordanaddison": {
+      "position": "WR",
+      "positionRank": 40
+    },
+    "chubahubbard": {
+      "position": "RB",
+      "positionRank": 32
+    },
+    "jakobimeyers": {
+      "position": "WR",
+      "positionRank": 41
+    },
+    "quentinjohnston": {
+      "position": "WR",
+      "positionRank": 42
+    },
+    "jaydenreed": {
+      "position": "WR",
+      "positionRank": 43
+    },
+    "jonathonbrooks": {
+      "position": "RB",
+      "positionRank": 33
+    },
+    "brockpurdy": {
+      "position": "QB",
+      "positionRank": 9
+    },
+    "joshdowns": {
+      "position": "WR",
+      "positionRank": 44
+    },
+    "trevorlawrence": {
+      "position": "QB",
+      "positionRank": 10
+    },
+    "denverdefense": {
+      "position": "DEF",
+      "positionRank": 2
+    },
+    "calebwilliams": {
+      "position": "QB",
+      "positionRank": 11
+    },
+    "wandalerobinson": {
+      "position": "WR",
+      "positionRank": 45
+    },
+    "tuckerkraft": {
+      "position": "TE",
+      "positionRank": 7
+    },
+    "stefondiggs": {
+      "position": "WR",
+      "positionRank": 46
+    },
+    "houstondefense": {
+      "position": "DEF",
+      "positionRank": 3
+    },
+    "xavierworthy": {
+      "position": "WR",
+      "positionRank": 47
+    },
+    "deebosamuel": {
+      "position": "WR",
+      "positionRank": 48
+    },
+    "jaredgoff": {
+      "position": "QB",
+      "positionRank": 12
+    },
+    "kylemonangai": {
+      "position": "RB",
+      "positionRank": 34
+    },
+    "kennygainwell": {
+      "position": "RB",
+      "positionRank": 35
+    },
+    "jacorycroskeymerritt": {
+      "position": "RB",
+      "positionRank": 36
+    },
+    "patrickmahomes": {
+      "position": "QB",
+      "positionRank": 13
+    },
+    "matthewgolden": {
+      "position": "WR",
+      "positionRank": 49
+    },
+    "rjharvey": {
+      "position": "RB",
+      "positionRank": 37
+    },
+    "dallasgoedert": {
+      "position": "TE",
+      "positionRank": 8
+    },
+    "romeodoubs": {
+      "position": "WR",
+      "positionRank": 50
+    },
+    "justinherbert": {
+      "position": "QB",
+      "positionRank": 14
+    },
+    "khalilshakir": {
+      "position": "WR",
+      "positionRank": 51
+    },
+    "aaronjones": {
+      "position": "RB",
+      "positionRank": 38
+    },
+    "minnesotadefense": {
+      "position": "DEF",
+      "positionRank": 4
+    },
+    "makailemon": {
+      "position": "WR",
+      "positionRank": 52
+    },
+    "laramsdefense": {
+      "position": "DEF",
+      "positionRank": 5
+    },
+    "bonix": {
+      "position": "QB",
+      "positionRank": 15
+    },
+    "georgekittle": {
+      "position": "TE",
+      "positionRank": 9
+    },
+    "jordanmason": {
+      "position": "RB",
+      "positionRank": 39
+    },
+    "kcconcepcion": {
+      "position": "WR",
+      "positionRank": 53
+    },
+    "jalencoker": {
+      "position": "WR",
+      "positionRank": 54
+    },
+    "traviskelce": {
+      "position": "TE",
+      "positionRank": 10
+    },
+    "rashidshaheed": {
+      "position": "WR",
+      "positionRank": 55
+    },
+    "jaxsondart": {
+      "position": "QB",
+      "positionRank": 16
+    },
+    "rachaadwhite": {
+      "position": "RB",
+      "positionRank": 40
+    },
+    "blakecorum": {
+      "position": "RB",
+      "positionRank": 41
+    },
+    "markandrews": {
+      "position": "TE",
+      "positionRank": 11
+    },
+    "samlaporta": {
+      "position": "TE",
+      "positionRank": 12
+    },
+    "detroitdefense": {
+      "position": "DEF",
+      "positionRank": 6
+    },
+    "jerryjeudy": {
+      "position": "WR",
+      "positionRank": 56
+    },
+    "dezhaunstribling": {
+      "position": "WR",
+      "positionRank": 57
+    },
+    "tretucker": {
+      "position": "WR",
+      "positionRank": 58
+    },
+    "newenglanddefense": {
+      "position": "DEF",
+      "positionRank": 7
+    },
+    "kaimifairbairn": {
+      "position": "K",
+      "positionRank": 1
+    },
+    "rashodbateman": {
+      "position": "WR",
+      "positionRank": 59
+    },
+    "zachcharbonnet": {
+      "position": "RB",
+      "positionRank": 42
+    },
+    "brandonaubrey": {
+      "position": "K",
+      "positionRank": 2
+    },
+    "bakermayfield": {
+      "position": "QB",
+      "positionRank": 17
+    },
+    "isaiahlikely": {
+      "position": "TE",
+      "positionRank": 13
+    },
+    "jalenmcmillan": {
+      "position": "WR",
+      "positionRank": 60
+    },
+    "pittsburghdefense": {
+      "position": "DEF",
+      "positionRank": 8
+    },
+    "kylermurray": {
+      "position": "QB",
+      "positionRank": 18
+    },
+    "calvinridley": {
+      "position": "WR",
+      "positionRank": 61
+    },
+    "keenanallen": {
+      "position": "WR",
+      "positionRank": 62
+    },
+    "tylershough": {
+      "position": "QB",
+      "positionRank": 19
+    },
+    "philadelphiadefense": {
+      "position": "DEF",
+      "positionRank": 9
+    },
+    "jauanjennings": {
+      "position": "WR",
+      "positionRank": 63
+    },
+    "lachargersdefense": {
+      "position": "DEF",
+      "positionRank": 10
+    },
+    "jakeferguson": {
+      "position": "TE",
+      "positionRank": 14
+    },
+    "woodymarks": {
+      "position": "RB",
+      "positionRank": 43
+    },
+    "jasonmyers": {
+      "position": "K",
+      "positionRank": 3
+    },
+    "jalennailor": {
+      "position": "WR",
+      "positionRank": 64
+    },
+    "denzelboston": {
+      "position": "WR",
+      "positionRank": 65
+    },
+    "tyjaespears": {
+      "position": "RB",
+      "positionRank": 44
+    },
+    "jakebates": {
+      "position": "K",
+      "positionRank": 4
+    },
+    "camerondicker": {
+      "position": "K",
+      "positionRank": 5
+    },
+    "malikwashington": {
+      "position": "WR",
+      "positionRank": 66
+    },
+    "tylerloop": {
+      "position": "K",
+      "positionRank": 6
+    },
+    "harrisonmevis": {
+      "position": "K",
+      "positionRank": 7
+    },
+    "samdarnold": {
+      "position": "QB",
+      "positionRank": 20
+    },
+    "emmettjohnson": {
+      "position": "RB",
+      "positionRank": 45
+    },
+    "daltonkincaid": {
+      "position": "TE",
+      "positionRank": 15
+    },
+    "chasemclaughlin": {
+      "position": "K",
+      "positionRank": 8
+    },
+    "camlittle": {
+      "position": "K",
+      "positionRank": 9
+    },
+    "mikewashington": {
+      "position": "RB",
+      "positionRank": 46
+    },
+    "tankdell": {
+      "position": "WR",
+      "positionRank": 67
+    },
+    "jordanlove": {
+      "position": "QB",
+      "positionRank": 21
+    },
+    "tankbigsby": {
+      "position": "RB",
+      "positionRank": 47
+    },
+    "cooperkupp": {
+      "position": "WR",
+      "positionRank": 68
+    },
+    "tylerallgeier": {
+      "position": "RB",
+      "positionRank": 48
+    },
+    "kaelonblack": {
+      "position": "RB",
+      "positionRank": 49
+    },
+    "cyrusallen": {
+      "position": "WR",
+      "positionRank": 69
+    },
+    "keatonmitchell": {
+      "position": "RB",
+      "positionRank": 50
+    },
+    "chrisrodriguez": {
+      "position": "RB",
+      "positionRank": 51
+    },
+    "willutz": {
+      "position": "K",
+      "positionRank": 10
+    },
+    "isiahpacheco": {
+      "position": "RB",
+      "positionRank": 52
+    },
+    "eddypieiro": {
+      "position": "K",
+      "positionRank": 11
+    },
+    "alvinkamara": {
+      "position": "RB",
+      "positionRank": 53
+    },
+    "jordyntyson": {
+      "position": "WR",
+      "positionRank": 70
+    }
+  },
+  "availability": [],
+  "editorial": {
+    "1": {
+      "Liam": "Henry's 34.80-point opener was the headline, but Lawrence and Smith-Njigba make this more than a one-player bet. The roster leads the remaining-lineup forecast even after budgeting for byes and the IR spots. A 1–0 start means that projected strength already has a little standings protection.",
+      "Brock": "Caleb Williams delivered 37.26 and Brock opened with a league-high 148.96. That is a huge ceiling to pair with Chase and Javonte Williams, although one eruption should not become the weekly baseline. The win lifts a roster forecast ranked third into second overall.",
+      "Mitchell": "Allen's 35.66 gives this roster a weekly advantage at quarterback, with Jefferson and Chase Brown supplying two more credible anchors. The 148.66 opener nearly matched the league high and banked a win against Chuck. The model still wants more evidence from the supporting slots before putting this team above Liam or Brock.",
+      "Nick": "Jeanty's 29.70 and the Robinson–Daniels core keep the long-term outlook much better than the opening loss suggests. The roster ranks second in the forecast, but losing to Quinn matters when equally talented teams have already banked a win. This is an early example of roster strength and playoff position pointing in different directions.",
+      "Quinn": "Swift's 31.90 made the difference in a 117.72-point win, but St. Brown is the receiver the weekly outlook is built around. Maye gives Quinn another path to improving that ceiling. The forecast ranks the roster seventh, so the opening win is doing meaningful work in this fifth-place assessment.",
+      "Leo": "Taylor supplied 23.60, and pairing him with Achane gives Leo an attractive running-back foundation. Mahomes adds stability that the 102.56-point loss alone would miss. Fourth in projected roster strength is enough to keep this team in the top half despite starting 0–1.",
+      "Isaac": "Hurts and McBride offer advantages at two scarce starting positions, with McCaffrey providing the main running-back ceiling. The opening win came with a below-median 105.42, so the record is slightly ahead of the scoring profile. Conner's IR spot also makes the healthy depth more important than the collection of names suggests.",
+      "Jack": "Gibbs produced 31.10 in a comfortable win, and Purdy plus Olave give Jack a clear starting core. The caution is what sits behind those anchors: the full legal-lineup forecast ranks ninth after accounting for the rest of the roster. Winning immediately helps, but one strong opener does not yet establish a deep weekly floor.",
+      "Chuck": "A 126.06-point loss is a rough draw rather than a bad offensive week. Walker's 32.60, Lamar and Lamb make the roster a more credible contender than an 0–1 label implies. The forecast places the available lineup sixth; the missing win explains the lower overall spot.",
+      "Tina": "McConkey led the starters with just 16.70 as Tina finished at 86.86 against Brock's eruption. Burrow and Nacua are the pieces most likely to change that outlook, but the model cannot fill the other starting slots with reputation alone. A tenth-ranked roster forecast and no banked win leave work to do.",
+      "Santi": "Flowers' 23.50 showed that the receiving group can carry a week, with Collins providing another potential anchor. The rest of the starting lineup did not keep pace in an 85.80-point loss. Until the supporting production catches up, the remaining-season forecast stays near the bottom even with Prescott stabilizing quarterback.",
+      "Akhil": "Skattebo's 14.10 was the leading starter score in a 68.64-point opening loss. Cook, Nix and Nabers give Akhil ways to improve, but none of the other teams has a lower full-lineup forecast at this point. The priority is raising several weekly floors rather than relying on one breakout to solve the entire lineup."
+    },
+    "2": {
+      "Liam": "Smith-Njigba's 38.00 rescued a 101.56-point win over Nick, taking Liam to 2–0. That score was below the league median, so the record has benefited from the matchup draw as well as the roster. Henry and the receiving ceiling still keep the rest-of-season forecast first.",
+      "Mitchell": "Allen followed his opener with 40.82 and Mitchell has now scored above the median in both weeks. The 2–0 record is earned rather than a scheduling illusion. Jefferson and Chase Brown keep the supporting forecast credible, although Allen is doing a large share of the heavy lifting.",
+      "Chuck": "Lamb's 31.30 helped convert a good lineup into its first win, putting Chuck at 1–1. The roster forecast is second, and both completed weeks have finished above the league median. That combination makes the record look like a modest start to a stronger team, rather than a reason to stay in the bottom half.",
+      "Jack": "Purdy's 28.48 and another useful Gibbs week carried Jack to 2–0. Both weeks have cleared the median, which gives the record more substance than a pair of fortunate matchups would. Olave's supporting production helps raise the roster forecast to fifth, while Mason's IR spot limits the running-back cushion.",
+      "Leo": "Mahomes supplied 28.98 in the win over Tina and Taylor remains the main running-back anchor. At 1–1, Leo has stopped the early standings damage without needing an extreme team score. The third-ranked roster forecast keeps the outlook ahead of several teams with the same record.",
+      "Quinn": "St. Brown's 30.70 was not enough to survive Allen's eruption on Mitchell's side. Quinn has now scored above the median twice but sits at 1–1, an important distinction from a genuinely struggling .500 team. Maye and Swift leave enough support around the top receiver to keep this a top-half outlook.",
+      "Isaac": "McCaffrey led with 20.60, but the 101.26 total was another below-median week. Splitting the first two games is useful standings protection rather than evidence of a dominant lineup. Hurts and McBride preserve the ceiling, while Conner's IR spot leaves less flexibility at running back.",
+      "Brock": "The opener's 148.96 gave way to 83.22 against Akhil, showing how quickly the floor can fall. Chase's 23.00 remained useful, but the broader forecast drops to eighth as the early production becomes less convincing. The 1–1 record leaves plenty of time, though the supporting lineup needs to carry more of the load.",
+      "Akhil": "Akhil found the first win with 106.92, including 21 from the Patriots defense. Cook and Nix are steadier foundations for the outlook than expecting that defensive score every week. Brown's IR spot keeps a major receiver unavailable, which is why the win lifts the overall ranking more than the roster forecast.",
+      "Nick": "Kelce's 20.60 could not cover the weaker contributions elsewhere in a 79.84-point loss. Robinson, Daniels and Jeanty still form an appealing core, but the full available-lineup forecast has slipped to ninth. At 0–2, that upside now has to produce actual wins before the standings gap becomes expensive.",
+      "Santi": "Prescott's 29.76 kept Santi competitive, but 101.46 was not enough against Chuck. Neither completed week has cleared the league median, so the 0–2 record cannot be blamed solely on unlucky opponents. More consistent support from Flowers and Collins is needed to turn the receiving talent into a higher weekly floor.",
+      "Tina": "Only 58.10 points against Leo turns the opening loss into a more serious 0–2 start. Nacua and McConkey have not yet supplied the receiver production needed to support Burrow. The roster forecast is now last, making improvement across several starting spots more important than a single waiver fix."
+    },
+    "3": {
+      "Liam": "The Smith-Njigba–Henry core backed up the unbeaten record with 131.44 against Quinn. Liam is 3–0 and still leads the available-lineup forecast, so the top spot rests on both future strength and wins already earned. The IR spots reduce depth, but the healthy starters remain the league's best projected group.",
+      "Jack": "Gibbs erupted for 37.90 as Jack posted 139.78 and reached 3–0. Every completed week has been above the median, so the record is not hiding a run of soft scoring. Purdy and Olave help bring the roster forecast up to second, putting Jack much closer to Liam than the opening-week assessment did.",
+      "Chuck": "Three above-median weeks have produced only a 2–1 record, leaving Chuck slightly behind the production. Lamar, Walker and Lamb give this lineup multiple routes to a strong score instead of one indispensable scorer. A third-ranked remaining-roster forecast keeps the team firmly in the top tier.",
+      "Mitchell": "Allen still leads the quarterback outlook, but 85.96 against Santi exposed the risk when the supporting slots do not contribute enough. The record is now 2–1 and the roster forecast has slipped to sixth. Jefferson and Chase Brown need to provide more reliable help if Mitchell is going to regain the top two.",
+      "Leo": "Wilson's 21.70 was a bright spot in an otherwise thin 78.14-point loss to Akhil. Mahomes and Taylor keep the roster forecast fifth, but a 1–2 record removes the room to wait indefinitely for that talent to convert. The outlook remains competitive, with the actual starting floor now the main question.",
+      "Nick": "Robinson's 34.30 helped Nick score 118.74 and still lose to Tina. That is genuine matchup misfortune, and the fourth-ranked roster forecast argues against treating 0–3 as proof of the league's worst team. Daniels' IR spot complicates the recovery, and every additional loss makes the useful running-back talent harder to turn into a playoff place.",
+      "Isaac": "London's 23.90 helped Isaac clear the median for the first time, but Chuck still won the matchup. The 1–2 record now contains both a fortunate win and an unfortunate loss. Hurts, McCaffrey and McBride keep the roster competitive, although Conner's absence leaves less room for another running-back problem.",
+      "Akhil": "Nix's 25.14 helped Akhil win a second straight game, this time with a below-median 95.04. Those banked wins deserve credit, but the remaining-roster forecast is still tenth with Brown occupying IR. Cook and Hubbard give the lineup a route to becoming stronger than the current scoring average.",
+      "Quinn": "An 81.36-point loss to Liam interrupts two otherwise respectable scoring weeks. St. Brown, Maye and Swift still offer a workable core, but the 1–2 record now combines some bad scheduling with a genuinely weak latest result. The forecast slips to eighth rather than assuming the earlier receiver scores will immediately return.",
+      "Brock": "Williams has moved into IR, leaving Willis to cover a position that powered the opening win. Chase's 20.30 was useful, but a second straight total in the low 80s shows the cost of the weakened lineup. At 1–2, Brock needs both a workable quarterback solution and more support around the top receiver.",
+      "Santi": "Kittle's 23.20 helped stop the losing streak against Mitchell, but 100.44 still fell below the league median. The first win is valuable without proving that the roster's weekly floor has been repaired. Prescott and Flowers remain the main anchors, while the forecast wants more consistency from the remaining slots.",
+      "Tina": "The 125.10-point win finally put some production behind the names on this roster. Shough's 24.80 led the starters, but the longer forecast still needs more sustained output from the receiver and running-back groups. One strong week improves the record to 1–2 without erasing two weak ones."
+    },
+    "4": {
+      "Jack": "A fourth consecutive above-median score and a 4–0 record finally move Jack past Liam. Wilson's 25.50 illustrates the value of usable replacements alongside Gibbs, Purdy and Olave. Chuck has the slightly stronger roster forecast this week, but Jack's extra banked win earns the overall lead.",
+      "Chuck": "Lamb's 32.80 helped produce a huge 158.88 against Brock, putting Chuck first in projected roster strength. All four completed weeks have cleared the median, with the only loss coming despite a strong score. Jack's unbeaten record keeps Chuck second, but the underlying lineup is making the strongest challenge.",
+      "Liam": "A kicker leading the starters with 16.00 is a good explanation for the 80.98-point loss. Smith-Njigba, Henry and Lawrence still keep the roster forecast third, so one flat week does not erase the contender profile. The first loss does remove the standings advantage that had helped hold the top spot.",
+      "Akhil": "Hubbard's 25.40 helped turn the earlier narrow wins into a convincing 133.36-point performance. Akhil is now 3–1, and the roster forecast has climbed to sixth even with Brown still in IR. The ranking rewards both the banked wins and a running-back group beginning to support them.",
+      "Leo": "McMillan's 38.20 gave Leo enough to score 119.50 and still run into unbeaten Jack. That is a much healthier loss than the previous week's 78.14. Mahomes and Taylor keep the roster forecast fifth, but at 1–3 the team cannot afford many more weeks where solid scoring produces no win.",
+      "Nick": "Robinson keeps producing, with 27.20 this week, while Nick's record falls to 0–4. The available roster still forecasts fourth, which explains a ranking above several winning teams without pretending the standings do not matter. Young is covering quarterback while Daniels occupies IR; a win is becoming more urgent than another encouraging projection.",
+      "Isaac": "Kamara's 20.30 helped secure a second win, although 98.12 was below the median. Isaac has now won two below-median weeks, giving the 2–2 record a friendlier look than the scoring profile. The Hurts–McCaffrey–London core keeps the outlook viable, but the next step is a more repeatable full-lineup total.",
+      "Quinn": "Stroud supplied 23.08, but 96.98 against Santi leaves Quinn at 1–3. The roster forecast remains seventh rather than collapsing with the record, supported by St. Brown and Higgins. Dell and Reed taking IR spots makes healthy receiver depth an increasingly important constraint.",
+      "Santi": "Collins' 27.30 drove a much stronger 120.50-point win over Quinn and brought Santi back to .500. It was the first above-median week, so the recovery now has some scoring evidence behind it. Prescott and Flowers keep the floor workable, but the broader forecast still sees a ninth-ranked roster rather than an established contender.",
+      "Mitchell": "Two straight losses with totals below 90 have changed the shape of Mitchell's 2–2 start. Allen remains a premium quarterback, but the available roster now forecasts eleventh with Etienne and Charbonnet in IR. The ranking falls because the supporting lineup has weakened, not because an elite quarterback suddenly became unimportant.",
+      "Brock": "Javonte Williams' 28.80 was not enough to keep an 89.12 total competitive against Chuck's explosion. With Caleb Williams still in IR, Darnold is part of the replacement plan at quarterback. The three-game losing streak and tenth-ranked roster forecast leave little reason to lean on the opening-week ceiling.",
+      "Tina": "Burrow's 25.72 helped Tina beat Liam and recover to 2–2. That is useful progress, but the model still ranks the available roster last after averaging the remaining legal lineups. Nacua and Bowers are the clearest routes to turning the improved record into a stronger long-term forecast."
+    },
+    "5": {
+      "Jack": "Five wins and five above-median scores leave very little luck to explain away. Gibbs supplied 35.20 in the 147.78-point win over Nick, and the roster now leads the remaining-lineup forecast as well. Mason and Price taking IR spots reduce the cushion, but the healthy core and banked wins both support No. 1.",
+      "Liam": "The response to last week's dud was a balanced 149.84 against Akhil, with Lawrence's 22.74 leading the starters. At 4–1, Liam has more standings protection than Chuck even though the roster forecast is a little lower. Smith-Njigba and Henry remain the backbone of a lineup that does not need one player to supply the entire score.",
+      "Chuck": "Lamar and Harrison occupying IR makes the outlook more complicated than the strong scoring average suggests. Watson's 29.30 helped keep the week competitive, but 102.14 against Leo brought the record to 3–2. Walker, Kyren Williams and Lamb still give Chuck the second-ranked roster forecast, with quarterback coverage now an important part of protecting it.",
+      "Akhil": "Nabers' 23.60 was useful, but 107.12 could not match Liam's rebound. Akhil's 3–2 record still gives the team a head start over several similarly projected rosters. Cook and the rest of the running-back group keep the forecast sixth, while Brown's IR spot remains the main obstacle to a deeper receiving lineup.",
+      "Leo": "Goff's 28.94 helped Leo beat Chuck with 128.24, turning some of the roster's promise into an actual second win. Three of five weeks have now cleared the median, a better profile than 2–3 alone implies. Taylor and McMillan support a fifth-ranked roster forecast, so the climb is credible if the healthy depth holds.",
+      "Santi": "Warren's 33.80 added a new source of upside in the 139.44-point win over Isaac. Three straight wins have created a useful buffer, even though only two of the five scoring weeks have cleared the median. Prescott and Flowers keep the roster forecast in the middle, with stronger running-back contributions making the recent improvement more believable.",
+      "Nick": "Daniels returned to the active picture with 32.26, and Nick still lost with 125.96. Two above-median losses explain part of 0–5, while Robinson and the fourth-ranked roster forecast explain why the team is not last here. The problem is the shrinking runway: this level of talent now needs a sustained winning stretch, not another respectable defeat.",
+      "Isaac": "Irving's 30.50 helped Isaac reach 129.92 and still lose to Santi. The record now contains two above-median losses as well as two below-median wins, so there is no simple all-luck explanation for 2–3. McCaffrey and London keep the roster forecast eighth, with Conner's IR spot continuing to limit running-back flexibility.",
+      "Tina": "Nacua's 29.20 helped secure a third straight win, taking Tina from 0–2 to 3–2. The roster forecast is improving but still only tenth, which keeps this ranking below the raw standings position. Burrow and Bowers offer enough upside to close that gap if the rest of the lineup becomes more consistent.",
+      "Mitchell": "Allen's 31.50 stopped the losing streak and restored a winning record. That quarterback edge is real, but the available roster still forecasts eleventh with Etienne and Charbonnet unavailable in IR. At 3–2, Mitchell has time to strengthen the supporting slots before the record and the forecast pull farther apart.",
+      "Quinn": "Maye erupted for 39.46, yet the team finished at 105.26 and lost again. That contrast says more about the supporting lineup than the quarterback position. St. Brown and Higgins keep a recovery possible, but a ninth-ranked roster forecast and a 1–4 record require more than occasional individual fireworks.",
+      "Brock": "Chase led the starters with only 16.70 in an 85.50-point loss, making four straight defeats. Darnold and Javonte Williams can provide useful weeks, but the current roster forecast is last with Caleb Williams still in IR. At 1–4, the team needs a higher full-lineup floor before its opening-week ceiling becomes a persuasive argument again."
+    }
+  }
+}
