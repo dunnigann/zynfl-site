@@ -2,6 +2,7 @@ import { DurableObject } from 'cloudflare:workers';
 import { SeasonCache } from './yahoo-cache.mjs';
 
 const ORIGIN = 'https://zynfl.com';
+const PUBLIC_ORIGINS = new Set([ORIGIN, 'https://www.zynfl.com']);
 const CALLBACK = `${ORIGIN}/auth/yahoo/callback`;
 const API = 'https://fantasysports.yahooapis.com/fantasy/v2/';
 const YEARS = [2024, 2025, 2026];
@@ -250,7 +251,11 @@ export default {
     const url = new URL(request.url);
     const dynamic = url.pathname.startsWith('/auth/yahoo') || url.pathname.startsWith('/api/yahoo/');
     if (!dynamic) return env.ASSETS.fetch(request);
-    if (url.origin !== ORIGIN) return json({ error: 'Use https://zynfl.com for Yahoo authorization.' }, 400);
+    const publicMatch = url.pathname.match(/^\/api\/yahoo\/season\/(2024|2025|2026)$/);
+    const publicRead = !!publicMatch || ['/api/yahoo/status', '/api/yahoo/nfl'].includes(url.pathname);
+    // Both website addresses serve the public feed. OAuth and owner operations
+    // stay on the registered callback origin so their cookies remain scoped.
+    if (publicRead ? !PUBLIC_ORIGINS.has(url.origin) : url.origin !== ORIGIN) return json({ error: 'Use https://zynfl.com for Yahoo authorization.' }, 400);
     if (request.method !== 'GET') return json({ error: 'method_not_allowed' }, 405);
     const connection = env.YAHOO_CONNECTION.getByName('zynfl-owner');
     try {
@@ -270,7 +275,6 @@ export default {
         return response;
       }
       if(url.pathname==='/api/yahoo/nfl'){const week=Number(url.searchParams.get('week'));if(!Number.isInteger(week)||week<1||week>18)return json({error:'invalid_week'},400);return json(await connection.nflWeek(week));}
-      const publicMatch=url.pathname.match(/^\/api\/yahoo\/season\/(2024|2025|2026)$/);
       if(publicMatch)return json(await connection.publicSeason(Number(publicMatch[1])));
       const authorized = await sameSecret(url.searchParams.get('setup') || request.headers.get('X-ZYNFL-Setup'), env.YAHOO_SETUP_TOKEN);
       if (!authorized) return json({ error: 'owner_authorization_required' }, 403);

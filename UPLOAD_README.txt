@@ -1,19 +1,25 @@
-ZYNFL Yahoo Live Update — October 16, 2026
+ZYNFL: live updates on both website addresses
 
-The website has already been deployed and is updating from Yahoo.
+The fix is already deployed to Cloudflare. It makes public Yahoo feeds work on
+both https://zynfl.com and https://www.zynfl.com. Yahoo authorization and owner
+operations remain restricted to https://zynfl.com.
 
-GitHub rejected the connector's write permission. To preserve this version in the repository:
-1. Unzip this download.
-2. Open github.com/dunnigann/zynfl-site at the repository ROOT.
-3. Use Add file > Upload files and drag in the zynfl-production folder from this ZIP.
-4. Commit all the files together to main.
+To keep the GitHub source in sync:
+1. Extract this ZIP.
+2. Open https://github.com/dunnigann/zynfl-site (main branch).
+3. Choose Add file > Upload files at the repository root.
+4. Drag in the extracted zynfl-production folder, then commit the changes.
+   Do not upload the ZIP itself or create another zynfl-production folder inside
+   the existing one.
 
-Keep the zynfl-production folder structure. Do not upload it inside a second zynfl-production folder.
+This changes only two files:
+- zynfl-production/src/worker.mjs
+- zynfl-production/tests/yahoo-hosts.test.mjs (new regression test)
 
-This is a one-time source update. Weekly uploads are no longer needed.
+Cloudflare's build command now requires the new test file before deployment,
+so an older repository version cannot overwrite the deployed fix. The current
+site continues to run while the source update is pending.
 
-The Cloudflare build command checks for the integration files and runs the tests before deployment. Old source cannot remove the live integration. The existing Yahoo login and runtime secrets remain saved; this ZIP contains no credentials.
-
-Read zynfl-production/YAHOO_AUDIT.md for the historical findings and zynfl-production/YAHOO_AUTOMATION.md for refresh behavior and metric definitions.
-
-Local source commit: c7439be
+Validation: 13 tests passed; all 2024, 2025 and 2026 public season feeds returned
+HTTP 200 on both hosts; the www matchup page displayed current Week 6 scores.
+Local source commit: b52e52b.
