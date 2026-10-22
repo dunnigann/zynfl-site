@@ -1,12 +1,13 @@
-# Homepage manager atlas
+# ZYNFL immersive globe homepage
 
-Only `#home` is redesigned. All other render functions, routes, existing data files,
-Yahoo integration and the Cloudflare Worker configuration are unchanged.
+Only `#home` is redesigned. The Week 6 update adds Jack’s supplied ranking list. All other render functions,
+routes, league statistics, Yahoo integration and the Cloudflare Worker configuration
+are unchanged.
 
 ## Files
 
 - `public/assets/js/home-globe.js`: isolated spherical canvas renderer, read-only data adapter,
-  screen-space clustering, team cards, archive selector, matchup arcs and activity.
+  co-located manager grouping, team cards, archive selector, matchup arcs and activity.
 - `public/assets/css/home-globe.css`: styles scoped to `.zg-home`.
 - `public/assets/js/manager-locations.js`: present-day manager location mapping.
 - `public/assets/globe/earth-land.json`: bundled Natural Earth public-domain coastline
@@ -47,8 +48,10 @@ its selected season, manager, orientation, zoom and motion preference.
 
 Drag to rotate, pinch or +/− to zoom, Ctrl+wheel for optional wheel zoom. Normal
 wheel scrolling remains available. Arrow keys rotate a focused globe. Beacons are
-buttons with accessible manager names. Coincident and close screen-space points
-cluster into a single button and expose individual manager controls. The full
+buttons with accessible manager names. Managers at the same geographic coordinates
+share a single button and expose individual controls. Separate cities never merge,
+even when projected close together. Nearby buttons spread apart with leader lines
+to their exact geographic anchors. The full
 manager list is always available, including the far side of the globe.
 Reduced-motion preference disables automatic rotation and traveling arc particles.
 Pause freezes all motion; explicit rotation and zoom still work. Rendering is capped
@@ -63,3 +66,23 @@ Run `node --test scripts/test-home-globe.cjs` from `zynfl-production/`.
 Run `node --check public/assets/js/home-globe.js` for syntax validation.
 The existing Cloudflare Workers Builds integration deploys pushes to `main`.
 Keep `wrangler.jsonc`, Worker bindings, cron triggers and secrets unchanged.
+
+## Immersive layout revision
+
+The introduction is reduced to `ZYNFL / est 2024`. The enlarged globe fills the
+homepage scene without a frame or legend; the team card floats above it on desktop.
+On mobile the card follows the globe. Zoom out to see the entire Earth.
+City grouping preserves Dallas, Austin, Washington DC and Princeton as separate
+beacons. Only exact co-locations such as NYC and Chicago share a beacon.
+
+## Jack’s Week 6 rankings
+
+`public/assets/js/jack-rankings-2026.js` supplies Jack’s exact Week 6 order. It loads
+after `yahoo-initial.js` and before `yahoo-live.js` captures the refresh base. The
+existing Yahoo rebuild preserves those manual lists across automatic refreshes.
+No scores, records, analyst rankings or prior Jack editions are changed. Existing
+movement arrows compare Week 6 with Week 5, and homepage cards use the new edition.
+
+Validation: 9 homepage/rankings tests and 18 existing suite tests pass. Desktop and
+320px/390px iframe layouts, separated city beacons, NYC picker, Week 6 order and
+movement arrows were checked in the browser. No horizontal mobile overflow.

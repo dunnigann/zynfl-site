@@ -16,12 +16,29 @@ function model(D,Z,year){
  const games=current?(wd?.games||wd?.matchups?.map(g=>({aOwner:g[0],bOwner:g[1],aScore:g[2],bScore:g[3],complete:!!wd.complete}))||[]):D.matchups.filter(g=>g.year===year&&g.week===week).map(g=>({...g,complete:true}));
  return {rows,champion,ranking,week,games,current};
 }
-// Transitive screen-space clustering, independent of manager ordering.
-function clusters(points,distance=45){
- const groups=[];
- for(const p of points){const touching=groups.filter(g=>g.some(q=>Math.hypot(p.x-q.x,p.y-q.y)<distance));const merged=[p,...touching.flat()];for(const g of touching)groups.splice(groups.indexOf(g),1);groups.push(merged);}
- return groups.map(g=>({members:g.slice().sort((a,b)=>a.owner.localeCompare(b.owner)),x:g.reduce((s,p)=>s+p.x,0)/g.length,y:g.reduce((s,p)=>s+p.y,0)/g.length}));
+// Only co-located managers share a beacon. Screen overlap never combines cities.
+function clusters(points){
+ const groups=new Map();
+ for(const p of points){const key=Number.isFinite(p.lat)&&Number.isFinite(p.lon)?`${p.lat.toFixed(3)}:${p.lon.toFixed(3)}`:`owner:${p.owner}`;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(p);}
+ return [...groups.values()].map(g=>({members:g.slice().sort((a,b)=>a.owner.localeCompare(b.owner)),x:g.reduce((s,p)=>s+p.x,0)/g.length,y:g.reduce((s,p)=>s+p.y,0)/g.length}));
 }
+// Spread clickable markers while preserving exact map anchors with leader lines.
+function spreadBeacons(groups,width,height){
+ const nodes=groups.map(g=>({...g,anchorX:g.x,anchorY:g.y})).sort((a,b)=>a.anchorY-b.anchorY||a.anchorX-b.anchorX);
+ const gap=width<600?49:55;
+ for(let pass=0;pass<80;pass++){
+  let moved=false;
+  for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){
+   const a=nodes[i],b=nodes[j];let dx=b.x-a.x,dy=b.y-a.y,d=Math.hypot(dx,dy);
+   if(d>=gap)continue;if(d<.01){const angle=(i*7+j)*2.39996;dx=Math.cos(angle);dy=Math.sin(angle);d=1;}
+   const shift=(gap-d)/2+.2;a.x-=dx/d*shift;a.y-=dy/d*shift;b.x+=dx/d*shift;b.y+=dy/d*shift;moved=true;
+  }
+  for(const n of nodes){n.x=clamp(n.x,27,width-27);n.y=clamp(n.y,29,height-55);}
+  if(!moved)break;
+ }
+ return nodes;
+}
+
 function mount(root,{D,Z,profile,navigate,photo,championship}){
  dispose();
  const reduced=matchMedia('(prefers-reduced-motion: reduce)'),events=new AbortController(),signal=events.signal;
@@ -32,16 +49,15 @@ function mount(root,{D,Z,profile,navigate,photo,championship}){
  if(!data.rows.some(r=>r.owner===state.owner))state.owner=data.rows[0]?.owner;
  if(state.paused===null||reduced.matches)state.paused=reduced.matches;
  const years=Object.keys(D.standings||{}).map(Number).sort((a,b)=>b-a);
- root.innerHTML=`<div class="zg-home"><div class="zg-topline"><span><i></i> THE LEAGUE, CONNECTED</span><span>EST. ${esc(D.meta.founded||2024)} <b>/</b> ZYNFL</span></div>
- <header class="zg-heading"><div><h1>One league.<br><span>A world of grudges.</span></h1><p>Different cities. Same obsession. Explore the people behind the teams.</p></div><label class="zg-season">SEASON<select id="zg-season">${years.map(y=>`<option value="${y}" ${y===state.year?'selected':''}>${y}${y===Number(Z.year||2026)?' · In season':' · Archive'}</option>`).join('')}</select></label></header>
- <div class="zg-layout"><section class="zg-atlas" aria-label="Interactive manager globe"><div class="zg-map-heading"><div><span class="zg-kicker">MANAGER ATLAS</span><strong id="zg-map-count"></strong></div><span class="zg-map-tag">DRAG TO EXPLORE ↗</span></div>
- <div class="zg-stage"><canvas id="zg-earth" tabindex="0" role="img" aria-label="Rotatable 3D Earth. Use arrow keys to rotate and plus or minus to zoom. Manager buttons follow below." aria-describedby="zg-help"></canvas><div class="zg-beacons" id="zg-beacons"></div><div class="zg-watermark" aria-hidden="true">ZYNFL</div></div>
- <div class="zg-map-footer"><div class="zg-legend"><span><i></i> Managers</span><span><i class="gold"></i> Champion</span><span><i class="line"></i> Matchup</span></div><div class="zg-controls"><button id="zg-motion" aria-pressed="${state.paused}" aria-label="Pause globe animation"></button><button id="zg-out" aria-label="Zoom out">−</button><button id="zg-in" aria-label="Zoom in">+</button><button id="zg-reset" aria-label="Reset globe view">↺</button></div></div>
- <p id="zg-help" class="zg-map-help">Drag to rotate · Pinch or use + / − to zoom · Select a beacon to explore</p><div id="zg-map-error" class="zg-map-help" role="status"></div></section>
+ root.innerHTML=`<div class="zg-home">
+ <header class="zg-heading"><h1>ZYNFL <span>/ est ${esc(D.meta.founded||2024)}</span></h1><label class="zg-season"><span class="zg-sr-only">Season</span><select id="zg-season" aria-label="Choose season">${years.map(y=>`<option value="${y}" ${y===state.year?'selected':''}>${y}${y===Number(Z.year||2026)?' · In season':' · Archive'}</option>`).join('')}</select></label></header>
+ <div class="zg-layout"><section class="zg-atlas" aria-label="Interactive manager globe"><span class="zg-sr-only" id="zg-map-count"></span>
+ <div class="zg-stage"><canvas id="zg-earth" tabindex="0" role="img" aria-label="Rotatable 3D Earth. Use arrow keys to rotate and plus or minus to zoom. Manager buttons follow below." aria-describedby="zg-help"></canvas><div class="zg-beacons" id="zg-beacons"></div></div>
+ <div class="zg-map-footer"><div class="zg-controls"><button id="zg-motion" aria-pressed="${state.paused}" aria-label="Pause globe animation"></button><button id="zg-out" aria-label="Zoom out">−</button><button id="zg-in" aria-label="Zoom in">+</button><button id="zg-reset" aria-label="Reset globe view">↺</button></div><p id="zg-help" class="zg-map-help">Drag to rotate · Pinch or + / − to zoom</p></div><div id="zg-map-error" class="zg-map-help" role="status"></div></section>
  <aside class="zg-team-panel" aria-label="Selected team"><div id="zg-cluster" class="zg-cluster"></div><div id="zg-team" aria-live="polite" aria-atomic="true"></div></aside></div>
- <div class="zg-managers-head"><span class="zg-kicker">THE LEAGUE</span><span id="zg-location-note"></span></div><div id="zg-managers" class="zg-managers" aria-label="Choose a manager"></div>
- <div class="zg-bottom"><section class="zg-match-panel"><div class="zg-section-head"><div><span class="zg-kicker">ACROSS THE MAP</span><h2 id="zg-week-label"></h2></div><label class="zg-toggle"><input type="checkbox" id="zg-arcs" ${state.arcs?'checked':''}> Show connections</label></div><div id="zg-matchups" class="zg-matchups"></div><button class="zg-text-link" id="zg-all-matchups">Explore matchups <span>↗</span></button></section>
- <section class="zg-activity-panel"><div class="zg-section-head"><div><span class="zg-kicker">LEAGUE PULSE</span><h2 id="zg-activity-title">Recent activity</h2></div><span class="zg-pulse-dot"></span></div><div id="zg-activity"></div><button class="zg-text-link" id="zg-activity-link">All transactions <span>↗</span></button></section></div>
+ <div class="zg-managers-head"><span class="zg-kicker">Managers</span><span id="zg-location-note"></span></div><div id="zg-managers" class="zg-managers" aria-label="Choose a manager"></div>
+ <div class="zg-bottom"><section class="zg-match-panel"><div class="zg-section-head"><div><h2 id="zg-week-label"></h2></div><label class="zg-toggle"><input type="checkbox" id="zg-arcs" ${state.arcs?'checked':''}> Show connections</label></div><div id="zg-matchups" class="zg-matchups"></div><button class="zg-text-link" id="zg-all-matchups">Explore matchups <span>↗</span></button></section>
+ <section class="zg-activity-panel"><div class="zg-section-head"><div><h2 id="zg-activity-title">Recent activity</h2></div><span class="zg-pulse-dot"></span></div><div id="zg-activity"></div><button class="zg-text-link" id="zg-activity-link">All transactions <span>↗</span></button></section></div>
  <footer class="zg-footnote"><span id="zg-freshness"></span><span>Location centers are approximate.</span></footer></div>`;
  const el=id=>root.querySelector('#zg-'+id),canvas=el('earth'),ctx=canvas.getContext('2d'),stage=canvas.parentElement,beaconLayer=el('beacons');
  let width=0,height=0,radius=0,cx=0,cy=0;
@@ -51,14 +67,14 @@ function mount(root,{D,Z,profile,navigate,photo,championship}){
  function renderCard(){
   const row=data.rows.find(r=>r.owner===state.owner);if(!row)return;
   const loc=locations[row.owner],champ=data.champion?.owner===row.owner,rank=data.ranking?.[1].jackRankings.indexOf(row.owner),op=data.games.find(g=>[g.aOwner,g.bOwner].includes(row.owner)),opp=op&&(op.aOwner===row.owner?op.bOwner:op.aOwner),img=photo(row.owner);
-  el('team').innerHTML=`<div class="zg-card-top"><span class="zg-kicker">FRANCHISE SPOTLIGHT</span><span class="zg-card-number">${String(row.rank).padStart(2,'0')}</span></div><div class="zg-person">${img?`<img src="${esc(img)}" alt="" width="60" height="60">`:`<span class="zg-avatar">${esc(row.owner.slice(0,1))}</span>`}<div><h2>${esc(row.owner)}</h2><p>${esc(loc?.label||'Location not provided')}</p></div></div><h3 class="zg-team-name">${esc(row.team)}</h3>${champ?`<button class="zg-champ" id="zg-champ">♛ ${data.champion.year} ${data.current?'DEFENDING ':''}CHAMPION ↗</button>`:'<div class="zg-card-divider"></div>'}
+  el('team').innerHTML=`<div class="zg-card-top"><span class="zg-kicker">TEAM</span><span class="zg-card-number">${String(row.rank).padStart(2,'0')}</span></div><div class="zg-person">${img?`<img src="${esc(img)}" alt="" width="60" height="60">`:`<span class="zg-avatar">${esc(row.owner.slice(0,1))}</span>`}<div><h2>${esc(row.owner)}</h2><p>${esc(loc?.label||'Location not provided')}</p></div></div><h3 class="zg-team-name">${esc(row.team)}</h3>${champ?`<button class="zg-champ" id="zg-champ">♛ ${data.champion.year} ${data.current?'DEFENDING ':''}CHAMPION ↗</button>`:'<div class="zg-card-divider"></div>'}
   <dl class="zg-stats"><div><dt>RECORD</dt><dd>${esc(row.w)}–${esc(row.l)}${row.t?`–${esc(row.t)}`:''}</dd></div><div><dt>${data.current?'STANDING':'REG. SEED'}</dt><dd>#${esc(row.rank)}</dd></div><div><dt>POWER RANK</dt><dd>${rank>=0?'#'+(rank+1):'—'}</dd></div></dl>
   <p class="zg-rank-note">${data.ranking?`Jack’s rankings · Week ${data.ranking[0]}`:'Power rankings unavailable for this season'}${!data.current&&row.finalRank?` · Final finish #${row.finalRank}`:''}</p>
   <div class="zg-opponent"><span class="zg-kicker">${data.current?'WEEK '+data.week:'FINAL WEEK '+data.week}</span><p>${opp?`<span>${esc(row.owner)}</span><small> VS </small><strong>${esc(opp)}</strong>`:'No matchup in this week'}</p></div>
   <button class="zg-profile" id="zg-profile">Open manager profile <span>↗</span></button>`;
   on(el('profile'),'click',()=>profile(row.owner));if(el('champ'))on(el('champ'),'click',()=>championship(data.champion.year));
  }
- function renderCluster(members){el('cluster').innerHTML=members.length>1?`<span>${members.length} managers in this area</span><div>${members.map(o=>`<button data-zg-cluster="${esc(o)}">${esc(o)}</button>`).join('')}</div>`:'';el('cluster').querySelectorAll('button').forEach(b=>on(b,'click',()=>select(b.dataset.zgCluster)));}
+ function renderCluster(members){el('cluster').innerHTML=members.length>1?`<span>${members.length} managers at this location</span><div>${members.map(o=>`<button data-zg-cluster="${esc(o)}">${esc(o)}</button>`).join('')}</div>`:'';el('cluster').querySelectorAll('button').forEach(b=>on(b,'click',()=>select(b.dataset.zgCluster)));}
  function renderData(){
   const mapped=data.rows.filter(r=>locations[r.owner]).length;
   el('map-count').textContent=`${mapped} managers on the map`;
@@ -98,25 +114,27 @@ function mount(root,{D,Z,profile,navigate,photo,championship}){
   // Thin atmosphere rim, independent of any external map tiles or GPU.
   ctx.beginPath();ctx.arc(cx,cy,radius,0,Math.PI*2);ctx.strokeStyle='rgba(121,233,211,.37)';ctx.lineWidth=1;ctx.stroke();
   if(state.arcs)data.games.forEach((g,i)=>arc(g,time,i));
-  const points=data.rows.filter(r=>locations[r.owner]).map(r=>{const l=locations[r.owner];return {...project(vector(l.lat,l.lon)),owner:r.owner};}).filter(p=>p.z>.08&&p.x>16&&p.x<width-16&&p.y>16&&p.y<height-16);
+  const points=data.rows.filter(r=>locations[r.owner]).map(r=>{const l=locations[r.owner];return {...project(vector(l.lat,l.lon)),owner:r.owner,lat:l.lat,lon:l.lon};}).filter(p=>p.z>.08&&p.x>16&&p.x<width-16&&p.y>16&&p.y<height-16);
   const active=new Set();
-  for(const group of clusters(points,width<500?32:30)){
+  for(const group of spreadBeacons(clusters(points),width,height)){
+   const moved=Math.hypot(group.x-group.anchorX,group.y-group.anchorY)>3;
+   if(moved){ctx.beginPath();ctx.moveTo(group.anchorX,group.anchorY);ctx.lineTo(group.x,group.y);ctx.strokeStyle='rgba(159,236,208,.45)';ctx.lineWidth=.8;ctx.stroke();ctx.beginPath();ctx.arc(group.anchorX,group.anchorY,2,0,Math.PI*2);ctx.fillStyle='#a1f2d1';ctx.fill();}
    const owners=group.members.map(p=>p.owner),key=owners.join('|');active.add(key);
    let button=beaconNodes.get(key);if(!button){button=document.createElement('button');button.type='button';button.className='zg-beacon';button.setAttribute('aria-label',owners.length>1?`${owners.length} managers: ${owners.join(', ')}. Open cluster.`:`${owners[0]}: ${locations[owners[0]].label}. Open team.`);button.innerHTML=`<span>${owners.length>1?owners.length:''}</span><em>${owners.length>1?owners.length+' managers':esc(owners[0])}</em>`;
     on(button,'pointerenter',e=>{if(e.pointerType==='mouse'){hover=true;renderCluster(owners);select(owners.includes(state.owner)?state.owner:owners[0]);}});
     on(button,'pointerleave',()=>{hover=false;wake();});on(button,'focus',()=>{hover=true;renderCluster(owners);select(owners.includes(state.owner)?state.owner:owners[0]);});on(button,'blur',()=>{hover=false;});
     on(button,'click',()=>{state.paused=true;motionLabel();renderCluster(owners);select(owners.includes(state.owner)?state.owner:owners[0]);if(owners.length>1)el('cluster').querySelector('button')?.focus();});beaconLayer.append(button);beaconNodes.set(key,button);}
-   button.classList.toggle('gold',owners.includes(data.champion?.owner));button.classList.toggle('selected',owners.includes(state.owner));button.style.left=group.x+'px';button.style.top=group.y+'px';
+   button.classList.toggle('gold',owners.includes(data.champion?.owner));button.classList.toggle('selected',owners.includes(state.owner));button.classList.toggle('label-left',group.x>width*.75);button.classList.toggle('label-right',group.x<65);button.style.left=group.x+'px';button.style.top=group.y+'px';
   }
   for(const [key,node]of beaconNodes)if(!active.has(key)){node.remove();beaconNodes.delete(key);}
  }
  function animate(time){frame=0;if(dead||document.hidden||!visible)return;const elapsed=Math.min(60,time-last||33);if(time-last<32){frame=requestAnimationFrame(animate);return;}last=time;const moving=!state.paused&&!reduced.matches&&!hover&&!pointers.size;if(moving){state.lon+=elapsed*.0018;dirty=true;}if(dirty||moving){draw(time);dirty=false;}if(moving)frame=requestAnimationFrame(animate);}
  function wake(){dirty=true;if(!frame&&!dead&&visible&&!document.hidden)frame=requestAnimationFrame(animate);}
- function resize(){width=stage.clientWidth;height=stage.clientHeight;const dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);ctx?.setTransform(dpr,0,0,dpr,0,0);cx=width*.5;cy=height*.5;radius=Math.min(width*.39,height*.43)*state.zoom;wake();}
+ function resize(){width=stage.clientWidth;height=stage.clientHeight;const dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);ctx?.setTransform(dpr,0,0,dpr,0,0);cx=width*(width>760?.40:.5);cy=height*.54;radius=Math.min(width*.70,height*.90)*state.zoom;wake();}
  on(el('season'),'change',e=>{state.year=Number(e.target.value);data=model(D,Z,state.year);if(!data.rows.some(r=>r.owner===state.owner))state.owner=data.rows[0]?.owner;renderData();wake();});
  on(el('motion'),'click',()=>{state.paused=!state.paused;motionLabel();wake();});
  on(el('arcs'),'change',e=>{state.arcs=e.target.checked;wake();});
- function zoom(amount){state.zoom=clamp(state.zoom+amount,.7,1.8);resize();}
+ function zoom(amount){state.zoom=clamp(state.zoom+amount,.4,2);resize();}
  on(el('in'),'click',()=>zoom(.15));on(el('out'),'click',()=>zoom(-.15));on(el('reset'),'click',()=>{state.lat=30;state.lon=-103;state.zoom=1;resize();});
  on(el('all-matchups'),'click',()=>navigate('matchups'));
  on(canvas,'keydown',e=>{const actions={ArrowLeft:()=>state.lon-=8,ArrowRight:()=>state.lon+=8,ArrowUp:()=>state.lat=clamp(state.lat+8,-75,75),ArrowDown:()=>state.lat=clamp(state.lat-8,-75,75),'+':()=>zoom(.15),'=':()=>zoom(.15),'-':()=>zoom(-.15)};if(actions[e.key]){e.preventDefault();state.paused=true;motionLabel();actions[e.key]();wake();}});
@@ -135,5 +153,5 @@ function mount(root,{D,Z,profile,navigate,photo,championship}){
  land().then(g=>{if(dead)return;landData=g;wake();}).catch(()=>{if(!dead)el('map-error').textContent='Map detail could not load. Location beacons and team cards remain available.';});
  dispose=()=>{dead=true;events.abort();observer.disconnect();intersection.disconnect();cancelAnimationFrame(frame);beaconNodes.clear();};
 }
-window.ZYNFL_HOME={mount,destroy:()=>dispose(),model,clusters};
+window.ZYNFL_HOME={mount,destroy:()=>dispose(),model,clusters,spreadBeacons};
 })();

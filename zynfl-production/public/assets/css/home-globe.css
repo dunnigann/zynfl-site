@@ -7,3 +7,59 @@
 @media(max-width:430px){.zg-heading{flex-wrap:wrap}.zg-season{display:flex;align-items:center;gap:12px}.zg-season select{max-width:none}.zg-topline{font-size:8px;letter-spacing:1.3px}.zg-topline b{padding:0 5px}.zg-stage{height:345px}.zg-map-footer{flex-wrap:wrap;justify-content:center;gap:14px}.zg-map-heading strong{font-size:12px}.zg-beacon em{font-size:9px}.zg-home .zg-heading h1{font-size:39px}.zg-stats dt{font-size:8px}}
 @media(prefers-reduced-motion:reduce){.zg-home *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 .zg-controls button:disabled{opacity:.45;cursor:default}
+
+/* Immersive homepage: the Earth is the scene, with controls and a team card above it. */
+.zg-home{padding:0;background:#060d16;background-image:radial-gradient(ellipse at 34% 35%,#11282e66,transparent 65%)}
+.zg-home .zg-heading{position:relative;z-index:4;max-width:1600px;margin:0 auto;padding:24px 36px 12px;gap:20px;align-items:center}
+.zg-home .zg-heading h1{font-size:32px;letter-spacing:4px;line-height:1.2;display:flex;align-items:baseline;gap:17px;white-space:nowrap}
+.zg-home .zg-heading h1 span{font-size:11px;letter-spacing:1.7px;color:var(--zg-muted);font-weight:400}
+.zg-home .zg-season{display:block;min-width:160px;letter-spacing:0}
+.zg-home .zg-season select{min-width:160px;min-height:40px;padding:9px 12px;background:#101c25b3;border-color:#24353e}
+.zg-home .zg-layout{position:relative;display:block;isolation:isolate}
+.zg-home .zg-atlas{border:0;border-radius:0;background:none;position:relative;overflow:hidden}
+.zg-home .zg-stage{height:clamp(620px,calc(100svh - 154px),960px)}
+.zg-home .zg-team-panel{position:absolute;z-index:4;right:max(36px,calc((100vw - 1528px)/2));top:46px;width:292px;padding:23px;background:linear-gradient(145deg,#13222beB,#0b1520ee);backdrop-filter:blur(15px)}
+.zg-home .zg-map-footer{position:absolute;z-index:4;bottom:24px;left:max(36px,calc((100vw - 1528px)/2));padding:0;display:flex;align-items:center;justify-content:flex-start;gap:18px}
+.zg-home .zg-map-footer .zg-map-help{margin:0;text-align:left;font-size:10px;max-width:185px}
+.zg-home #zg-map-error:not(:empty){position:absolute;bottom:0;left:30px;color:#bdd8d8}
+.zg-home .zg-controls button{background:#101d29b8;backdrop-filter:blur(10px);min-width:42px;min-height:42px}
+.zg-home .zg-beacon{width:46px;height:46px}
+.zg-home .zg-beacon em{top:39px;left:50%;transform:translateX(-50%);font-size:10px;padding:4px 6px;line-height:1.2;background:#06101bc9;max-width:100px;text-align:center}
+.zg-home .zg-beacon.label-left em{left:auto;right:0;transform:none}
+.zg-home .zg-beacon.label-right em{left:0;transform:none}
+.zg-home .zg-managers-head,.zg-home .zg-managers,.zg-home .zg-bottom,.zg-home .zg-footnote{max-width:1456px;margin-left:auto;margin-right:auto}
+.zg-home .zg-managers-head{margin-top:24px;padding:0 36px}
+.zg-home .zg-managers{padding:0 36px}
+.zg-home .zg-bottom{padding:0 36px;margin-top:26px}
+.zg-home .zg-footnote{padding:24px 36px}
+.zg-sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:1100px) and (min-width:761px){
+ .zg-home .zg-heading{padding:22px 24px 12px}
+ .zg-home .zg-stage{height:680px}
+ .zg-home .zg-team-panel{right:24px;top:30px;width:260px;padding:20px}
+ .zg-home .zg-map-footer{left:24px;gap:12px}
+ .zg-home .zg-map-footer .zg-map-help{max-width:135px}
+ .zg-home .zg-team-name{font-size:23px}
+ .zg-home .zg-managers-head,.zg-home .zg-managers,.zg-home .zg-bottom{padding-left:24px;padding-right:24px}
+}
+@media(max-width:760px){
+ .zg-home .zg-heading{padding:21px 20px 10px;gap:12px;flex-wrap:nowrap}
+ .zg-home .zg-heading h1{font-size:25px;letter-spacing:2px;gap:9px;flex-wrap:wrap;row-gap:4px;white-space:normal}
+ .zg-home .zg-heading h1 span{font-size:9px;letter-spacing:1px}
+ .zg-home .zg-season,.zg-home .zg-season select{min-width:117px;max-width:140px;font-size:10px}
+ .zg-home .zg-stage{height:530px}
+ .zg-home .zg-team-panel{position:relative;right:auto;top:auto;width:auto;max-width:560px;margin:0 20px 24px;padding:21px;backdrop-filter:none}
+ .zg-home .zg-map-footer{left:20px;right:20px;bottom:20px;flex-wrap:wrap;justify-content:space-between;gap:10px}
+ .zg-home .zg-map-footer .zg-map-help{font-size:9px;max-width:150px}
+ .zg-home .zg-managers-head,.zg-home .zg-managers,.zg-home .zg-bottom{padding-left:20px;padding-right:20px}
+ .zg-home .zg-managers-head{margin-top:8px}
+ .zg-home .zg-footnote{padding:22px 20px}
+}
+@media(max-width:430px){
+ .zg-home .zg-stage{height:480px}
+ .zg-home .zg-heading h1{max-width:160px;gap:7px}
+ .zg-home .zg-heading h1 span{font-size:9px}
+ .zg-home .zg-map-footer{justify-content:center;bottom:18px;gap:12px}
+ .zg-home .zg-map-footer .zg-map-help{max-width:none;font-size:9px}
+ .zg-home .zg-beacon em{font-size:9px}
+}
