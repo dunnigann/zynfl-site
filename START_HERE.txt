@@ -1,0 +1,44 @@
+ZYNFL HOMEPAGE GLOBE — 2026-10-21
+
+STATUS: Implemented, tested, and committed locally. NOT deployed.
+GitHub connector writes returned HTTP 403 (Resource not accessible by integration).
+The local environment also has no GitHub push credentials. zynfl.com is unchanged.
+
+Base commit: 97f89d2c042019f6569d269db18d308fa101078a
+Local commit: c8f222b (Redesign ZYNFL homepage with interactive manager globe)
+
+INSTALL WITH GIT
+1. Open a clean checkout of dunnigann/zynfl-site and pull main.
+2. Extract this ZIP outside the checkout.
+3. From the repository root, run:
+   git apply --check /path/to/extracted/homepage-globe.patch
+   git apply /path/to/extracted/homepage-globe.patch
+   node --test zynfl-production/scripts/test-home-globe.cjs
+4. Review, commit, and push to main. Existing Cloudflare Workers Builds deploys it.
+   If git apply --check reports conflicts, stop and reconcile with newer edits.
+
+ALTERNATIVE: Copy the included zynfl-production files into the corresponding paths
+in your repo, preserving all other files, then commit/push. The ZIP contains only
+the eight changed files, plus this readme and the patch. Do not upload the ZIP itself
+as a website asset. No dependency installation or Cloudflare configuration needed.
+
+LOCATION CONFIGURATION
+All 12 supplied managers are configured. Isaac uses Taiwan's approximate center.
+Optionally supply his city. Historical managers with unknown locations stay off the
+map but remain accessible in the manager list. Historical views show current cities.
+Edit public/assets/js/manager-locations.js inside zynfl-production to change locations.
+
+VALIDATION
+7 automated tests passed: all 12 manager mappings, exact current cards/matchups,
+historical champions and placements, absent rankings, clustering, data immutability,
+and real bundled map geometry. All changed JavaScript passed node --check.
+Verified app.js byte-identical outside renderHome and its navigation cleanup hook.
+Browser QA covered desktop, 390px and 320px mobile iframe widths (no horizontal
+overflow), manager selection, cluster selection, keyboard rotation, zoom, profiles,
+season switching, Teams navigation and return, and simulated reduced-motion mode.
+Pinch support is implemented, but was not tested on physical mobile hardware.
+Local preview has no Yahoo backend; it exercised the existing embedded snapshot.
+Production Yahoo refresh and deployment could not be verified without write access.
+No existing data files, other tabs, Worker configuration, or Dirty D's were edited.
+
+See zynfl-production/HOMEPAGE_GLOBE.md for design, behavior and maintenance notes.
