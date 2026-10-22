@@ -1,88 +1,82 @@
-# ZYNFL immersive globe homepage
+# ZYNFL US manager map
 
-Only `#home` is redesigned. The Week 6 update adds Jack’s supplied ranking list. All other render functions,
-routes, league statistics, Yahoo integration and the Cloudflare Worker configuration
-are unchanged.
+The homepage now uses a flat map of the contiguous United States, with all 12
+current managers represented by independent circular profile portraits. The legacy
+home-globe.js / home-globe.css filenames are retained for upload compatibility.
 
-## Files
+## Scope
 
-- `public/assets/js/home-globe.js`: isolated spherical canvas renderer, read-only data adapter,
-  co-located manager grouping, team cards, archive selector, matchup arcs and activity.
-- `public/assets/css/home-globe.css`: styles scoped to `.zg-home`.
-- `public/assets/js/manager-locations.js`: present-day manager location mapping.
-- `public/assets/globe/earth-land.json`: bundled Natural Earth public-domain coastline
-  and sampled land points. Source: https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_land.geojson
-  Terms: https://www.naturalearthdata.com/about/terms-of-use/
-- `public/index.html`: loads the homepage assets.
-- `public/assets/js/app.js`: replaces only `renderHome` and adds disposal at navigation.
-- `scripts/test-home-globe.cjs`: source-backed adapter, location and clustering checks.
+Only the homepage renderer and styles, the manager-location mapping, and the
+allegiance section inside existing manager profiles change. Other page renderers,
+Yahoo automation, scores, standings, historical placements, power rankings and
+Cloudflare hosting configuration are unchanged. Jack’s Week 6 list remains intact.
+The shared app.js change adds one optional allegiance section to showOwner.
 
-## Configuration
+## Locations and portraits
 
-All 12 current managers use the locations Jack supplied on October 21, 2026.
-Coordinates represent city centers, not personal addresses. Isaac is located at
-an approximate center of Taiwan; provide a city if a more precise marker is wanted.
-Edit `manager-locations.js` using the exact manager key and `{label,lat,lon}`.
-Historical managers without supplied locations remain selectable with an unmapped
-label. Historical season views intentionally use **present-day locations**.
-No API keys, external map services, package installation or hosting changes required.
+Jack is mapped to Plano, Texas (33.0198, -96.6989). Isaac is mapped to Carrollton,
+Texas (32.9756, -96.8897). All other locations retain Jack’s supplied cities.
+Coordinates are approximate city centers. Historical season views use this same
+current location mapping; historical managers without a supplied city remain
+available in the manager list and are not assigned an invented location.
 
-## Data semantics
+Managers in Chicago, NYC and North Texas keep separate photo markers. Nearby
+portraits spread apart with thin leader lines to their exact map anchors. All 12
+portraits fit in the default view, including at 320px mobile width. The gold ring
+continues to identify the champion from the existing league data.
 
-Cards read `ZYNFL_DATA.standings[year]`. Current records and standings use the
-existing Yahoo model. Archive cards distinguish regular seed from playoff finish.
-Power ranking is the latest available **Jack** edition in `ZYNFL_2026.weeks`, labeled
-with its actual week. It is unavailable in historical seasons unless supported by
-the data adapter. No ranking or statistic is guessed.
-The current gold beacon represents the latest completed champion. Historical gold
-beacons represent that season's champion. Championship buttons open the existing
-championship-lineup view; manager buttons open existing manager profiles.
-Current matchup arcs use the source current week; historical arcs use the last
-archived week. Status and scores come directly from the source, without guessing
-whether an old snapshot is final. Recent transactions come from the existing
-transaction model. The footer discloses the snapshot update date.
-The existing Yahoo refresh re-mounts the homepage with updated data and preserves
-its selected season, manager, orientation, zoom and motion preference.
+The 12 map portraits use local 160px WebP crops (about 60 KB combined). Existing
+full-size profile photos remain unchanged. The bundled US state geometry is about
+36 KB. No new runtime package or map API is required.
 
 ## Interaction and accessibility
 
-Drag to rotate, pinch or +/− to zoom, Ctrl+wheel for optional wheel zoom. Normal
-wheel scrolling remains available. Arrow keys rotate a focused globe. Beacons are
-buttons with accessible manager names. Managers at the same geographic coordinates
-share a single button and expose individual controls. Separate cities never merge,
-even when projected close together. Nearby buttons spread apart with leader lines
-to their exact geographic anchors. The full
-manager list is always available, including the far side of the globe.
-Reduced-motion preference disables automatic rotation and traveling arc particles.
-Pause freezes all motion; explicit rotation and zoom still work. Rendering is capped
-at 30 fps, pixel ratio at 2, and stops when hidden, offscreen or on another route.
-Geometry is loaded only on the homepage and cached in memory; all assets are local.
-If map geometry fails, beacons and cards remain available; if Canvas is unavailable,
-the manager list and all data panels remain usable.
+Drag to pan; pinch, +/− or Ctrl+wheel to zoom; arrow keys pan a focused map.
+Normal page scrolling remains available. Reset restores the complete map.
+Portraits are focusable buttons, labeled with the manager and city. Hover, focus
+and click select the existing team card; its profile button opens the original
+manager file. Every manager is also selectable from the full list below the map.
 
-## Validation and publishing
+Matchup connections retain the source schedule and scores. Pause stops traveling
+particles. Reduced-motion preferences disable animation. Rendering stops while
+the page is hidden, the map is offscreen, or another tab is selected. Automatic
+Yahoo refreshes preserve the map’s selected year, manager, pan and zoom.
 
-Run `node --test scripts/test-home-globe.cjs` from `zynfl-production/`.
-Run `node --check public/assets/js/home-globe.js` for syntax validation.
-The existing Cloudflare Workers Builds integration deploys pushes to `main`.
-Keep `wrangler.jsonc`, Worker bindings, cron triggers and secrets unchanged.
+## Allegiances
 
-## Immersive layout revision
+manager-allegiances.js contains the exact 36 entries supplied by Jack. The team
+card shows compact logo badges and the full manager profile shows team names and
+categories. Country and Firm are retained for Akhil; Firm is an allegiance label,
+not an employment claim. No entries are invented for historical managers.
 
-The introduction is reduced to `ZYNFL / est 2024`. The enlarged globe fills the
-homepage scene without a frame or legend; the team card floats above it on desktop.
-On mobile the card follows the globe. Zoom out to see the entire Earth.
-City grouping preserves Dallas, Austin, Washington DC and Princeton as separate
-beacons. Only exact co-locations such as NYC and Chicago share a beacon.
+All 32 distinct logos and flags are bundled in assets/images/allegiances. See
+ASSET_SOURCES.md for provenance. The map thumbnails are in
+assets/images/managers/map. These images require no external request at runtime.
 
-## Jack’s Week 6 rankings
+## Validation
 
-`public/assets/js/jack-rankings-2026.js` supplies Jack’s exact Week 6 order. It loads
-after `yahoo-initial.js` and before `yahoo-live.js` captures the refresh base. The
-existing Yahoo rebuild preserves those manual lists across automatic refreshes.
-No scores, records, analyst rankings or prior Jack editions are changed. Existing
-movement arrows compare Week 6 with Week 5, and homepage cards use the new edition.
+27 automated tests pass: 9 homepage/data/rankings tests and 18 existing tests.
+Checks cover all 12 US locations, 36 exact allegiance entries, local image paths,
+city projection bounds, portrait separation across five viewport widths, source
+data immutability and Week 6 ranking persistence through repeated Yahoo rebuilds.
+JavaScript syntax and git diff whitespace checks pass.
 
-Validation: 9 homepage/rankings tests and 18 existing suite tests pass. Desktop and
-320px/390px iframe layouts, separated city beacons, NYC picker, Week 6 order and
-movement arrows were checked in the browser. No horizontal mobile overflow.
+Browser checks: desktop and 320px/390px mobile layouts, all 12 loaded portraits,
+no mobile horizontal overflow, team cards, profile allegiance logos, mobile zoom,
+keyboard pan and reset. Existing manager profiles and Week 6 rankings are retained.
+
+Run from zynfl-production:
+  node --test scripts/test-home-globe.cjs tests/*.test.mjs
+
+## Deployment
+
+Pushes to main use the existing Cloudflare Workers Builds workflow. No Worker,
+wrangler, OAuth, secret or Yahoo binding change is required. The GitHub connector
+still rejects writes with 403 Resource not accessible by integration. This update
+is saved locally and supplied as a ZIP for manual upload; no remote deployment
+was made by this change.
+
+To publish, extract the update ZIP. At the repository root on main, choose
+Add file > Upload files, drag in the extracted zynfl-production folder, preserve
+its folder structure, and commit. Wait for the Cloudflare build to succeed, then
+reload zynfl.com. The ZIP contains only this update’s changed and new files.

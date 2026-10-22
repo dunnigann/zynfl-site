@@ -1,0 +1,18 @@
+.za-allegiances{color:#dce8ed;margin:22px 0 28px}
+.za-allegiances h3{font-size:16px;margin:0 0 14px;letter-spacing:.1px}
+.za-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.za-team{display:flex;align-items:center;gap:12px;min-width:0;padding:15px;border:1px solid #344650;border-radius:12px;background:#17232d}
+.za-mark{width:48px;height:48px;flex-shrink:0;display:grid;place-items:center;background:#f2f5f3;border-radius:50%;padding:8px}
+.za-mark img{display:block;width:100%;height:100%;object-fit:contain}
+.za-copy{min-width:0;display:grid;gap:5px}
+.za-copy small{font-size:9px;letter-spacing:1.2px;color:#9fb6c2;text-transform:uppercase}
+.za-copy strong{font-size:12px;line-height:1.4;font-weight:600;overflow-wrap:anywhere}
+.za-compact{margin:0 0 20px}
+.za-compact .za-list{gap:7px}
+.za-compact .za-team{padding:9px 5px;display:flex;flex-direction:column;gap:7px;border-color:#89bfb91d;background:#8bc8b007;text-align:center}
+.za-compact .za-mark{width:38px;height:38px;padding:6px}
+.za-compact .za-copy{gap:3px}
+.za-compact .za-copy small{font-size:8px;letter-spacing:.6px}
+.za-compact .za-copy strong{font-size:9px;line-height:1.3}
+@media(max-width:600px){.za-list{gap:8px}.za-team{padding:12px 8px;flex-direction:column;align-items:flex-start;gap:9px}.za-mark{width:42px;height:42px}.za-copy strong{font-size:11px}}
+@media(max-width:360px){.za-list{grid-template-columns:1fr}.za-team{flex-direction:row;align-items:center}.za-compact .za-list{grid-template-columns:repeat(3,minmax(0,1fr))}.za-compact .za-team{flex-direction:column}}
