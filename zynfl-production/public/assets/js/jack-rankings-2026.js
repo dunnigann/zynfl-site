@@ -2,8 +2,14 @@
 (()=>{
  'use strict';
  const season=window.ZYNFL_2026;
- const week6=['Jack','Liam','Chuck','Akhil','Santi','Isaac','Leo','Mitchell','Tina','Quinn','Nick','Brock'];
+ const editions={
+  6:['Jack','Liam','Chuck','Akhil','Santi','Isaac','Leo','Mitchell','Tina','Quinn','Nick','Brock'],
+  7:['Jack','Chuck','Santi','Liam','Isaac','Akhil','Tina','Quinn','Leo','Mitchell','Nick','Brock'],
+  8:['Liam','Jack','Santi','Chuck','Akhil','Isaac','Tina','Quinn','Mitchell','Leo','Nick','Brock']
+ };
  season.jackRankings??={};
- season.jackRankings[6]=week6.slice();
- if(season.weeks?.[6])season.weeks[6].jackRankings=week6.slice();
+ for(const [week,order] of Object.entries(editions)){
+  season.jackRankings[week]=order.slice();
+  if(season.weeks?.[week])season.weeks[week].jackRankings=order.slice();
+ }
 })();

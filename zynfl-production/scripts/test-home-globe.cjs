@@ -57,7 +57,12 @@ test('Week 6 supplied rankings survive repeated Yahoo rebuilds and only update J
  assert.deepEqual(expected.map((owner,i)=>prior.indexOf(owner)-i),[0,0,0,2,0,1,3,-4,0,-2,0,0]);
  const fresh={window:{ZYNFL_YAHOO_MODEL:{}}};vm.createContext(fresh);
  for(const name of ['yahoo-initial.js','jack-rankings-2026.js'])vm.runInContext(fs.readFileSync(path.join(root,'assets/js',name),'utf8'),fresh);
- const clean=JSON.parse(JSON.stringify(fresh.window.ZYNFL_2026));delete clean.jackRankings[6];clean.weeks[6].jackRankings=null;
+ const clean=JSON.parse(JSON.stringify(fresh.window.ZYNFL_2026));
  const original={window:{ZYNFL_YAHOO_MODEL:{}}};vm.createContext(original);vm.runInContext(fs.readFileSync(path.join(root,'assets/js/yahoo-initial.js'),'utf8'),original);
- assert.deepEqual(clean,JSON.parse(JSON.stringify(original.window.ZYNFL_2026)));
+ const originalSeason=JSON.parse(JSON.stringify(original.window.ZYNFL_2026));
+ for(const week of [6,7,8]){
+  if(week in originalSeason.jackRankings)clean.jackRankings[week]=originalSeason.jackRankings[week];else delete clean.jackRankings[week];
+  if(clean.weeks[week])clean.weeks[week].jackRankings=originalSeason.weeks[week].jackRankings;
+ }
+ assert.deepEqual(clean,originalSeason);
 });
