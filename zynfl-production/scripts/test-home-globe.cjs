@@ -60,9 +60,11 @@ test('Week 6 supplied rankings survive repeated Yahoo rebuilds and only update J
  const clean=JSON.parse(JSON.stringify(fresh.window.ZYNFL_2026));
  const original={window:{ZYNFL_YAHOO_MODEL:{}}};vm.createContext(original);vm.runInContext(fs.readFileSync(path.join(root,'assets/js/yahoo-initial.js'),'utf8'),original);
  const originalSeason=JSON.parse(JSON.stringify(original.window.ZYNFL_2026));
- for(const week of [6,7,8]){
+ for(const week of [6,7,8,9,10]){
   if(week in originalSeason.jackRankings)clean.jackRankings[week]=originalSeason.jackRankings[week];else delete clean.jackRankings[week];
   if(clean.weeks[week])clean.weeks[week].jackRankings=originalSeason.weeks[week].jackRankings;
  }
+ delete clean.jackRankReasonsByWeek[10];
+ if(!originalSeason.jackRankReasonsByWeek)delete clean.jackRankReasonsByWeek;
  assert.deepEqual(clean,originalSeason);
 });
