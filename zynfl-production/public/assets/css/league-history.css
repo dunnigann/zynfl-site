@@ -1,0 +1,66 @@
+/* History routes share the existing navy and gold archive palette. */
+.history-menu-toggle{white-space:nowrap}
+.history-menu-chevron{display:inline-block;width:6px;height:6px;margin-left:5px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg)}
+.history-menu-toggle[aria-expanded="true"] .history-menu-chevron{transform:translateY(1px) rotate(225deg)}
+.nav-history #historySubmenu[hidden]{display:none}
+.nav-history #historySubmenu:not([hidden]){display:grid;gap:3px}
+
+.history-hall{
+ position:relative;isolation:isolate;text-align:center;padding:clamp(3.4rem,7vw,6.7rem) 0 clamp(3.5rem,7vw,6.25rem);
+ border-bottom:1px solid #ddba6a36;
+ background:radial-gradient(ellipse at 50% 9%,#d6ab502c,transparent 56%),linear-gradient(180deg,#26313e,#141d27 95%);
+}
+.history-hall:before{
+ content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+ background:linear-gradient(105deg,transparent 18%,#ffe8b205 18.15%,transparent 42%),linear-gradient(255deg,transparent 18%,#ffe8b205 18.15%,transparent 42%);
+}
+.history-hall h1{
+ color:#ffe7ad;margin:0 auto clamp(2rem,5vw,3.5rem);font:700 clamp(2.55rem,7vw,6.5rem)/1.04 Georgia,'Times New Roman',serif;
+ letter-spacing:-.035em;text-shadow:0 0 45px #ffdc8450,0 4px 2px #111923a0;text-wrap:balance;
+}
+.history-hall .hall-banners{
+ display:flex;justify-content:center;flex-wrap:wrap;align-items:stretch;gap:clamp(.65rem,2.8vw,2rem);padding:0;margin:0 auto;
+}
+.history-hall .hall-banners .banner{
+ flex:0 1 clamp(9rem,24vw,15.5rem);min-width:0;min-height:clamp(12.8rem,24vw,17rem);
+ padding:1.55rem clamp(.65rem,2vw,1.25rem) 2.7rem;display:flex;flex-direction:column;align-items:center;
+ border:1px solid #e3ba63;clip-path:polygon(0 0,100% 0,100% 87%,50% 100%,0 87%);
+ box-shadow:inset 0 0 0 5px #14202b,inset 0 0 0 6px #d6ac525e;
+ background:linear-gradient(155deg,#2f4051,#1c2937 57%,#141e2a);
+ transition:background-color .2s,transform .2s;cursor:pointer;
+}
+.history-hall .hall-banners .banner:hover{transform:translateY(-4px);background:linear-gradient(155deg,#3a4e60,#233446 57%,#141e2a)}
+.history-hall .hall-banners .banner:focus-visible{outline:2px solid #ffe4a0;outline-offset:-5px;background:#364a60}
+.history-hall .banner:before{width:38px;margin:0 auto .85rem}
+.history-hall .hall-banners .banner-year{font-size:.85rem;color:#f5d38a}
+.history-hall .hall-banners .banner-team{font-size:clamp(.9rem,2vw,1.27rem);min-height:3.5em;flex:1;margin:.55rem 0 .4rem;text-wrap:balance;overflow-wrap:anywhere}
+.history-hall .hall-banners .banner-owner{margin-top:0;font-size:.83rem;color:#d7e2ed}
+.history-hall .hall-banners .banner-record{font-size:1.08rem;color:#f9e7bf}
+.history-details .award-scope button{min-height:40px;font-size:.81rem;padding:.5rem .9rem}
+.history-coverage,.history-method{color:#bbc9d7;font-size:.86rem;line-height:1.6}
+.history-coverage{margin:1rem 0 1.5rem}
+.history-method{margin:1.1rem 0 0;max-width:76ch}
+.history-player-grid,.history-matchup-grid{display:grid;gap:1rem;align-items:start}
+.history-player-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.history-matchup-grid{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:1.25rem}
+.history-stat-card{padding:clamp(.95rem,2.2vw,1.55rem);min-width:0;border:1px solid #495b6b;border-radius:13px;background:linear-gradient(160deg,#243445,#1b2836);color:#f3f7fa}
+.history-stat-card h2{font-size:clamp(1.13rem,2vw,1.45rem);line-height:1.23;margin:0 0 .8rem;letter-spacing:-.02em}
+.history-stat-list,.history-game-list{margin:0;padding:0;list-style:none}
+.history-stat-list{counter-reset:position}
+.history-stat-list li,.history-game-list li{padding:.62rem 0;border-top:1px solid #637b904f}
+.history-stat-list li{display:grid;grid-template-columns:1.4rem minmax(0,1fr) auto;align-items:center;gap:.5rem;counter-increment:position}
+.history-stat-list li:before{content:counter(position);color:#f1ca75;font-size:.8rem;font-variant-numeric:tabular-nums}
+.history-stat-list strong,.history-stat-list small{display:block}
+.history-stat-list strong,.history-game-score strong{font-size:.94rem}
+.history-stat-list small,.history-game-list small{font-size:.78rem;line-height:1.4;color:#bfcedd}
+.history-stat-list b,.history-game-score b{font-variant-numeric:tabular-nums;color:#ffe2a0;font-size:1rem}
+.history-case-count,.history-empty{color:#bfcedd;font-size:.87rem}
+.history-case-count{margin:-.2rem 0 .7rem}
+.history-game-score{display:flex;gap:.25rem .55rem;align-items:baseline;flex-wrap:wrap}
+.history-game-score>span{white-space:nowrap}
+.history-game-defeats{font-size:.8rem;color:#bfcedd}
+@media(max-width:970px){.history-player-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:660px){.history-player-grid,.history-matchup-grid{grid-template-columns:1fr}}
+@media(max-width:365px){.history-hall .hall-banners .banner{flex-basis:calc(50% - .35rem)}}
+@media(prefers-reduced-motion:reduce){.history-hall .hall-banners .banner{transition:none}}
+.history-hall .banner:after{content:"";position:absolute;inset:0;pointer-events:none;background:#dfb96a;clip-path:polygon(0 86.7%,50% 99.6%,100% 86.7%,100% 87.3%,50% 100%,0 87.3%)}
