@@ -5,7 +5,7 @@
  const seasons=new Map();let busy=false,applied=false,revision='',lastArchive=0,pendingView=false;
  async function get(year){const r=await fetch(`/api/yahoo/season/${year}`,{cache:'no-store',signal:AbortSignal.timeout(15000)});if(!r.ok)throw Error('Yahoo data is temporarily unavailable');const s=await r.json();if(s.year!==year||s.schema!==1||s.teams?.length!==12||!Array.isArray(s.games)||!s.weeks)throw Error('Incomplete Yahoo response');return s;}
  function refreshView(){
-  if(!document.getElementById('modalBackdrop').hidden||document.querySelector('dialog[open]')||['INPUT','TEXTAREA'].includes(document.activeElement?.tagName)){pendingView=true;return;}pendingView=false;
+  if(!document.getElementById('modalBackdrop').hidden||document.querySelector('dialog[open]')||['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName)){pendingView=true;return;}pendingView=false;
   const x=scrollX,y=scrollY,open=[...app.querySelectorAll('details')].map((e,i)=>e.open?i:null).filter(i=>i!=null);
   go((location.hash||'#home').slice(1),{preserveScroll:true});open.forEach(i=>{const el=app.querySelectorAll('details')[i];if(el)el.open=true;});window.scrollTo(x,y);
  }
@@ -15,7 +15,12 @@
    const years=!applied||Date.now()-lastArchive>3600000?[2024,2025,2026]:[2026];
    const results=await Promise.allSettled(years.map(get));
    results.forEach((r,i)=>{if(r.status==='fulfilled')seasons.set(years[i],r.value);});
-   if(seasons.size!==3)throw Error('Some Yahoo history is temporarily unavailable');
+   const current=seasons.get(2026),changed=current?.updatedAt!==window.ZYNFL_PLAYOFF_LIVE?.updatedAt;
+   if(current)window.ZYNFL_PLAYOFF_LIVE=current;
+   if(seasons.size!==3){
+    if(changed&&activePage==='playoffPredictor')refreshView();
+    throw Error('Some Yahoo history is temporarily unavailable');
+   }
    const all=[...seasons.values()].sort((a,b)=>a.year-b.year),latest=seasons.get(2026),key=all.map(s=>`${s.updatedAt}:${s.coverage?.verifiedRosters}:${s.transactions.length}:${Object.keys(s.powerRankings||{}).length}`).join('|');
    window.ZYNFL_YAHOO_SEASONS=all;
    if(key!==revision){

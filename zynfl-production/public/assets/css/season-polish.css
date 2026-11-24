@@ -6,12 +6,6 @@
 .rank-badge.silver{background:#ced8e2;color:#192431}
 .rank-badge.bronze{background:#c98e63;color:#1d1920}
 
-.z-probability{display:grid;gap:7px;min-width:100px;max-width:210px;font-variant-numeric:tabular-nums}
-.z-probability>span{font-weight:750;color:#f5f7fb}
-.z-probability-track{height:9px;overflow:hidden;background:#344556;border-radius:999px}
-.z-probability-track>span{display:block;height:100%;background:linear-gradient(90deg,#559fce,#8bd3ff);border-radius:inherit;transition:width .4s ease}
-td:nth-child(3) .z-probability-track>span{background:linear-gradient(90deg,#bc8c3c,#f5cc66)}
-
 .z-ranking-list>li{display:grid;grid-template-columns:42px 45px minmax(0,1fr) 60px;gap:18px;align-items:start}
 .z-rank-copy{min-width:0}.z-rank-copy h3{line-height:1.4}
 .z-rank-movement{font-size:17px;font-weight:850;white-space:nowrap;text-align:right;padding-top:5px;font-variant-numeric:tabular-nums}
@@ -39,6 +33,5 @@ td:nth-child(3) .z-probability-track>span{background:linear-gradient(90deg,#bc8c
  .z-ranking-list .z-rank{font-size:23px;min-width:0}.z-ranking-list .z-photo{width:34px;height:34px}
  .z-rank-movement{font-size:14px}
  .z-ranking-list h3{font-size:16px}.z-ranking-list p{font-size:14px;line-height:1.75}
- .z-probability{width:100%;max-width:none;min-width:0}
  .z-team-header .z-win-chance{margin-left:5px}
 }
