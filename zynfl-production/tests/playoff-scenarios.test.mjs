@@ -96,3 +96,23 @@ test('completed ties count as half a win and incomplete weeks do not leak live s
  assert.equal(m.remaining.length,2);
  assert.equal(scenario.prepare({...partial,games:partial.games.slice(0,-1)}),null);
 });
+
+test('the seed guide follows Yahoo’s league week, including when standings are unchanged',()=>{
+ const previews=Array.from({length:18},(_,i)=>scenario.prepare({...season,league:{...season.league,currentWeek:i+1}}));
+ assert.deepEqual(previews.filter(x=>scenario.showSeedScenarios(x.currentWeek)).map(x=>x.currentWeek),[12,13,14]);
+ assert.equal(new Set(previews.map(x=>x.stamp)).size,18,'a week change invalidates a previously rendered guide');
+});
+
+test('offline dates limit the seed guide to Weeks 12–14 and fresh Yahoo data takes priority',()=>{
+ const asOf=date=>scenario.seedGuideWeek(null,season,new Date(date));
+ assert.equal(asOf('2026-11-24T05:59:00Z'),null);
+ assert.equal(asOf('2026-11-24T06:00:00Z'),12);
+ assert.equal(asOf('2026-12-01T12:00:00Z'),13);
+ assert.equal(asOf('2026-12-08T12:00:00Z'),14);
+ assert.equal(asOf('2026-12-15T06:00:00Z'),null);
+ const end=new Date('2026-12-14T23:00:00Z');
+ const live={updatedAt:'2026-12-14T22:00:00Z',league:{currentWeek:15}};
+ assert.equal(scenario.seedGuideWeek(live,season,end),15);
+ assert.equal(scenario.seedGuideWeek({...live,updatedAt:'2026-12-12T22:00:00Z'},season,end),14);
+ assert.equal(scenario.seedGuideWeek({...live,league:{currentWeek:15,finished:true}},season,end),null);
+});

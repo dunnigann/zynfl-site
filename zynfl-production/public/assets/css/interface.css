@@ -63,15 +63,12 @@
  padding-block:0 clamp(1.8rem,5vw,3.4rem);
 }
 .history-hall .page-heading--hall h1 {
- font:inherit;
- color:var(--ui-text);
- font-size:clamp(2.5rem,7vw,5rem);
- font-weight:730;
- line-height:1.07;
- letter-spacing:-.05em;
- text-shadow:0 0 38px #a4bdd43b;
+ color:#ffe7ad;
+ font:700 clamp(2.55rem,7vw,6.5rem)/1.04 Georgia,'Times New Roman',serif;
+ letter-spacing:-.035em;
+ text-shadow:0 0 45px #ffdc8450,0 4px 2px #111923a0;
 }
-.history-hall .page-heading--hall h1::before {margin-inline:auto}
+.history-hall .page-heading--hall h1::before {content:none}
 .section-heading h2,.z-section-head h2 {
  font-size:clamp(1.4rem,3vw,2rem);
  font-weight:700;

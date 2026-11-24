@@ -15,13 +15,14 @@
    const years=!applied||Date.now()-lastArchive>3600000?[2024,2025,2026]:[2026];
    const results=await Promise.allSettled(years.map(get));
    results.forEach((r,i)=>{if(r.status==='fulfilled')seasons.set(years[i],r.value);});
-   const current=seasons.get(2026),changed=current?.updatedAt!==window.ZYNFL_PLAYOFF_LIVE?.updatedAt;
+   const current=seasons.get(2026),prior=window.ZYNFL_PLAYOFF_LIVE;
+   const changed=current?.updatedAt!==prior?.updatedAt||current?.league?.currentWeek!==prior?.league?.currentWeek;
    if(current)window.ZYNFL_PLAYOFF_LIVE=current;
    if(seasons.size!==3){
     if(changed&&activePage==='playoffPredictor')refreshView();
     throw Error('Some Yahoo history is temporarily unavailable');
    }
-   const all=[...seasons.values()].sort((a,b)=>a.year-b.year),latest=seasons.get(2026),key=all.map(s=>`${s.updatedAt}:${s.coverage?.verifiedRosters}:${s.transactions.length}:${Object.keys(s.powerRankings||{}).length}`).join('|');
+   const all=[...seasons.values()].sort((a,b)=>a.year-b.year),latest=seasons.get(2026),key=all.map(s=>`${s.updatedAt}:${s.league?.currentWeek}:${s.coverage?.verifiedRosters}:${s.transactions.length}:${Object.keys(s.powerRankings||{}).length}`).join('|');
    window.ZYNFL_YAHOO_SEASONS=all;
    if(key!==revision){
     const model=window.ZYNFL_YAHOO_MODEL.build(base,all);

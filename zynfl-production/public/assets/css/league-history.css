@@ -64,3 +64,41 @@
 @media(max-width:365px){.history-hall .hall-banners .banner{flex-basis:calc(50% - .35rem)}}
 @media(prefers-reduced-motion:reduce){.history-hall .hall-banners .banner{transition:none}}
 .history-hall .banner:after{content:"";position:absolute;inset:0;pointer-events:none;background:#dfb96a;clip-path:polygon(0 86.7%,50% 99.6%,100% 86.7%,100% 87.3%,50% 100%,0 87.3%)}
+
+/* Postseason statistics use the same cards as the other history lists. */
+.history-postseason-grid {
+ display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr)) minmax(0,1.18fr);
+ gap:1rem;
+}
+.history-pf-list li {
+ display:grid;
+ grid-template-columns:minmax(0,1fr) auto;
+ align-items:baseline;
+ gap:.4rem .8rem;
+}
+.history-pf-list strong,.history-pf-list small {display:block}
+.history-pf-list b {
+ color:var(--ui-text,#f5f7fa);
+ font-variant-numeric:tabular-nums;
+ white-space:nowrap;
+}
+.history-accolades b span,.history-pf-list b span {
+ color:var(--ui-muted,#bbc9d7);
+ font-size:.75rem;
+ font-weight:550;
+}
+.history-rule {
+ color:var(--ui-muted,#bbc9d7);
+ font-size:.85rem;
+ line-height:1.55;
+ margin:.2rem 0 .7rem;
+}
+.history-postseason-note {margin:.65rem 0 1.5rem}
+@media(max-width:970px){
+ .history-postseason-grid {grid-template-columns:repeat(2,minmax(0,1fr))}
+ .history-accolades {grid-column:1/-1}
+}
+@media(max-width:660px){
+ .history-postseason-grid {grid-template-columns:1fr}
+}

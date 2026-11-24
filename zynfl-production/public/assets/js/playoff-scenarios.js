@@ -10,7 +10,7 @@ const units=(team,game,result)=>team===game.a?result:2-result;
 function prepare(season){
  if(!season?.teams?.length||!season.settings)return null;
  const start=Number(season.league?.startWeek||1),end=Number(season.settings.playoffStart)-1;
- const qualifiers=Number(season.settings.playoffTeams);
+ const qualifiers=Number(season.settings.playoffTeams),currentWeek=Number(season.league?.currentWeek);
  const teams=season.teams.map((t,i)=>({i,id:Number(t.id),owner:t.owner,name:t.name,rank:Number(t.rank)||i+1,w:0,l:0,t:0,pf:0,recent:[]}));
  const ids=new Map(teams.map(t=>[t.id,t.i]));
  if(ids.size!==teams.length||teams.length>16||teams.length%2||!Number.isInteger(end)||end<start||!Number.isInteger(qualifiers)||qualifiers<1||qualifiers>teams.length)return null;
@@ -35,8 +35,8 @@ function prepare(season){
  const order=teams.slice().sort((a,b)=>b.units-a.units||b.pf-a.pf||recentOrder(b,a));
  order.forEach((t,i)=>{t.standing=i+1;});
  const byes=2**Math.ceil(Math.log2(qualifiers))-qualifiers;
- const stamp=JSON.stringify([season.year,through,end,qualifiers,remaining,teams.map(t=>[t.id,t.owner,t.name,t.rank,t.units,t.pf,t.recent])]);
- return {year:season.year,teams,through,end,qualifiers,byes,remaining,completed,order,stamp,available:end-through<=lastWeeks};
+ const stamp=JSON.stringify([season.year,currentWeek,through,end,qualifiers,remaining,teams.map(t=>[t.id,t.owner,t.name,t.rank,t.units,t.pf,t.recent])]);
+ return {year:season.year,currentWeek,teams,through,end,qualifiers,byes,remaining,completed,order,stamp,available:end-through<=lastWeeks};
 }
 function recentOrder(a,b){
  for(let i=0;i<a.recent.length;i++)if(a.recent[i]!==b.recent[i])return a.recent[i]-b.recent[i];
@@ -163,7 +163,18 @@ function buildPaths(model,teamId){
  return {seeds,eliminated:!seeds.some(x=>x.seed<=qualifiers),clinched:seeds.length>0&&seeds.every(x=>x.seed<=qualifiers)};
 }
 
-const api={prepare,buildPaths};
+const showSeedScenarios=week=>Number.isInteger(week)&&week>=12&&week<=14;
+function seedGuideWeek(live,snapshot,at=new Date()){
+ if(live?.league?.finished)return null;
+ const week=Number(live?.league?.currentWeek);
+ const updated=Date.parse(live?.coreUpdatedAt||live?.updatedAt);
+ if(Number.isInteger(week)&&week>0&&at-updated<86400000)return week;
+ // Use the published Yahoo week dates if the league feed goes stale.
+ const parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(at);
+ const day=['year','month','day'].map(key=>parts.find(p=>p.type===key).value).join('-');
+ return snapshot?.seedGuideWeeks?.find(w=>w.start<=day&&day<=w.end)?.week??null;
+}
+const api={prepare,buildPaths,showSeedScenarios,seedGuideWeek};
 if(typeof module==='object'&&module.exports)module.exports=api;
 else if(typeof document!=='undefined')root.ZYNFL_PLAYOFF_SCENARIOS=api;
 else root.onmessage=({data:{model,teamId,request}})=>{

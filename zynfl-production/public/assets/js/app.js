@@ -87,6 +87,13 @@ function historyMatchupList(title,rows){
   return `<li><small>${g.year} · Week ${g.week}${g.playoffs?' · Playoffs':''}</small><div class="history-game-score"><span><strong>${zEsc(winner.owner)}</strong> <b>${historyPoints(winner.points)}</b></span><span class="history-game-defeats">def.</span><span><strong>${zEsc(loser.owner)}</strong> <b>${historyPoints(loser.points)}</b></span></div></li>`;
  }).join('')}</ul>`:'<p class="history-empty">No qualifying matchups for this season.</p>'}</section>`;
 }
+function historyPlayoffList(title,rows,fieldReady){
+ return `<section class="history-stat-card"><h2>${title}</h2>${rows.length?`<ul class="history-game-list history-pf-list">${rows.map(t=>`<li><div><strong>${zEsc(t.team||t.owner)}</strong><small>${t.year} · ${zEsc(t.owner)} · No. ${t.pfRank} in PF${t.seed?` · Seed ${t.seed}`:''}</small></div><b>${historyPoints(t.pf)} <span>PF</span></b></li>`).join('')}</ul>`:`<p class="history-empty">${fieldReady?'No qualifying teams for this selection.':'Available when the playoff field is set.'}</p>`}</section>`;
+}
+function historyAccolades(rows){
+ const places=['1st','2nd','3rd'];
+ return `<section class="history-stat-card history-accolades"><h2>Top 5 Players by Accolades</h2><p class="history-rule">First +3 · Second +2 · Third +1</p>${rows.length?`<ol class="history-stat-list">${rows.map(p=>`<li><div><strong>${zEsc(p.name)}</strong><small>${p.finishes.map(f=>`${f.year} ${zEsc(f.owner)} (${places[f.place-1]})`).join(' · ')}</small></div><b>${p.points} <span>pts</span></b></li>`).join('')}</ol>`:'<p class="history-empty">Available after the final podium rosters are verified.</p>'}</section>`;
+}
 function renderDetailedStatistics(){
  app.innerHTML=`<div class="page history-details">${pageHeader('Detailed Statistics')}<section class="section"><div class="wrap">${historyScopes(detailScope,'Detailed statistics season')}<div id="historyDetails"></div></div></section></div>`;
  const draw=()=>{
@@ -94,9 +101,11 @@ function renderDetailedStatistics(){
   const coverage=stats.coverage.map(c=>`${c.year}: matchups through Week ${c.lastMatchWeek||'—'}, verified lineups through Week ${c.lastLineupWeek||'—'}${c.lineupGaps.length?` (lineups unavailable for ${c.lineupGaps.length===1?'Week':'Weeks'} ${c.lineupGaps.join(', ')})`:''}`);
   document.getElementById('historyDetails').innerHTML=`
    <p class="history-coverage">${coverage.join(' · ')}</p>
+   <div class="history-postseason-grid">${historyPlayoffList('Top-6 PF, Missed Playoffs',stats.missedTopPF,stats.coverage.some(c=>c.fieldReady))}${historyPlayoffList('Bottom-6 PF, Made Playoffs',stats.qualifiedBottomPF,stats.coverage.some(c=>c.fieldReady))}${historyAccolades(stats.accolades)}</div>
+   <p class="history-rule history-postseason-note">PF rankings use regular-season scoring. Accolades count each player once per season, from the team’s final playoff roster, including bench and IR. Ties are broken by the number of firsts, then seconds, then by name.</p>
    <div class="history-player-grid">${historyPlayerList('Top 10 Starter Performances',stats.top)}${historyPlayerList('Bottom 10 Starter Performances',stats.bottom)}${historyPlayerList('Top 10 Bench Performances',stats.bench)}</div>
    <div class="history-matchup-grid">${historyMatchupList('2nd-Highest Scorer Lost to the Highest',stats.secondHigh)}${historyMatchupList('2nd-Lowest Scorer Beat the Lowest',stats.secondLow)}</div>
-   <p class="history-method">Completed matchups include playoffs. Player rankings use verified lineup slots, include kickers and defenses, and exclude IR. Weekly scoring ranks count only teams that played. A tie for first leaves no second place.</p>`;
+   <p class="history-method">Completed matchups include playoffs. Weekly performance rankings use verified lineup slots, include kickers and defenses, and exclude IR. Weekly scoring ranks count only teams that played. A tie for first leaves no second place.</p>`;
  };
  bindHistoryScopes(scope=>{detailScope=scope;draw();});draw();
 }

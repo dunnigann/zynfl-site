@@ -1,18 +1,21 @@
 /* The exact seed guide and the simulation are separate views of the same Yahoo schedule. */
-const playoffWorkerUrl='assets/js/playoff-scenarios.js?v=20261124-seeds';
+const playoffWorkerUrl='assets/js/playoff-scenarios.js?v=20261124-postseason';
 const playoffView={teamId:null,seed:null,route:null,key:null,forecast:null,paths:new Map()};
 let playoffWorker,playoffRequest=0;
 const playoffInflight=new Map();
 
 function playoffModel(){
+ const snapshot=window.ZYNFL_PLAYOFF_SNAPSHOT,scenarios=window.ZYNFL_PLAYOFF_SCENARIOS;
  const ordered=[
   window.ZYNFL_PLAYOFF_LIVE,
   window.ZYNFL_YAHOO_SEASONS?.find(s=>s.year===2026),
-  window.ZYNFL_PLAYOFF_SNAPSHOT
- ].filter(Boolean).sort((a,b)=>Date.parse(b.updatedAt)-Date.parse(a.updatedAt));
+  snapshot
+ ].filter(Boolean).sort((a,b)=>(Date.parse(b.updatedAt)||0)-(Date.parse(a.updatedAt)||0));
+ const leagueWeek=scenarios.seedGuideWeek(ordered.find(s=>s!==snapshot),snapshot);
  for(const season of ordered){
-  const model=window.ZYNFL_PLAYOFF_SCENARIOS.prepare(season);
-  if(model)return model;
+  const model=scenarios.prepare(season);
+  if(model)return leagueWeek===model.currentWeek?model:
+   {...model,currentWeek:leagueWeek,stamp:model.stamp+':week-'+leagueWeek};
  }
  return null;
 }
@@ -117,7 +120,7 @@ async function drawPlayoffGuide(model,inside){
  try{
   const result=await calculatePlayoffPaths(model,team.id);
   if(!inside.isConnected||playoffView.teamId!==team.id||inside.dataset.team!==String(team.id))return;
-  if(!result){inside.innerHTML='<p class="sp-state">Seed paths are available during the final three weeks of the regular season.</p>';return;}
+  if(!result){inside.innerHTML='<p class="sp-state">Waiting for Yahoo to finalize the previous week.</p>';return;}
   if(result.eliminated){inside.innerHTML='<p class="sp-state sp-eliminated"><strong>Eliminated</strong></p>';return;}
   inside.innerHTML=`<div class="sp-seed-picker"><div class="sp-seed-label"><strong>Possible seeds</strong>${result.clinched?'<span class="sp-clinched">Playoff spot clinched</span>':''}</div><div class="sp-seed-buttons" role="group" aria-label="Choose a possible seed">${result.seeds.map(({seed})=>`<button type="button" aria-pressed="false" aria-label="Seed ${seed}, ${spBracket(model,seed).toLowerCase()}" data-playoff-seed="${seed}" class="${seed<=model.qualifiers?'sp-in-bracket':''}">${seed}</button>`).join('')}</div></div><div class="sp-path"></div>`;
   const wanted=playoffView.seed,defaultSeed=result.seeds.some(x=>x.seed===team.standing)?team.standing:result.seeds[0].seed;
@@ -153,16 +156,16 @@ function renderPlayoffPredictor(){
   playoffView.key=model.stamp;playoffView.forecast=null;playoffView.paths.clear();
  }
  if(!spTeam(model,playoffView.teamId))playoffView.teamId=(model.order.find(t=>t.owner==='Quinn')||model.order[0]).id;
- const forecast=spForecast(model);
+ const forecast=spForecast(model),showGuide=window.ZYNFL_PLAYOFF_SCENARIOS.showSeedScenarios(model.currentWeek);
  app.innerHTML=`<div class="page sp-page">${pageHeader('Playoff Predictor')}
  <div class="wrap sp-layout">
-  <section class="sp-block" aria-labelledby="sp-guide-heading">
+  ${showGuide?`<section class="sp-block" aria-labelledby="sp-guide-heading">
    <div class="sp-section-top"><div><h2 id="sp-guide-heading">Seed scenarios</h2><p class="sp-context">${model.year} · Results through Week ${model.through}${model.remaining.length?` · ${model.through+1===model.end?`Week ${model.end}`:`Weeks ${model.through+1}–${model.end}`} left`:''}</p></div>
     <label class="sp-select-label"><span>Team</span><select id="sp-team" class="sp-select">${model.order.map(t=>`<option value="${t.id}" ${t.id===playoffView.teamId?'selected':''}>${zEsc(t.name||t.owner)} · ${zEsc(t.owner)}</option>`).join('')}</select></label></div>
    <div id="sp-team-current" class="sp-team-current"></div>
    <div id="sp-guide"></div>
    <details class="sp-method"><summary>Seeding rules</summary><p>The top ${model.qualifiers} make the championship bracket${model.byes?` and the top ${model.byes} get a bye`:''}. Paths use the remaining Yahoo schedule, including the possibility of a tied game. Teams rank by win percentage (a tie is half a win), then season points. If season points are exactly tied, newer weekly scores decide first. Unfinished games are open outcomes.</p></details>
-  </section>
+  </section>`:''}
   <section class="sp-block sp-forecast" aria-labelledby="sp-forecast-heading">
    <div class="sp-section-top"><h2 id="sp-forecast-heading">Playoff odds</h2></div>
    <div class="sp-table-wrap"><table><thead><tr><th scope="col">Team</th><th scope="col">Playoffs</th><th scope="col">First-round bye</th><th scope="col">Expected seed</th><th scope="col">Expected wins</th></tr></thead>
@@ -170,15 +173,16 @@ function renderPlayoffPredictor(){
      const team=model.teams.find(t=>t.owner===r.owner);
      return `<tr><th scope="row"><strong>${zEsc(team.name||r.owner)}</strong><small>${zEsc(r.owner)}</small></th><td>${spProbability(r.playoff,`${r.owner} playoff odds`)}</td><td>${spProbability(r.bye,`${r.owner} first-round bye odds`)}</td><td>${r.seed.toFixed(1)}</td><td>${r.wins.toFixed(1)}</td></tr>`;
     }).join('')}</tbody></table></div>
-   <details class="sp-method"><summary>How the odds are estimated</summary><p>5,000 simulations use the ${model.remaining.length} remaining matchups, each team’s scoring average and its week-to-week scoring variation. These are estimates; the seed scenarios above are calculated from the schedule.</p></details>
+   <details class="sp-method"><summary>How the odds are estimated</summary><p>5,000 simulations use the ${model.remaining.length} remaining matchups, each team’s scoring average and its week-to-week scoring variation. These are estimates.${showGuide?' The seed scenarios above are calculated from the schedule.':''}</p></details>
   </section>
  </div></div>`;
+ if(!showGuide)return;
  const pick=document.getElementById('sp-team'),guide=document.getElementById('sp-guide');
  function teamChange(){
   guide.dataset.team=String(playoffView.teamId);
   const t=spTeam(model,playoffView.teamId);
   document.getElementById('sp-team-current').innerHTML=`<span>Current seed <strong>${t.standing}</strong></span><span>Record <strong>${spRecord(t)}</strong></span><span>Points for <strong>${spPoints(t.pf)}</strong></span>`;
-  if(!model.available){guide.innerHTML='<p class="sp-state">Seed paths are available during the final three weeks of the regular season.</p>';return;}
+  if(!model.available||model.through<model.currentWeek-1){guide.innerHTML='<p class="sp-state">Waiting for Yahoo to finalize the previous week.</p>';return;}
   drawPlayoffGuide(model,guide);
  }
  pick.addEventListener('change',()=>{playoffView.teamId=Number(pick.value);playoffView.seed=null;playoffView.route=null;teamChange();});teamChange();

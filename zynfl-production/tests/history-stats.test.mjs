@@ -53,7 +53,7 @@ test('live extended coverage wins while older or partial snapshots cannot erase 
  const stale=load(2026);
  const prior=forScope(2026,[stale],snapshot);
  assert.deepEqual(prior.top,snapshot[2026].top);
- assert.equal(prior.coverage[0].lastLineupWeek,10);
+ assert.equal(prior.coverage[0].lastLineupWeek,11);
  const next=structuredClone(stale),g=next.games.find(g=>g.complete);
  g.aScore=500;
  const base={2026:summarize(stale)};
@@ -63,4 +63,46 @@ test('live extended coverage wins while older or partial snapshots cannot erase 
  const updated=forScope(2026,[partial],base);
  assert.deepEqual(updated.top,base[2026].top);
  assert.equal(updated.coverage[0].lineupWeeks,base[2026].coverage[0].lineupWeeks);
+});
+
+test('PF lists use the actual championship field and regular-season points',()=>{
+ const all=forScope('all',[],snapshot);
+ assert.deepEqual(all.missedTopPF.map(t=>[t.year,t.owner,t.pfRank,t.pf]),[[2025,'Daniel',6,147316],[2024,'Nick',6,150228]]);
+ assert.deepEqual(all.qualifiedBottomPF.map(t=>[t.year,t.owner,t.pfRank,t.pf,t.seed]),[[2025,'Rick',7,145876,2],[2024,'Jack',7,148976,5]]);
+ assert.deepEqual(forScope(2024,[],snapshot).missedTopPF.map(t=>t.owner),['Nick']);
+ const season=load(2025);
+ const g=season.games.find(g=>g.week===17&&g.aOwner==='Leo');
+ g.aScore=10000;
+ assert.deepEqual(summarize(season).missedTopPF,snapshot[2025].missedTopPF,'playoff points do not enter the PF rankings');
+ const before={...season,league:{...season.league,finished:false,currentWeek:14}};
+ assert.equal(summarize(before).coverage[0].fieldReady,false,'do not guess the field while the regular season is still open');
+ const playoffs={...before,league:{...before.league,currentWeek:15},games:season.games.filter(g=>g.week<=15)};
+ assert.deepEqual(summarize(playoffs).qualifiedBottomPF,snapshot[2025].qualifiedBottomPF,'include Rick even though he has an opening playoff bye');
+ const pending=structuredClone(playoffs);
+ pending.games.find(g=>g.week===14).complete=false;
+ assert.equal(summarize(pending).coverage[0].fieldReady,false,'do not rank partial regular-season scores');
+});
+
+test('accolades use the last playoff roster, stable player IDs and a 3/2/1 podium',()=>{
+ const all=forScope('all',[],snapshot);
+ assert.deepEqual(all.accolades.map(p=>[p.name,p.points]),[
+  ['Bijan Robinson',5],['DJ Moore',5],['James Cook III',5],['Baker Mayfield',4],['Jahmyr Gibbs',4]
+ ]);
+ assert.deepEqual(all.accolades[0].finishes.map(f=>[f.year,f.owner,f.place]),[[2025,'Quinn',2],[2024,'Chuck',1]]);
+ assert.deepEqual(forScope(2026,[],snapshot).accolades,[]);
+ const fixture=load(2025);
+ const [gold,silver,bronze]=[1,2,3].map(i=>fixture.teams.find(t=>t.rank===i));
+ fixture.weeks[10].players.push({playerId:'early-only',name:'Earlier roster member',slot:'BN',owner:gold.owner,points:1});
+ fixture.weeks[17].players.push(
+  {playerId:'bench',name:'Verified bench player',slot:'BN',owner:silver.owner,points:0},
+  {playerId:'ir',name:'Verified IR player',slot:'IR',owner:bronze.owner,points:0}
+ );
+ const {finishes,coverage}=summarize(fixture);
+ assert.ok(coverage[0].podiumReady);
+ assert(!finishes.some(f=>f.playerId==='early-only'));
+ assert.equal(finishes.find(f=>f.playerId==='bench').place,2);
+ assert.equal(finishes.find(f=>f.playerId==='ir').place,3);
+ delete fixture.rosterFinal['17:'+bronze.id];
+ assert.equal(summarize(fixture).coverage[0].podiumReady,false);
+ assert.deepEqual(forScope(2025,[fixture],snapshot).accolades,forScope(2025,[],snapshot).accolades,'an unverified refresh keeps the archived podium roster');
 });
