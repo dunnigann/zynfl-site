@@ -22,7 +22,26 @@ function prepareResponsiveTables(){
    select.addEventListener('change',draw);draw();table.after(panel);
   }else{
    table.classList.add('responsive-table');
-   table.querySelectorAll('tbody tr').forEach(row=>[...row.cells].forEach((cell,i)=>{cell.dataset.label=headers[i]||'';}));
+   // Preserve table semantics when the visual layout switches to cards.
+   table.setAttribute('role','table');
+   [...table.tBodies,table.tHead].filter(Boolean).forEach(group=>{
+    group.setAttribute('role','rowgroup');
+    for(const row of group.rows){
+     row.setAttribute('role','row');
+     [...row.cells].forEach((cell,i)=>{
+      const heading=cell.tagName==='TH';
+      cell.setAttribute('role',heading?(cell.scope==='row'?'rowheader':'columnheader'):'cell');
+      if(group!==table.tHead){
+       cell.dataset.label=headers[i]||'';
+       if(headers[i]&&cell.scope!=='row'){
+        const label=document.createElement('span');
+        label.className='responsive-cell-label';label.setAttribute('aria-hidden','true');
+        label.textContent=headers[i];cell.prepend(label);
+       }
+      }
+     });
+    }
+   });
   }
  });
 }

@@ -168,7 +168,7 @@ function renderPlayoffPredictor(){
   </section>`:''}
   <section class="sp-block sp-forecast" aria-labelledby="sp-forecast-heading">
    <div class="sp-section-top"><h2 id="sp-forecast-heading">Playoff odds</h2></div>
-   <div class="sp-table-wrap"><table><thead><tr><th scope="col">Team</th><th scope="col">Playoffs</th><th scope="col">First-round bye</th><th scope="col">Expected seed</th><th scope="col">Expected wins</th></tr></thead>
+   <div class="sp-table-wrap"><table aria-label="Playoff odds by team"><thead><tr><th scope="col">Team</th><th scope="col">Playoffs</th><th scope="col">First-round bye</th><th scope="col">Expected seed</th><th scope="col">Expected wins</th></tr></thead>
     <tbody>${forecast.map(r=>{
      const team=model.teams.find(t=>t.owner===r.owner);
      return `<tr><th scope="row"><strong>${zEsc(team.name||r.owner)}</strong><small>${zEsc(r.owner)}</small></th><td>${spProbability(r.playoff,`${r.owner} playoff odds`)}</td><td>${spProbability(r.bye,`${r.owner} first-round bye odds`)}</td><td>${r.seed.toFixed(1)}</td><td>${r.wins.toFixed(1)}</td></tr>`;

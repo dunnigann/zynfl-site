@@ -19,6 +19,7 @@
 .z-table-scroll{overflow:visible}.z-log{white-space:normal}
 .z-legend{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
 .z-ranking-list p{font-size:14px;line-height:1.65}
+.responsive-cell-label{display:none}
 .mobile-matrix{display:none}
 .not-found{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px 20px;background:var(--navy);color:white;min-height:100svh}
 .not-found .error-tin{width:112px;height:112px;border-radius:50%;margin-bottom:30px}
@@ -78,16 +79,17 @@ button:focus-visible,a:focus-visible,select:focus-visible{outline:3px solid #3b8
  .z-dialog{width:calc(100% - 20px);max-width:none;max-height:92svh;padding:22px 14px;overflow-x:clip}.z-dialog-heading{gap:10px}.z-dialog-heading .z-photo{width:56px;height:56px}
  .z-dialog-heading>div{min-width:0}.z-dialog-heading h2{font-size:22px}.z-dialog-heading p{font-size:12px}
  .z-detail-stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.z-detail-stats>div{padding:12px 6px}.z-detail-stats strong{font-size:20px}.z-detail-stats small{font-size:10px}
- /* Preserve all columns as labeled values instead of truncating or hiding them. */
- table.responsive-table{display:block;width:100%;border:0;table-layout:auto;overflow:visible;box-shadow:none;border-radius:0}
- table.responsive-table thead{display:none}
- table.responsive-table tbody{display:grid;width:100%;gap:12px}
- table.responsive-table tbody tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border:1px solid var(--line);border-radius:10px;background:white;padding:10px;gap:10px}
- table.responsive-table tbody td{display:block!important;width:auto!important;position:static;padding:0!important;border:0;text-align:left;white-space:normal!important;overflow:visible!important;text-overflow:clip;overflow-wrap:anywhere!important;font-size:13px!important;line-height:1.5}
- table.responsive-table tbody td:first-child{grid-column:1/-1;font-weight:750}
- table.responsive-table tbody td:before{content:attr(data-label);display:block;font-size:10px;font-weight:750;text-transform:uppercase;letter-spacing:.5px;color:#607185;margin-bottom:3px}
- table.responsive-table td strong,table.responsive-table td small{white-space:normal!important;overflow:visible;text-overflow:clip;font-size:inherit}
- table.responsive-table.career-table td:first-child small{display:block!important;font-size:11px}
+ /* Keep headings in the accessibility tree and show each value with its label. */
+ table.responsive-table{display:block;width:100%;border:0;table-layout:auto;overflow:visible;box-shadow:none;border-radius:0;background:transparent}
+ table.responsive-table thead{display:block;position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+ table.responsive-table > tbody{display:grid;width:100%;gap:.7rem}
+ table.responsive-table > tbody > tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border:1px solid var(--line);border-radius:10px;background:var(--white);color:var(--ink);padding:.75rem;gap:.65rem .9rem}
+ table.responsive-table > tbody > tr > :is(th,td){display:block!important;min-width:0;width:auto!important;position:static;padding:0!important;border:0;background:transparent;color:inherit;text-align:left;white-space:normal!important;overflow:visible!important;text-overflow:clip;overflow-wrap:anywhere!important;font-size:.9375rem!important;line-height:1.45}
+ table.responsive-table > tbody > tr > :first-child{grid-column:1/-1;font-weight:750}
+ .responsive-cell-label{display:block;margin-bottom:.1rem;color:var(--ui-muted,var(--muted));font-size:.8125rem;font-weight:600;line-height:1.35}
+ table.responsive-table :is(th,td) :is(strong,small){white-space:normal!important;overflow:visible;text-overflow:clip}
+ table.responsive-table :is(th,td) small,.season-table-shell table.responsive-table td small{font-size:.8125rem;color:var(--ui-muted,var(--muted))}
+ table.responsive-table.career-table td:first-child small{display:block!important}
  .matrix-shell{overflow:visible}.matrix-shell>.matrix{display:none}.mobile-matrix{display:block;padding:14px;font-size:14px}
  .mobile-matrix label{display:block;font-weight:750}.mobile-matrix select{display:block;width:100%;padding:10px;margin-top:8px;border:1px solid #c9d2dc;border-radius:8px;background:white;color:var(--ink);font-size:16px;min-height:44px}
  .mobile-matrix dl{margin:16px 0 0}.mobile-matrix dl>div{display:flex;justify-content:space-between;gap:16px;padding:10px 8px;border-bottom:1px solid #e7eaee}

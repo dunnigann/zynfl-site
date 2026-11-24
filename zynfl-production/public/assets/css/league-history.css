@@ -1,10 +1,4 @@
 /* History routes share the existing navy and gold archive palette. */
-.history-menu-toggle{white-space:nowrap}
-.history-menu-chevron{display:inline-block;width:6px;height:6px;margin-left:5px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg)}
-.history-menu-toggle[aria-expanded="true"] .history-menu-chevron{transform:translateY(1px) rotate(225deg)}
-.nav-history #historySubmenu[hidden]{display:none}
-.nav-history #historySubmenu:not([hidden]){display:grid;gap:3px}
-
 .history-hall{
  position:relative;isolation:isolate;text-align:center;padding:clamp(3.4rem,7vw,6.7rem) 0 clamp(3.5rem,7vw,6.25rem);
  border-bottom:1px solid #ddba6a36;
@@ -83,10 +77,19 @@
  font-variant-numeric:tabular-nums;
  white-space:nowrap;
 }
-.history-accolades b span,.history-pf-list b span {
+.history-pf-list b span {
  color:var(--ui-muted,#bbc9d7);
  font-size:.75rem;
  font-weight:550;
+}
+.history-accolades .player-trophy-case {justify-content:flex-end;gap:.35rem;margin:0}
+.history-accolades .ptrophy {
+ padding:0;
+ background:none;
+ color:inherit;
+ font-size:1.125rem;
+ line-height:1.45;
+ white-space:nowrap;
 }
 .history-rule {
  color:var(--ui-muted,#bbc9d7);

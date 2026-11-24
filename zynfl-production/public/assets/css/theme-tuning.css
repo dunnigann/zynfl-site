@@ -29,6 +29,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,su
 .podium-table th,.career-table th,.season-table th,.draft-table th{background:#29394a;color:#f5cc66;border-color:#405367}
 .podium-table td,.career-table td,.season-table td,.draft-table td{border-color:#405367;color:#f5f7fb}
 .podium-table tr:nth-child(even),.career-table tr:nth-child(even),.season-table tr:nth-child(even),.draft-table tr:nth-child(even){background:#223143}
+.table-subtitle{display:block;color:var(--muted)}
 .award-scope button,.scope-btn,.draft-year-toggle button,.draft-pos-btn,.filter-select,.search-input,.player-top-select{background:#263648;color:#f5f7fb;border-color:#53697d}
 .award-scope button.active,.scope-btn.active,.draft-year-toggle button.active,.draft-pos-btn.active{background:#bc364b;border-color:#f27687;color:#fff}
 .player-top-select.pos-QB,.player-top-select.pos-RB,.player-top-select.pos-WR,.player-top-select.pos-TE,.player-top-select.pos-FLEX,.player-top-select.pos-K,.player-top-select.pos-DEF{color:#10151f}
@@ -75,7 +76,10 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,su
 .gallery-empty p,.adp-context-card p,.injury-card p,.season-phase p,.notice p{color:#bdcdd9}
 .bracket-team.advances{background:#30465a;color:#fff}
 .season-table-shell th,.season-table-shell td{border-color:#405367}
-.season-team-stat strong,.bracket-team strong,.gallery-card strong{color:#fff}
+.season-team-stat strong,.bracket-team strong,.bracket-team.advances strong,.gallery-card strong,.football-jersey{color:#fff}
+.bracket-team small,.adp-slot,.season-team-stat span,.dna-stats span,.shame-card span{color:var(--muted)}
+.shame-year{color:#f5cc66}
+.dna-stats div{background:#263648}
 .belt-tag{background:#554523;color:#ffe49d}
 @media(max-width:1180px){
  .nav-dropdown{display:block}
@@ -124,8 +128,8 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,su
 .manager-start-total small{display:block;font-weight:600;font-size:11px;color:#c6d5e2;margin-top:3px}
 
 /* A football formation with separate cells for every player. The offensive line faces midfield. */
-.z-field-scroll{overflow-x:auto;overflow-y:hidden}
-.z-field{min-width:700px}
+.z-field-scroll{overflow:visible}
+.z-field{min-width:0}
 .z-formation,.z-formation.z-bottom{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));grid-template-rows:92px 145px 145px;gap:0;max-width:none;width:100%;margin:0;padding:9px 0;align-items:stretch}
 .z-position{min-width:0;min-height:0;display:flex;justify-content:center;align-items:flex-start;padding:3px 1px;z-index:1}
 .z-position .z-player{width:100%;min-width:0;max-width:120px;gap:3px;align-items:center;overflow:hidden}
@@ -152,8 +156,9 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,su
  .manager-starts{grid-template-columns:1fr}
  .manager-file .detail-grid{grid-template-columns:1fr}
  .manager-row{grid-template-columns:minmax(100px,33%) minmax(0,1fr)}
- .z-field{min-width:700px}
  .z-position .z-player-photo{width:min(var(--bubble),88px);height:min(var(--bubble),88px)}
+ .bracket-team small,.adp-slot,.season-team-stat span,.dna-stats span,.shame-card span,.shame-year{font-size:.75rem}
+ .season-team-stat span,.dna-stats span{white-space:normal;overflow-wrap:anywhere}
 }
 @media(max-width:520px){
  .manager-file .detail-card{padding:15px}

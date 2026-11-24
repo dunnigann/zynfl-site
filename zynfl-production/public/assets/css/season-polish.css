@@ -26,12 +26,62 @@
 .z-field .z-bottom .z-place-wr1,.z-field .z-bottom .z-place-wr2,.z-field .z-bottom .z-place-te,.z-field .z-bottom .z-place-flex{grid-row:2}
 .z-field .z-bottom .z-place-qb{grid-row:3}
 .z-field .z-bottom .z-place-k,.z-field .z-bottom .z-place-def,.z-field .z-bottom .z-place-rb1,.z-field .z-bottom .z-place-rb2,.z-field .z-bottom .z-place-flex-rb{grid-row:4}
+@media(max-width:780px){
+ .z-field{padding:10px}
+ .z-field .z-formation,.z-field .z-formation.z-bottom{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  grid-template-rows:none;
+  gap:.55rem .3rem;
+  padding:.8rem 0;
+ }
+ .z-field .z-formation{
+  grid-template-areas:". kick defense ." "qb rb1 rb2 flex-back" "wr1 wr2 te flex" "line line line line";
+ }
+ .z-field .z-formation.z-bottom{
+  grid-template-areas:"line line line line" "wr1 wr2 te flex" "qb rb1 rb2 flex-back" ". kick defense .";
+ }
+ .z-place-k{--field-area:kick}.z-place-def{--field-area:defense}
+ .z-place-qb{--field-area:qb}.z-place-rb1{--field-area:rb1}.z-place-rb2{--field-area:rb2}
+ .z-place-flex-rb{--field-area:flex-back}.z-place-flex{--field-area:flex}
+ .z-place-wr1{--field-area:wr1}.z-place-wr2{--field-area:wr2}.z-place-te{--field-area:te}
+ .z-field .z-formation .z-position{grid-area:var(--field-area)}
+ .z-field .z-formation.z-top .z-line,.z-field .z-formation.z-bottom .z-line{grid-area:line}
+ .z-field .z-position .z-player{min-height:44px;overflow-wrap:anywhere}
+ .z-field .z-position .z-player-photo{width:clamp(32px,calc(var(--bubble) * .65),56px);height:clamp(32px,calc(var(--bubble) * .65),56px)}
+ .z-field .z-position .z-player strong,.z-field .z-position .z-player small,.z-field .z-position .z-player em,
+ .z-field .z-position-empty strong{white-space:normal;overflow:visible;overflow-wrap:anywhere;line-height:1.3}
+ .z-field .z-position .z-player strong,.z-field .z-position-empty strong{font-size:.75rem}
+ .z-field .z-position .z-player small,.z-field .z-position .z-player em{font-size:.6875rem}
+ .z-field .z-team-header h2{font-size:1rem;overflow-wrap:anywhere}
+ .z-field .z-team-score strong{font-size:1.3rem}
+ .z-field .z-team-score small{font-size:.6875rem}
+ .z-field-note{font-size:.875rem}
+}
 @media(max-width:700px){
  .season-table-shell:has(.responsive-table){overflow:visible;border:0;background:transparent;box-shadow:none}
- .season-table-shell .responsive-table tbody tr{background:#1b2633;border-color:#405367}
+ .z-sidebar select{font-size:1rem;padding:.48rem .55rem}
+ .z-sidebar label{font-size:.75rem;letter-spacing:.035em;text-transform:none}
+ .z-weekbar button{min-width:44px;min-height:44px;font-size:.875rem}
+ .z-page .z-weekbar button:disabled{color:var(--muted);background:var(--navy);border-color:var(--line)}
+ .z-bench-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .z-bench-grid .z-player{min-height:44px}
+ .z-bench-grid .z-player strong{font-size:.75rem;display:block;min-height:0;overflow:visible;white-space:normal;overflow-wrap:anywhere}
+ .z-bench-grid .z-player small,.z-bench-grid .z-player em{font-size:.6875rem}
+ .z-dialog-heading{padding-right:44px}
+ .z-dialog .z-dialog-close{width:44px;height:44px;line-height:1}
  .z-ranking-list>li{grid-template-columns:26px 34px minmax(0,1fr) 40px;gap:9px;padding:17px 12px}
  .z-ranking-list .z-rank{font-size:23px;min-width:0}.z-ranking-list .z-photo{width:34px;height:34px}
  .z-rank-movement{font-size:14px}
  .z-ranking-list h3{font-size:16px}.z-ranking-list p{font-size:14px;line-height:1.75}
  .z-team-header .z-win-chance{margin-left:5px}
+}
+@media(max-width:380px){
+ .z-field .z-formation,.z-field .z-formation.z-bottom{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .z-field .z-formation{
+  grid-template-areas:"kick . defense" "rb1 qb rb2" "wr1 te wr2" ". flex-slot ." "line line line";
+ }
+ .z-field .z-formation.z-bottom{
+  grid-template-areas:"line line line" ". flex-slot ." "wr1 te wr2" "rb1 qb rb2" "kick . defense";
+ }
+ .z-place-flex-rb,.z-place-flex{--field-area:flex-slot}
 }
